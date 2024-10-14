@@ -43,13 +43,15 @@ $tertiary-letter-spacing: 8%;
 //text-transforms
 $primary-text-transform: uppercase;
 
-header {
+.header {
   font-family: $primary-font-family;
   font-size: $small-acton-font-size;
   font-weight: $primary-font-weight;
   line-height: $secondary-line-height;
   letter-spacing: $primary-letter-spacing;
   text-transform: $primary-text-transform;
+  display: flex;
+  justify-content: space-between;
 }
 .logo svg {
   width: 2em;
