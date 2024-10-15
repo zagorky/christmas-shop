@@ -1,0 +1,43 @@
+.header {
+  font-size: var(--small-acton-font-size);
+  display: flex;
+  justify-content: space-between;
+  height: 40px;
+  padding: 12px 20px;
+}
+.logo {
+  display: flex;
+  align-items: center;
+  padding: 8px 20px;
+  cursor: pointer;
+  gap: 8px;
+}
+a {
+  text-decoration: none;
+  color: none;
+}
+.logo svg {
+  width: 2em;
+  height: 2em;
+}
+
+nav,
+ul {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  gap: 8px;
+  height: 40px;
+}
+li {
+  text-decoration: none;
+  list-style: none;
+  padding: 12px 20px;
+  cursor: pointer;
+  /* height: 40px; */
+}
+li:hover {
+  color: var(--primary-color);
+  background-color: var(--primary-10);
+  border-radius: 12px;
+}

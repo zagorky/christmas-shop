@@ -1,0 +1,5 @@
+.timer {
+  display: grid;
+  justify-content: center;
+  grid-template-columns: repeat(4, 80px);
+}

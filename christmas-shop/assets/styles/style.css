@@ -1,0 +1,71 @@
+/* variables */
+
+:root {
+  /* colors */
+  --primary-color: #ff4646;
+  --static-white: #ffffff;
+  --tag-purple: #4361ff;
+  --primary-10: #ff464620;
+  --static-white-40: #7f7f7f;
+  --tag-pink: #ff43f7;
+  --dark: #181c29;
+  --static-white-20: #ffffff3b;
+  --tag-green: #06a44f;
+  /* font-families */
+  --primary-font-family: Montserrat, sans-serif;
+  --secondary-font-family: allura, cursive;
+  /* font-sizes */
+  --header1-font-size: 32px;
+  --header2-font-size: 24px;
+  --header3-font-size: 16px;
+  --header4-font-size: 12px;
+  --p-font-size: 16px;
+  --large-acton-font-size: 24px;
+  --small-acton-font-size: 12px;
+  --caption-font-size: 24px;
+  --slider-font-size: 80px;
+  /* font-weights */
+  --primary-font-weight: 600;
+  --secondary-font-weight: 400;
+  /* line-heights */
+  --primary-line-height: 150%;
+  --secondary-line-height: 130%;
+  /* letter-spacings */
+  --primary-letter-spacing: 5%;
+  --secondary-letter-spacing: 16%;
+  --tertiary-letter-spacing: 8%;
+  /* text-transforms */
+  --primary-text-transform: uppercase;
+}
+
+/* fonts */
+@font-face {
+  font-family: Montserrat;
+  src: url(../fonts/Montserrat-Regular.ttf);
+}
+@font-face {
+  font-family: allura;
+  src: url(../fonts/Allura-Regular.ttf);
+}
+
+/* styles */
+* {
+  font-family: var(--primary-font-family);
+  font-size: var(--p-font-size);
+  font-weight: var(--primary-font-weight);
+  line-height: var(--primary-line-height);
+  letter-spacing: var(--primary-letter-spacing);
+  text-transform: var(--primary-text-transform);
+}
+
+button {
+  color: var(--static-white);
+  background-color: var(--dark);
+  border-radius: 12px;
+  text-align: center;
+  padding: 12px 20px;
+}
+button:hover {
+  color: var(--dark);
+  background-color: var(--static-white);
+}

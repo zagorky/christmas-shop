@@ -7,7 +7,15 @@
       rel="stylesheet"
       href="node_modules/modern-normalize/modern-normalize.css"
     />
-    <link rel="stylesheet" href="./assets/styles/style.scss" />
+    <link rel="stylesheet" href="./assets/styles/style.css" />
+    <link rel="stylesheet" href="./assets/styles/about.css" />
+    <link rel="stylesheet" href="./assets/styles/best.css" />
+    <link rel="stylesheet" href="./assets/styles/cta.css" />
+    <link rel="stylesheet" href="./assets/styles/footer.css" />
+    <link rel="stylesheet" href="./assets/styles/header.css" />
+    <link rel="stylesheet" href="./assets/styles/hero.css" />
+    <link rel="stylesheet" href="./assets/styles/slider.css" />
+
     <link
       rel="shortcut icon"
       href="./assets/imgs/hozyajstvennaya_sumka_f2c0trh55st2.ico"
@@ -37,28 +45,28 @@
             </clipPath>
           </defs>
         </svg>
-        The Gifts
+        <p>the gifts</p>
       </div>
       <nav class="navigation">
         <ul>
-          <li>Gifts</li>
-          <li>About</li>
-          <li>Best</li>
-          <li>Contacts</li>
+          <li><a href="#gifts">gifts</a></li>
+          <li><a href="#about">about</a></li>
+          <li><a href="#best">best</a></li>
+          <li><a href="#contacts">contacts</a></li>
         </ul>
       </nav>
     </header>
     <main>
-      <section class="first-block">
-        <div class="fb-text-content">
+      <section class="hero-section">
+        <div class="hero-secction-text-content">
           <p>Merry Christmas</p>
           <p>Gift yourself the magic of new possibilities</p>
           <button>Explore Magical Gifts</button>
           <p>and Happy New Year</p>
         </div>
       </section>
-      <section class="about-block">
-        <div class="sb-text-content">
+      <section id="about" class="about-section">
+        <div class="about-section-text-content">
           <p>About</p>
           <p>Unleash your inner superhero!</p>
           <p>
@@ -67,40 +75,40 @@
             your life.
           </p>
         </div>
-        <div class="sb-img">
+        <div class="about-section-img">
           <img
             src="./assets/imgs/ImageContainer.svg"
             alt="image-container"
-            class="sb-img"
+            class="about-section-img-content"
           />
         </div>
       </section>
-      <section class="slider-block"></section>
-      <section class="cards-block">
+      <section id="gifts" class="slider-section"></section>
+      <section id="best" class="best-gifts-section">
         <p>Best gifts</p>
         <p>especially for you</p>
-        <div>
+        <div class="card">
           <div></div>
           <p>For work</p>
           <p>Console.log Guru</p>
         </div>
-        <div>
+        <div class="card">
           <div></div>
           <p>For health</p>
           <p>Hydration Bot</p>
         </div>
-        <div>
+        <div class="card">
           <div></div>
           <p>For work</p>
           <p>Merge Master</p>
         </div>
-        <div>
+        <div class="card">
           <div></div>
           <p>For harmony</p>
           <p>Spontaneous Coding Philosopher</p>
         </div>
       </section>
-      <section class="timer-block">
+      <section class="cta-section">
         <p>Ready to start your journey to a better version of yourself?</p>
         <button>Explore Magical Gifts</button>
         <p>The New Year is Coming Soon...</p>
@@ -112,7 +120,7 @@
         </div>
       </section>
     </main>
-    <footer>
+    <footer id="contacts">
       <div class="call-us">
         <img src="" alt="" />
         <p>+375 (29) 111-22-33</p>
