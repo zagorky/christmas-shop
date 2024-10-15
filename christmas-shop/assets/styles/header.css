@@ -1,5 +1,4 @@
 .header {
-  font-size: var(--small-acton-font-size);
   display: flex;
   justify-content: space-between;
   height: 40px;
@@ -14,13 +13,14 @@
 }
 a {
   text-decoration: none;
-  color: none;
+  color: var(--dark);
+  padding: 12px 20px;
+  font-weight: 600;
 }
 .logo svg {
   width: 2em;
   height: 2em;
 }
-
 nav,
 ul {
   display: flex;
@@ -32,12 +32,14 @@ ul {
 li {
   text-decoration: none;
   list-style: none;
-  padding: 12px 20px;
   cursor: pointer;
-  /* height: 40px; */
+  padding: 12px 0;
 }
 li:hover {
-  color: var(--primary-color);
   background-color: var(--primary-10);
   border-radius: 12px;
+}
+a:hover,
+li:hover {
+  color: var(--primary-color);
 }

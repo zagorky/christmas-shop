@@ -1,0 +1,5 @@
+.about-section {
+  background-color: var(--static-white);
+  border-radius: 12px;
+  display: flex;
+}
