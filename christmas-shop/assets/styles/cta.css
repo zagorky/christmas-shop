@@ -1,13 +1,43 @@
+.cta-section {
+  padding-top: 60px;
+  padding-bottom: 60px;
+  background-image: url(../imgs/bg-forest.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
 .cta-container {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  background-image: url(../imgs/bg-forest.png);
+  color: var(--static-white);
+}
+.cta-text-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  width: 426px;
+  height: 428px;
+  text-align: center;
 }
 
 .timer {
   display: grid;
   justify-content: center;
   grid-template-columns: repeat(4, 80px);
+  background-color: #ffffff5a;
+  border-radius: 12px;
+  padding: 8px 12px;
+}
+
+.hours,
+.mins {
+  border-left: 1px solid var(--static-white-40);
+}
+.mins {
+  border-right: 1px solid var(--static-white-40);
 }
