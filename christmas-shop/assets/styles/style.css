@@ -55,6 +55,7 @@ main {
   background-image: url(https://s3-alpha-sig.figma.com/img/81a3/9777/2dfc048014f1902a0c5cef20e2241de5?Expires=1730073600&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=KLxrxAjngQ7jvBwCmK8r7QaHCHjwGlgL1uhc07q6jfm0W6A55nNW6Js7RBs46wvzXlvXI0G9hLNQary0qDSWMeD9k7mdzW~Rx4ZOAIvHFptdC7K~XxdcDsKyz4vvRVEvhyXDmsvLR100c6ol6E5liiIiq~hV0eMqRyugFyLk0NGQJktCO1t~Yl1Xxm52xb~1LTKnYsy7s2ODC9FqXSwUq2WRpoE8~h2EZUr6vSXb3Kz~C~eGpiVWsyPqc6zJBzaWQ-my6MDJYkvcMItZ8zFaQFaw0YRquMC2qTXIT5~~qTTFgfBJIV2qlrbZ9FWD6yb58OWB5G-hs1DA9zVnU8KK-g__);
   background-color: var(--primary-color);
   border-radius: 12px;
+  width: 100dvw;
 }
 
 button {
