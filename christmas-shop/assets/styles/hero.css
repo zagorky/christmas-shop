@@ -1,10 +1,11 @@
 .hero-section {
   border-radius: 12px;
   display: flex;
-  background-image: url("../imgs/bg-snowball.png");
+  background-image: url("../imgs/bg-snowball.png"), url("../imgs/bg-snow.png");
   background-repeat: no-repeat;
-  background-position: top;
-  background-size: contain;
+  background-position: center;
+  background-size: 100%, 100%;
+  /* background-size: contain; */
 }
 
 .hero-secction-text-content {
@@ -19,4 +20,8 @@
   height: 404px;
   color: var(--static-white);
   text-align: center;
+}
+.explore-btn {
+  padding: 20px 32px;
+  border-radius: 25px;
 }
