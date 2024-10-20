@@ -151,7 +151,7 @@ button:hover {
   margin: 0;
 }
 /* slider */
-.slider {
+.slider-text {
   font-family: var(--primary-font-family);
   font-size: var(--slider-font-size);
   font-weight: var(--secondary-font-weight);
