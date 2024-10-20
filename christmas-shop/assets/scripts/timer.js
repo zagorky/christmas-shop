@@ -13,8 +13,6 @@ function timer() {
   fillDates(seconds, countSecs(calculateMSTillNY()));
 }
 
-setInterval(timer(), 1000);
-
 function calculateMSTillNY() {
   let today = new Date();
   let NYDate = new Date(today.getFullYear(), 0, 1);
@@ -41,3 +39,5 @@ function countSecs(ms) {
 function fillDates(value, func) {
   value.textContent = `${func} `;
 }
+
+setInterval(timer, 1000);
