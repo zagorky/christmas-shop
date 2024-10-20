@@ -21,7 +21,9 @@
   gap: 12px;
 }
 .slider {
-  max-width: 1276px;
+  color: var(--static-white);
+  max-width: 2576px;
+  width: 1276px;
   height: 200px;
   overflow: hidden;
   max-width: 2400px;
