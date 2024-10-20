@@ -1,0 +1,53 @@
+.contants-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 60px;
+}
+.contacts-info-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+}
+.contact-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  background-color: #ecf3f8;
+  border-radius: 20px;
+  width: 418px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+footer {
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+.information-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 12px;
+}
+.social-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+}
+.telegram,
+.facebook,
+.instagram,
+.x {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+}
