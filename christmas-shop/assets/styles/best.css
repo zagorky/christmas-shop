@@ -13,15 +13,12 @@
   background-color: var(--static-white);
 }
 
-/* .best-gifts-section {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-} */
+.best-gifts-section {
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
 .best-gifts-container {
   display: flex;
-  padding: 82px 60px;
   display: flex;
   justify-content: center;
   align-items: center;

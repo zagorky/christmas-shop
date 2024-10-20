@@ -3,10 +3,32 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  padding-top: 60px;
+  padding-bottom: 60px;
 }
 .slider-container {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+}
+.slider-text-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: var(--static-white);
+  gap: 12px;
+}
+.slider {
+  max-width: 1276px;
+  height: 200px;
+}
+
+.btn {
+  width: 56px;
+  height: 56px;
+  border-radius: 20px;
+  border: 1px solid var(--static-white-40);
+  background-color: var(--primary-color);
 }
