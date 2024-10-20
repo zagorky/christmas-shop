@@ -1,0 +1,27 @@
+.about-section {
+  background-color: var(--static-white);
+  border-radius: 20px;
+  display: grid;
+  margin: 60px auto;
+  grid-template-columns: repeat(2, 1fr);
+  max-width: 1256px;
+}
+
+.about-section-text-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 20px;
+  margin: 100px 152px 100px 60px;
+  padding: 60px 0;
+}
+
+.about {
+  color: var(--primary-color);
+}
+
+.about-section-img {
+  background-image: url(../imgs/ImageContainer.svg);
+  background-repeat: no-repeat;
+  border-radius: 20px;
+}

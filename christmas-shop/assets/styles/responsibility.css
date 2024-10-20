@@ -1,0 +1,10 @@
+@media screen and (max-width: 768.9px) {
+  /* header */
+
+  .navigation {
+    display: none;
+  }
+  .burger-menu {
+    display: block;
+  }
+}

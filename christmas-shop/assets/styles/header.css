@@ -1,0 +1,50 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  height: 40px;
+  padding: 12px 20px;
+  max-width: 1276px;
+  width: 100%;
+  margin: 0 auto;
+}
+.burger-menu {
+  display: none;
+}
+.logo {
+  display: flex;
+  align-items: center;
+  padding: 8px 20px;
+  cursor: pointer;
+  gap: 8px;
+}
+a {
+  text-decoration: none;
+  color: var(--dark);
+  padding: 12px 20px;
+  font-weight: 600;
+}
+.logo svg {
+  width: 2em;
+  height: 2em;
+}
+nav,
+ul {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  gap: 8px;
+}
+li {
+  text-decoration: none;
+  list-style: none;
+  cursor: pointer;
+  padding: 12px 0;
+}
+li:hover {
+  background-color: var(--primary-10);
+  border-radius: 12px;
+}
+a:hover,
+li:hover {
+  color: var(--primary-color);
+}

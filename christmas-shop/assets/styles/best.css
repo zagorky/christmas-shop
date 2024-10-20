@@ -1,0 +1,62 @@
+.cards-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  justify-content: center;
+}
+
+.card {
+  height: 342px;
+  width: 310px;
+  cursor: pointer;
+  border-radius: 12px;
+  background-color: var(--static-white);
+}
+
+.best-gifts-section {
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+.best-gifts-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.best-gifts-text-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  color: var(--static-white);
+  margin: 0 auto 20px auto;
+}
+
+.cards-img-for-work {
+  background-image: url(../imgs/for-work.png);
+  background-size: 100% 100%;
+  width: 310px;
+  height: 230px;
+}
+.cards-img-for-health {
+  background-image: url(../imgs/for-health.png);
+  background-size: 100% 100%;
+  width: 310px;
+  height: 230px;
+}
+.cards-img-for-harmony {
+  background-image: url(../imgs/for-harmony.png);
+  background-size: 100% 100%;
+  width: 310px;
+  height: 230px;
+}
+
+.card-text-container {
+  display: flex;
+  flex-direction: column;
+  padding: 20px 20px 44px 20px;
+  gap: 8px;
+}
+.card-text-container h3 {
+  margin: 0;
+}
