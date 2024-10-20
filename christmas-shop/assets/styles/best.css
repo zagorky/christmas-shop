@@ -3,4 +3,9 @@
   width: 230px;
   cursor: pointer;
   border-radius: 12px;
+  background-color: var(--static-white);
+}
+
+.best-gifts-section {
+  display: flex;
 }
