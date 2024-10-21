@@ -20,7 +20,7 @@
   padding-bottom: 3px;
 }
 
-a {
+.nav-a {
   text-decoration: none;
   color: var(--dark);
   width: 100%;
@@ -44,8 +44,7 @@ li {
   cursor: pointer;
 }
 
-a:hover,
-li:hover {
+.nav-a:hover {
   color: var(--primary-color);
   background-color: var(--primary-10);
 }
