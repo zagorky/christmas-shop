@@ -4,8 +4,8 @@
   background-image: url("../imgs/bg-snowball.png"), url("../imgs/bg-snow.png");
   background-repeat: no-repeat;
   background-position: center;
-  background-size: 100%, 100%;
-  /* background-size: contain; */
+  background-size: cover;
+  background-position: 50% 50%;
 }
 
 .hero-secction-text-content {
