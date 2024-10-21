@@ -1,7 +1,7 @@
-const days = document.querySelector(".days h2");
-const hours = document.querySelector(".hours h2");
-const minutes = document.querySelector(".mins h2");
-const seconds = document.querySelector(".secs h2");
+const days = document.querySelector(".days p");
+const hours = document.querySelector(".hours p");
+const minutes = document.querySelector(".mins p");
+const seconds = document.querySelector(".secs p");
 
 function timer() {
   fillDates(days, countDays(calculateMSTillNY()));
