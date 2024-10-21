@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="./assets/styles/hero.css" />
     <link rel="stylesheet" href="./assets/styles/slider.css" />
     <link rel="stylesheet" href="./assets/styles/responsibility.css" />
+    <link rel="stylesheet" href="./assets/styles/normalize.css" />
 
     <link
       rel="shortcut icon"
@@ -23,64 +24,41 @@
   </head>
   <body>
     <header class="header">
-      <div class="logo">
-        <svg
-          width="24"
-          height="24"
-          viewBox="0 0 24 24"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <g clip-path="url(#clip0_120_865)">
-            <path
-              d="M18.2942 14.8224L17.4727 14.3481L19.674 13.7583L19.3102 12.4006L15.7512 13.3542L14.0725 12.385C14.0957 12.26 14.1084 12.1315 14.1084 12C14.1084 11.8684 14.0957 11.7398 14.0725 11.6149L15.7512 10.6457L19.3102 11.5994L19.674 10.2416L17.4727 9.65177L18.2942 9.17747L21.8194 8.96588L22.3385 6.03095L19.5373 5.01305L17.5914 7.96016L16.7699 8.43446L17.3598 6.23317L16.002 5.86939L15.0484 9.42842L13.3687 10.3982C13.1741 10.2315 12.949 10.0997 12.7028 10.0124V8.0742L15.3082 5.46879L14.3143 4.47488L12.7028 6.08633V5.13772L14.2772 1.98876L12 0L9.72271 1.98886L11.2972 5.13782V6.08642L9.68569 4.47497L8.69178 5.46889L11.2971 8.0743V10.0125C11.051 10.0998 10.8259 10.2316 10.6312 10.3983L8.95154 9.42852L7.99792 5.86949L6.64018 6.23326L7.23003 8.43456L6.40854 7.96025L4.46269 5.01314L1.66148 6.03104L2.18058 8.96597L5.70578 9.17757L6.52727 9.65187L4.32597 10.2417L4.6898 11.5994L8.24882 10.6458L9.92746 11.615C9.90431 11.74 9.89157 11.8685 9.89157 12C9.89157 12.1316 9.90427 12.2602 9.92746 12.3851L8.24882 13.3543L4.6898 12.4006L4.32597 13.7584L6.52727 14.3482L5.70578 14.8225L2.18058 15.034L1.66148 17.969L4.46274 18.9869L6.40859 16.0397L7.23012 15.5654L6.64028 17.7667L7.99801 18.1306L8.95163 14.5715L10.6313 13.6018C10.826 13.7684 11.0511 13.9003 11.2972 13.9875V15.9258L8.69187 18.5311L9.68579 19.525L11.2973 17.9135V18.8621L9.7228 22.0111L12.0001 24L14.2774 22.0111L12.7029 18.8621V17.9135L14.3144 19.525L15.3083 18.5311L12.7029 15.9258V13.9875C12.9491 13.9003 13.1742 13.7684 13.3689 13.6018L15.0485 14.5715L16.0022 18.1306L17.3599 17.7667L16.7701 15.5654L17.5916 16.0397L19.5374 18.9869L22.3387 17.969L21.8196 15.034L18.2942 14.8224Z"
-              fill="#FF4646"
-            />
-          </g>
-          <defs>
-            <clipPath id="clip0_120_865">
-              <rect width="24" height="24" fill="white" />
-            </clipPath>
-          </defs>
-        </svg>
-        <p class="actionSmall">the gifts</p>
-      </div>
-      <div class="burger-menu">
-        <svg
-          width="22"
-          height="2"
-          viewBox="0 0 22 2"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <path
-            d="M1 1H21"
-            stroke="#181C29"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-          />
-        </svg>
-        <svg
-          width="22"
-          height="2"
-          viewBox="0 0 22 2"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <path
-            d="M1 1H21"
-            stroke="#181C29"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-          />
-        </svg>
-      </div>
+      <a class="logo-link" href="../christmas-shop/index.html">
+        <div class="logo">
+          <svg
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <g clip-path="url(#clip0_120_865)">
+              <path
+                d="M18.2942 14.8224L17.4727 14.3481L19.674 13.7583L19.3102 12.4006L15.7512 13.3542L14.0725 12.385C14.0957 12.26 14.1084 12.1315 14.1084 12C14.1084 11.8684 14.0957 11.7398 14.0725 11.6149L15.7512 10.6457L19.3102 11.5994L19.674 10.2416L17.4727 9.65177L18.2942 9.17747L21.8194 8.96588L22.3385 6.03095L19.5373 5.01305L17.5914 7.96016L16.7699 8.43446L17.3598 6.23317L16.002 5.86939L15.0484 9.42842L13.3687 10.3982C13.1741 10.2315 12.949 10.0997 12.7028 10.0124V8.0742L15.3082 5.46879L14.3143 4.47488L12.7028 6.08633V5.13772L14.2772 1.98876L12 0L9.72271 1.98886L11.2972 5.13782V6.08642L9.68569 4.47497L8.69178 5.46889L11.2971 8.0743V10.0125C11.051 10.0998 10.8259 10.2316 10.6312 10.3983L8.95154 9.42852L7.99792 5.86949L6.64018 6.23326L7.23003 8.43456L6.40854 7.96025L4.46269 5.01314L1.66148 6.03104L2.18058 8.96597L5.70578 9.17757L6.52727 9.65187L4.32597 10.2417L4.6898 11.5994L8.24882 10.6458L9.92746 11.615C9.90431 11.74 9.89157 11.8685 9.89157 12C9.89157 12.1316 9.90427 12.2602 9.92746 12.3851L8.24882 13.3543L4.6898 12.4006L4.32597 13.7584L6.52727 14.3482L5.70578 14.8225L2.18058 15.034L1.66148 17.969L4.46274 18.9869L6.40859 16.0397L7.23012 15.5654L6.64028 17.7667L7.99801 18.1306L8.95163 14.5715L10.6313 13.6018C10.826 13.7684 11.0511 13.9003 11.2972 13.9875V15.9258L8.69187 18.5311L9.68579 19.525L11.2973 17.9135V18.8621L9.7228 22.0111L12.0001 24L14.2774 22.0111L12.7029 18.8621V17.9135L14.3144 19.525L15.3083 18.5311L12.7029 15.9258V13.9875C12.9491 13.9003 13.1742 13.7684 13.3689 13.6018L15.0485 14.5715L16.0022 18.1306L17.3599 17.7667L16.7701 15.5654L17.5916 16.0397L19.5374 18.9869L22.3387 17.969L21.8196 15.034L18.2942 14.8224Z"
+                fill="#FF4646"
+              />
+            </g>
+            <defs>
+              <clipPath id="clip0_120_865">
+                <rect width="24" height="24" fill="white" />
+              </clipPath>
+            </defs>
+          </svg>
+          <p class="actionSmall">the gifts</p>
+        </div></a
+      >
+      <div class="burger-menu"></div>
       <nav class="navigation">
         <ul>
-          <li><a class="actionSmall" href="#gifts">gifts</a></li>
-          <li><a class="actionSmall" href="#about">about</a></li>
-          <li><a class="actionSmall" href="#best">best</a></li>
-          <li><a class="actionSmall" href="#contacts">contacts</a></li>
+          <li>
+            <a class="actionSmall nav-a" href="../christmas-shop/gifts.html"
+              >gifts</a
+            >
+          </li>
+          <li><a class="actionSmall nav-a" href="#about">about</a></li>
+          <li><a class="actionSmall nav-a" href="#best">best</a></li>
+          <li><a class="actionSmall nav-a" href="#contacts">contacts</a></li>
         </ul>
       </nav>
     </header>
@@ -89,7 +67,11 @@
         <div class="hero-secction-text-content">
           <p class="caption">Merry Christmas</p>
           <h1 class="header1">Gift yourself the magic of new possibilities</h1>
-          <button class="actionSmall">Explore Magical Gifts</button>
+          <button class="actionSmall explore-btn">
+            <a class="explore-bnt-link" href="../christmas-shop/gifts.html"
+              >Explore Magical Gifts</a
+            >
+          </button>
           <p class="caption">and Happy New Year</p>
         </div>
       </section>
@@ -119,14 +101,14 @@
             <div class="slider-elem"><p class="slider-text">create</p></div>
             <div class="slider-elem-img">
               <img
-                src="./assets/imgs/christmas-tree-ball.png"
+                src="./assets/imgs/christmas-trees.png"
                 alt="christmas-tree-ball"
               />
             </div>
             <div class="slider-elem"><p class="slider-text">love</p></div>
             <div class="slider-elem-img">
               <img
-                src="./assets/imgs/christmas-trees.png"
+                src="./assets/imgs/christmas-tree-ball.png"
                 alt="christmas-trees"
               />
             </div>
@@ -152,7 +134,7 @@
                   stroke-linejoin="round"
                 />
               </svg></button
-            ><button class="right btn">
+            ><button class="right btn active">
               <svg
                 width="14"
                 height="14"
@@ -175,7 +157,7 @@
       <section id="best" class="best-gifts-section">
         <div class="best-gifts-container">
           <div class="best-gifts-text-container">
-            <p class="caption">Best gifts</p>
+            <p class="caption">Best Gifts</p>
             <h2 class="header2">especially for you</h2>
           </div>
           <div class="cards-container">
@@ -183,28 +165,28 @@
               <div class="cards-img-for-work"></div>
               <div class="card-text-container">
                 <h4 class="header4 for-work">For work</h4>
-                <h3>Console.log Guru</h3>
+                <h3 class="header3">Console.log Guru</h3>
               </div>
             </div>
             <div class="card">
               <div class="cards-img-for-health"></div>
               <div class="card-text-container">
                 <h4 class="header4 for-health">For health</h4>
-                <h3>Hydration Bot</h3>
+                <h3 class="header3">Hydration Bot</h3>
               </div>
             </div>
             <div class="card">
               <div class="cards-img-for-work"></div>
               <div class="card-text-container">
                 <h4 class="header4 for-work">For work</h4>
-                <h3>Merge Master</h3>
+                <h3 class="header3">Merge Master</h3>
               </div>
             </div>
             <div class="card">
               <div class="cards-img-for-harmony"></div>
               <div class="card-text-container">
                 <h4 class="header4 for-harmony">For harmony</h4>
-                <h3>Spontaneous Coding Philosopher</h3>
+                <h3 class="header3">Spontaneous Coding Philosopher</h3>
               </div>
             </div>
           </div>
@@ -213,34 +195,52 @@
       <section class="cta-section">
         <div class="cta-container">
           <div class="cta-text-container">
-            <h2 class="header3">
+            <h2 class="header2 cta-h2">
               Ready to start your journey to a better version of yourself?
             </h2>
-            <button class="actionSmall">Explore Magical Gifts</button>
-            <p class="caption">The New Year is Coming Soon...</p>
-            <div class="timer">
-              <div class="days-container">
-                <div class="days">
-                  <h2 class="header2"></h2>
-                  <h4 class="header4">days</h4>
+            <button class="actionSmall explore-btn cta-btn">
+              <a class="explore-bnt-link" href="../christmas-shop/gifts.html"
+                >Explore Magical Gifts</a
+              >
+            </button>
+            <div class="timer-container">
+              <p class="caption cta-p">The New Year is Coming Soon...</p>
+              <div class="timer">
+                <div class="days-container">
+                  <div class="days">
+                    <p class="header2"></p>
+                    <h4 class="header4">days</h4>
+                  </div>
                 </div>
-              </div>
-              <div class="hours-container">
-                <div class="hours">
-                  <h2 class="header2"></h2>
-                  <h4 class="header4">hours</h4>
+                <img
+                  src="../christmas-shop/assets/imgs/Separator.svg"
+                  alt=" "
+                />
+                <div class="hours-container">
+                  <div class="hours">
+                    <p class="header2"></p>
+                    <h4 class="header4">hours</h4>
+                  </div>
                 </div>
-              </div>
-              <div class="mins-container">
-                <div class="mins">
-                  <h2 class="header2"></h2>
-                  <h4 class="header4">minutes</h4>
+                <img
+                  src="../christmas-shop/assets/imgs/Separator.svg"
+                  alt=" "
+                />
+                <div class="mins-container">
+                  <div class="mins">
+                    <p class="header2"></p>
+                    <h4 class="header4">minutes</h4>
+                  </div>
                 </div>
-              </div>
-              <div class="secs-container">
-                <div class="secs">
-                  <h2 class="header2"></h2>
-                  <h4 class="header4">seconds</h4>
+                <img
+                  src="../christmas-shop/assets/imgs/Separator.svg"
+                  alt=" "
+                />
+                <div class="secs-container">
+                  <div class="secs">
+                    <p class="header2"></p>
+                    <h4 class="header4">seconds</h4>
+                  </div>
                 </div>
               </div>
             </div>
@@ -269,103 +269,29 @@
         </div>
         <div class="information-container">
           <div class="social-container">
-            <div class="telegram">
-              <a href=""
-                ><svg
-                  width="24"
-                  height="24"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M21 5L2 12.5L9 13.5M21 5L18.5 20L9 13.5M21 5L9 13.5M9 13.5V19L12.2488 15.7229"
-                    stroke="#181C29"
-                    stroke-width="1.5"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  />
-                </svg>
-              </a>
-            </div>
-            <div class="facebook">
-              <a href=""
-                ><svg
-                  width="24"
-                  height="24"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M17 2H14C12.6739 2 11.4021 2.52678 10.4645 3.46447C9.52678 4.40215 9 5.67392 9 7V10H6V14H9V22H13V14H16L17 10H13V7C13 6.73478 13.1054 6.48043 13.2929 6.29289C13.4804 6.10536 13.7348 6 14 6H17V2Z"
-                    stroke="#181C29"
-                    stroke-width="1.5"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  />
-                </svg>
-              </a>
-            </div>
-            <div class="instagram">
-              <a href=""
-                ><svg
-                  width="24"
-                  height="24"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M12 16C14.2091 16 16 14.2091 16 12C16 9.79086 14.2091 8 12 8C9.79086 8 8 9.79086 8 12C8 14.2091 9.79086 16 12 16Z"
-                    stroke="#181C29"
-                    stroke-width="1.5"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  />
-                  <path
-                    d="M3 16V8C3 5.23858 5.23858 3 8 3H16C18.7614 3 21 5.23858 21 8V16C21 18.7614 18.7614 21 16 21H8C5.23858 21 3 18.7614 3 16Z"
-                    stroke="#181C29"
-                    stroke-width="1.5"
-                  />
-                  <path
-                    d="M17.5 6.51L17.51 6.49889"
-                    stroke="#181C29"
-                    stroke-width="1.5"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  />
-                </svg>
-              </a>
-            </div>
-            <div class="x">
-              <a href=""
-                ><svg
-                  width="24"
-                  height="24"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M16.8198 20.7684L3.75317 3.96836C3.44664 3.57425 3.72749 3 4.22678 3H6.70655C6.8917 3 7.06649 3.08548 7.18016 3.23164L20.2468 20.0316C20.5534 20.4258 20.2725 21 19.7732 21H17.2935C17.1083 21 16.9335 20.9145 16.8198 20.7684Z"
-                    stroke="#181C29"
-                    stroke-width="1.5"
-                  />
-                  <path
-                    d="M20 3L4 21"
-                    stroke="#181C29"
-                    stroke-width="1.5"
-                    stroke-linecap="round"
-                  /></svg
-              ></a>
-            </div>
+            <a href="https://web.telegram.org/" target="_blank"
+              ><div class="telegram"></div
+            ></a>
+
+            <a href="http://www.facebook.com/" target="_blank">
+              <div class="facebook"></div
+            ></a>
+
+            <a href="https://www.instagram.com/" target="_blank"
+              ><div class="instagram"></div
+            ></a>
+
+            <a href="https://twitter.com/?lang=ru" target="_blank"
+              ><div class="x"></div
+            ></a>
           </div>
           <div class="copyright">
             <p class="p">© Copyright 2025, All Rights Reserved</p>
           </div>
           <div class="ps">
-            <p class="caption">Made in Rolling Scopes School</p>
+            <a class="logo-link" href="https://rs.school/" target="_blank">
+              <p class="caption">Made in Rolling Scopes School</p></a
+            >
           </div>
         </div>
       </div>

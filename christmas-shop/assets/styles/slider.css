@@ -4,7 +4,7 @@
   align-items: center;
   justify-content: center;
   padding-top: 60px;
-  padding-bottom: 60px;
+  padding-bottom: 57px;
 }
 .slider-container {
   display: flex;
@@ -24,24 +24,27 @@
   color: var(--static-white);
   max-width: 2576px;
   width: 1276px;
-  height: 200px;
   overflow: hidden;
   max-width: 2400px;
   display: flex;
   flex-direction: row;
+  padding-top: 20px;
+  padding-bottom: 18px;
 }
 .slider-elem {
-  padding: 51px 20px;
+  margin: auto 0;
 }
 .slider-elem-img img {
   width: 200px;
   height: 200px;
   border-radius: 20px;
+  margin: 0 20px;
 }
 .bnt-container {
   display: flex;
-  align-items: end;
   gap: 20px;
+  justify-content: end;
+  margin-left: 90%;
 }
 .btn {
   padding: 20px;
@@ -63,4 +66,8 @@
 .right {
   margin: auto;
   transform: rotate(180deg);
+}
+.active {
+  border: 1px solid var(--static-white);
+  fill: var(--static-white1);
 }

@@ -43,6 +43,7 @@
 
 * {
   box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 body {
   font-family: var(--primary-font-family);
@@ -52,7 +53,7 @@ body {
   text-transform: var(--primary-text-transform);
 }
 main {
-  background-image: url(https://s3-alpha-sig.figma.com/img/81a3/9777/2dfc048014f1902a0c5cef20e2241de5?Expires=1730073600&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=KLxrxAjngQ7jvBwCmK8r7QaHCHjwGlgL1uhc07q6jfm0W6A55nNW6Js7RBs46wvzXlvXI0G9hLNQary0qDSWMeD9k7mdzW~Rx4ZOAIvHFptdC7K~XxdcDsKyz4vvRVEvhyXDmsvLR100c6ol6E5liiIiq~hV0eMqRyugFyLk0NGQJktCO1t~Yl1Xxm52xb~1LTKnYsy7s2ODC9FqXSwUq2WRpoE8~h2EZUr6vSXb3Kz~C~eGpiVWsyPqc6zJBzaWQ-my6MDJYkvcMItZ8zFaQFaw0YRquMC2qTXIT5~~qTTFgfBJIV2qlrbZ9FWD6yb58OWB5G-hs1DA9zVnU8KK-g__);
+  /* background-image: url(https://s3-alpha-sig.figma.com/img/81a3/9777/2dfc048014f1902a0c5cef20e2241de5?Expires=1730073600&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=KLxrxAjngQ7jvBwCmK8r7QaHCHjwGlgL1uhc07q6jfm0W6A55nNW6Js7RBs46wvzXlvXI0G9hLNQary0qDSWMeD9k7mdzW~Rx4ZOAIvHFptdC7K~XxdcDsKyz4vvRVEvhyXDmsvLR100c6ol6E5liiIiq~hV0eMqRyugFyLk0NGQJktCO1t~Yl1Xxm52xb~1LTKnYsy7s2ODC9FqXSwUq2WRpoE8~h2EZUr6vSXb3Kz~C~eGpiVWsyPqc6zJBzaWQ-my6MDJYkvcMItZ8zFaQFaw0YRquMC2qTXIT5~~qTTFgfBJIV2qlrbZ9FWD6yb58OWB5G-hs1DA9zVnU8KK-g__); */
   background-color: var(--primary-color);
   border-radius: 12px;
   width: 100%;
@@ -80,7 +81,7 @@ button:hover {
   font-size: var(--header1-font-size);
   font-weight: var(--primary-font-weight);
   line-height: 150%;
-  letter-spacing: 18%;
+  letter-spacing: 0.18em;
   text-transform: uppercase;
   margin: 0;
 }
@@ -90,7 +91,7 @@ button:hover {
   font-size: var(--header2-font-size);
   font-weight: var(--primary-font-weight);
   line-height: 152%;
-  letter-spacing: 16%;
+  letter-spacing: 0.17em;
   text-transform: uppercase;
   margin: 0;
 }
@@ -100,7 +101,7 @@ button:hover {
   font-size: var(--header3-font-size);
   font-weight: var(--primary-font-weight);
   line-height: 152%;
-  letter-spacing: 8%;
+  letter-spacing: 0.08em;
   text-transform: uppercase;
   margin: 0;
 }
@@ -110,7 +111,7 @@ button:hover {
   font-size: var(--header4-font-size);
   font-weight: var(--primary-font-weight);
   line-height: 130%;
-  letter-spacing: 5%;
+  letter-spacing: 0.05em;
   text-transform: uppercase;
   margin: 0;
 }
@@ -128,7 +129,7 @@ button:hover {
   font-size: var(--large-acton-font-size);
   font-weight: var(--secondary-font-weight);
   line-height: 152%;
-  letter-spacing: 16%;
+  letter-spacing: 0.16em;
   margin: 0;
 }
 /* action small */
@@ -137,7 +138,7 @@ button:hover {
   font-size: var(--small-acton-font-size);
   font-weight: var(--primary-font-weight);
   line-height: 130%;
-  letter-spacing: 5%;
+  letter-spacing: 0.06em;
   text-transform: uppercase;
   margin: 0;
 }
@@ -147,7 +148,7 @@ button:hover {
   font-size: var(--caption-font-size);
   font-weight: var(--secondary-font-weight);
   line-height: 100%;
-  letter-spacing: 5%;
+  letter-spacing: 0.05em;
   margin: 0;
 }
 /* slider */
@@ -157,6 +158,8 @@ button:hover {
   font-weight: var(--secondary-font-weight);
   text-transform: uppercase;
   margin: 0;
+  font-weight: 600;
+  letter-spacing: 0.016em;
 }
 
 .for-work {
@@ -167,4 +170,16 @@ button:hover {
 }
 .for-harmony {
   color: var(--tag-pink);
+}
+.logo-link {
+  text-decoration: none;
+  color: var(--dark);
+  align-self: center;
+}
+.inactive {
+  cursor: default;
+}
+.inactive:hover {
+  color: var(--dark) !important;
+  background-color: #ffffff00 !important;
 }

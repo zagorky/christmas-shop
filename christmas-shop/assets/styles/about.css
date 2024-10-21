@@ -4,7 +4,7 @@
   display: grid;
   margin: 60px auto;
   grid-template-columns: repeat(2, 1fr);
-  max-width: 1256px;
+  max-width: 1276px;
 }
 
 .about-section-text-content {
