@@ -171,3 +171,15 @@ button:hover {
 .for-harmony {
   color: var(--tag-pink);
 }
+.logo-link {
+  text-decoration: none;
+  color: var(--dark);
+  align-self: center;
+}
+.inactive {
+  cursor: default;
+}
+.inactive:hover {
+  color: var(--dark) !important;
+  background-color: #ffffff00 !important;
+}

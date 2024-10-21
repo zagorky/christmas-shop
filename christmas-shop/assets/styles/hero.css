@@ -29,7 +29,6 @@
 
 .explore-bnt-link {
   padding: 20px 32px;
-
   text-decoration: none;
   color: var(--static-white);
 }
@@ -37,7 +36,6 @@
 .explore-bnt-link:hover,
 .explore-btn:hover {
   border-radius: 25px;
-
   background-color: var(--static-white);
   color: var(--dark);
 }
