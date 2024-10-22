@@ -170,3 +170,8 @@ main {
   color: var(--dark) !important;
   background-color: #ffffff20 !important;
 }
+.wrapper {
+  max-width: 1440px;
+  width: 100%;
+  margin: 0 auto;
+}
