@@ -22,6 +22,12 @@
   text-align: center;
 }
 .explore-btn {
+  color: var(--static-white);
+  background-color: var(--dark);
+  border-radius: 12px;
+  text-align: center;
+  padding: 12px 20px;
+  cursor: pointer;
   padding: 20px 0;
   border-radius: 25px;
   border: none;
@@ -35,6 +41,8 @@
 
 .explore-bnt-link:hover,
 .explore-btn:hover {
+  color: var(--dark);
+  background-color: var(--static-white);
   border-radius: 25px;
   background-color: var(--static-white);
   color: var(--dark);
