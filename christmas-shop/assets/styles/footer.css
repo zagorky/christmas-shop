@@ -28,7 +28,12 @@
   padding-bottom: 20px;
   cursor: pointer;
 }
-.contact-card:hover {
+.contact-card a {
+  text-decoration: none;
+  color: var(--dark);
+}
+.contact-card:hover,
+.contact-card:hover a {
   color: var(--primary-color);
 }
 footer {
