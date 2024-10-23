@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="./assets/styles/hero.css" />
     <link rel="stylesheet" href="./assets/styles/slider.css" />
     <link rel="stylesheet" href="./assets/styles/responsibility.css" />
+    <link rel="stylesheet" href="./assets/styles/burger.css" />
     <link rel="stylesheet" href="./assets/styles/normalize.css" />
 
     <link
@@ -49,7 +50,10 @@
             <p class="actionSmall">the gifts</p>
           </div></a
         >
-        <div class="burger-menu"></div>
+        <div class="burger-menu">
+          <div class="burger line1"></div>
+          <div class="burger line2"></div>
+        </div>
         <nav class="navigation">
           <ul>
             <li>
@@ -78,18 +82,20 @@
             <p class="caption">and Happy New Year</p>
           </div>
         </section>
-        <section id="about" class="about-section">
-          <div class="about-section-text-content">
-            <p class="caption about">About</p>
-            <h2 class="header2">Unleash your inner superhero!</h2>
-            <p class="p">
-              This New Year marks the beginning of your journey to inner harmony
-              and new strengths. We offer unique gifts that will help you
-              improve your life.
-            </p>
-          </div>
-          <div class="about-section-img"></div>
-        </section>
+        <div class="about-wrapper">
+          <section id="about" class="about-section">
+            <div class="about-section-text-content">
+              <p class="caption about">About</p>
+              <h2 class="header2">Unleash your inner superhero!</h2>
+              <p class="p">
+                This New Year marks the beginning of your journey to inner
+                harmony and new strengths. We offer unique gifts that will help
+                you improve your life.
+              </p>
+            </div>
+            <div class="about-section-img"></div>
+          </section>
+        </div>
         <section id="gifts" class="slider-section">
           <div class="slider-container">
             <div class="slider-text-container">
@@ -115,7 +121,9 @@
                   alt="christmas-trees"
                 />
               </div>
-              <div class="slider-elem"><p class="slider-text">harmony</p></div>
+              <div class="slider-elem">
+                <p class="slider-text">harmony</p>
+              </div>
               <div class="slider-elem-img">
                 <img src="./assets/imgs/snowman.png" alt="snowman" />
               </div>
@@ -195,61 +203,65 @@
             </div>
           </div>
         </section>
-        <section class="cta-section">
-          <div class="cta-container">
-            <div class="cta-text-container">
-              <h2 class="header2 cta-h2">
-                Ready to start your journey to a better version of yourself?
-              </h2>
-              <div class="actionSmall explore-btn cta-btn">
-                <a class="explore-bnt-link" href="../christmas-shop/gifts.html"
-                  >Explore Magical Gifts</a
-                >
-              </div>
-              <div class="timer-container">
-                <p class="caption cta-p">The New Year is Coming Soon...</p>
-                <div class="timer">
-                  <div class="days-container">
-                    <div class="days">
-                      <p class="header2"></p>
-                      <h4 class="header4">days</h4>
+        <div class="cta-wrapper">
+          <section class="cta-section">
+            <div class="cta-container">
+              <div class="cta-text-container">
+                <h2 class="header2 cta-h2">
+                  Ready to start your journey to a better version of yourself?
+                </h2>
+                <div class="actionSmall explore-btn cta-btn">
+                  <a
+                    class="explore-bnt-link"
+                    href="../christmas-shop/gifts.html"
+                    >Explore Magical Gifts</a
+                  >
+                </div>
+                <div class="timer-container">
+                  <p class="caption cta-p">The New Year is Coming Soon...</p>
+                  <div class="timer">
+                    <div class="days-container">
+                      <div class="days">
+                        <p class="header2"></p>
+                        <h4 class="header4">days</h4>
+                      </div>
                     </div>
-                  </div>
-                  <img
-                    src="../christmas-shop/assets/imgs/Separator.svg"
-                    alt=" "
-                  />
-                  <div class="hours-container">
-                    <div class="hours">
-                      <p class="header2"></p>
-                      <h4 class="header4">hours</h4>
+                    <img
+                      src="../christmas-shop/assets/imgs/Separator.svg"
+                      alt=" "
+                    />
+                    <div class="hours-container">
+                      <div class="hours">
+                        <p class="header2"></p>
+                        <h4 class="header4">hours</h4>
+                      </div>
                     </div>
-                  </div>
-                  <img
-                    src="../christmas-shop/assets/imgs/Separator.svg"
-                    alt=" "
-                  />
-                  <div class="mins-container">
-                    <div class="mins">
-                      <p class="header2"></p>
-                      <h4 class="header4">minutes</h4>
+                    <img
+                      src="../christmas-shop/assets/imgs/Separator.svg"
+                      alt=" "
+                    />
+                    <div class="mins-container">
+                      <div class="mins">
+                        <p class="header2"></p>
+                        <h4 class="header4">minutes</h4>
+                      </div>
                     </div>
-                  </div>
-                  <img
-                    src="../christmas-shop/assets/imgs/Separator.svg"
-                    alt=" "
-                  />
-                  <div class="secs-container">
-                    <div class="secs">
-                      <p class="header2"></p>
-                      <h4 class="header4">seconds</h4>
+                    <img
+                      src="../christmas-shop/assets/imgs/Separator.svg"
+                      alt=" "
+                    />
+                    <div class="secs-container">
+                      <div class="secs">
+                        <p class="header2"></p>
+                        <h4 class="header4">seconds</h4>
+                      </div>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
-          </div>
-        </section>
+          </section>
+        </div>
       </main>
       <footer id="contacts">
         <div class="contants-container">
@@ -310,6 +322,10 @@
       </footer>
     </div>
     <script type="module" src="./assets/scripts/timer.js"></script>
+    <script type="module" src="./assets/scripts/burger.js"></script>
+    <script type="module" src="./assets/scripts/popup.js"></script>
+    <script type="module" src="./assets/scripts/slider.js"></script>
+
     <script type="module" src="./assets/scripts/index.js"></script>
   </body>
 </html>

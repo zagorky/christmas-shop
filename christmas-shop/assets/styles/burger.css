@@ -1,0 +1,16 @@
+.burger-menu {
+  display: none;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  flex-direction: column;
+  cursor: pointer;
+  width: 40px;
+  height: 40px;
+}
+
+.burger {
+  background-color: var(--dark);
+  width: 20px;
+  height: 1px;
+}

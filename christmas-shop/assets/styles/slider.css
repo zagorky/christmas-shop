@@ -23,9 +23,8 @@
 .slider {
   color: var(--static-white);
   max-width: 2576px;
-  width: 1276px;
+  width: 90dvw;
   overflow: hidden;
-  max-width: 2400px;
   display: flex;
   flex-direction: row;
   padding-top: 20px;
