@@ -22,7 +22,7 @@
     display: none;
   }
   .burger-menu {
-    display: block;
+    display: flex;
   }
 
   /* hero */
