@@ -24,4 +24,6 @@
   background-image: url(../imgs/ImageContainer.svg);
   background-repeat: no-repeat;
   border-radius: 20px;
+  background-size: cover;
+  background-position: 50% 50%;
 }

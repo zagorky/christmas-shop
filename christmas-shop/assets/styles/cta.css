@@ -12,7 +12,7 @@
   align-items: center;
   flex-direction: column;
   color: var(--static-white);
-  padding: 60px 425px;
+  /* padding: 60px 425px; */
 }
 
 .cta-text-container {
@@ -21,7 +21,7 @@
   align-items: center;
   justify-content: center;
   gap: 17px;
-  width: 426px;
+  /* width: 426px; */
   height: 428px;
   text-align: center;
 }

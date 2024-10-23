@@ -1,3 +1,13 @@
+@media screen and (max-width: 1060.9px) {
+  .contacts-info-container {
+    display: flex;
+    flex-direction: column;
+  }
+  .contact-card {
+    width: 100%;
+  }
+}
+
 @media screen and (max-width: 768.9px) {
   /* header */
 
@@ -7,4 +17,24 @@
   .burger-menu {
     display: block;
   }
+
+  /* hero */
+
+  /* about */
+
+  /* gifts-slider */
+
+  .slider {
+    max-width: 100dvw;
+  }
+
+  /* cta */
+
+  .cta-container {
+    padding: 0;
+  }
+
+  /* footer */
+
+  /* gifts-page */
 }
