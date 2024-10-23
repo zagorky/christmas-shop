@@ -1,4 +1,11 @@
 @media screen and (max-width: 1060.9px) {
+  /* about */
+  .about-section-text-content {
+    padding-right: 50px;
+    padding-left: 60px;
+  }
+
+  /* footer */
   .contacts-info-container {
     display: flex;
     flex-direction: column;

@@ -1,10 +1,16 @@
+.about-wrapper {
+  display: flex;
+  margin: 0 auto;
+  max-width: 1276px;
+  padding: 60px 8px;
+}
 .about-section {
   background-color: var(--static-white);
   border-radius: 20px;
   display: grid;
-  margin: 60px auto;
   grid-template-columns: repeat(2, 1fr);
-  max-width: 1276px;
+  width: 100%;
+  height: 527px;
 }
 
 .about-section-text-content {
@@ -12,8 +18,10 @@
   flex-direction: column;
   justify-content: center;
   gap: 20px;
-  margin: 100px 152px 100px 60px;
-  padding: 60px 0;
+  padding-top: 62px;
+  padding-bottom: 60px;
+  padding-left: 60px;
+  padding-right: 157px;
 }
 
 .about {
@@ -21,9 +29,10 @@
 }
 
 .about-section-img {
-  background-image: url(../imgs/ImageContainer.svg);
+  background-image: url(../imgs/santa2.png);
   background-repeat: no-repeat;
   border-radius: 20px;
   background-size: cover;
   background-position: 50% 50%;
+  height: 100%;
 }
