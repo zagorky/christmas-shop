@@ -14,7 +14,8 @@
   align-items: center;
   cursor: pointer;
   gap: 8px;
-  padding-left: 20px;
+  padding: 8px 20px;
+  margin: 0 8px;
 }
 .navigation {
   padding-bottom: 3px;
