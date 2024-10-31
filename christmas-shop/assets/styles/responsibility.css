@@ -79,4 +79,10 @@
     gap: 18px;
   }
   /* gifts-page */
+  .menu {
+    gap: 0px;
+  }
+  .menu-btn {
+    padding: 12px 8px;
+  }
 }

@@ -53,21 +53,25 @@
   border-radius: 20px;
   border: 1px solid var(--static-white-40);
   background-color: var(--primary-color);
+  color: var(--static-white-40);
+  cursor: pointer;
 }
+
 .left svg {
   margin: auto;
   transition: fill 0.2s;
 }
-.left:hover svg,
-.right:hover svg {
-  fill: var(--primary-color);
-  transition: 0.2s;
+.btn:hover {
+  color: var(--primary-color);
+  background-color: var(--static-white);
 }
 .right {
   margin: auto;
+}
+.left {
   transform: rotate(180deg);
 }
 .active {
   border: 1px solid var(--static-white);
-  fill: var(--static-white1);
+  color: var(--static-white);
 }
