@@ -51,27 +51,35 @@
   width: 56px;
   height: 56px;
   border-radius: 20px;
-  border: 1px solid var(--static-white-40);
+  border: 1px solid var(--static-white);
   background-color: var(--primary-color);
-  color: var(--static-white-40);
+  color: var(--static-white);
   cursor: pointer;
 }
 
-.left svg {
-  margin: auto;
-  transition: fill 0.2s;
-}
-.btn:hover {
-  color: var(--primary-color);
-  background-color: var(--static-white);
-}
 .right {
   margin: auto;
 }
 .left {
-  transform: rotate(180deg);
+  margin: auto;
 }
-.active {
+.activeNav {
   border: 1px solid var(--static-white);
   color: var(--static-white);
+}
+.activeNav:hover {
+  color: var(--primary-color);
+  background-color: var(--static-white);
+}
+
+.inactiveNav {
+  cursor: default;
+  border: 1px solid var(--static-white-40);
+  background-color: var(--primary-color);
+  color: var(--static-white-40);
+}
+.inactiveNav:hover {
+  border: 1px solid var(--static-white-40);
+  background-color: var(--primary-color);
+  color: var(--static-white-40);
 }
