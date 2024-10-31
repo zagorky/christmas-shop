@@ -3,6 +3,7 @@
   margin: 0 auto;
   max-width: 1276px;
   padding: 60px 8px;
+  flex-direction: column;
 }
 .about-section {
   background-color: var(--static-white);

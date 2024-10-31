@@ -1,5 +1,6 @@
 .slider-section {
   display: flex;
+  overflow: hidden;
   flex-direction: column;
   align-items: center;
   justify-content: center;
@@ -24,11 +25,11 @@
   color: var(--static-white);
   max-width: 2576px;
   width: 90dvw;
-  overflow: hidden;
   display: flex;
   flex-direction: row;
   padding-top: 20px;
   padding-bottom: 18px;
+  padding-left: 10px;
 }
 .slider-elem {
   margin: auto 0;
@@ -43,7 +44,7 @@
   display: flex;
   gap: 20px;
   justify-content: end;
-  margin-left: 90%;
+  margin: 0 10px 0 auto;
 }
 .btn {
   padding: 20px;

@@ -3,7 +3,6 @@
   display: flex;
   background-image: url("../imgs/bg-snowball.png"), url("../imgs/bg-snow.png");
   background-repeat: no-repeat;
-  background-position: center;
   background-size: cover;
   background-position: 50% 50%;
 }
