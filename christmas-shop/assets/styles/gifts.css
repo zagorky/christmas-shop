@@ -35,6 +35,9 @@
   background-color: var(--primary-color);
   cursor: pointer;
 }
+.menu-btn:hover {
+  background-color: var(--static-white-40);
+}
 .activeBtn {
   background-color: var(--static-white-40);
   cursor: default;

@@ -1,16 +1,22 @@
 .burger-menu {
-  display: none;
-  justify-content: center;
-  align-items: center;
-  gap: 8px;
-  flex-direction: column;
+  display: block;
   cursor: pointer;
   width: 40px;
   height: 40px;
+  margin: auto 8px;
+  position: absolute;
 }
 
-.burger {
-  background-color: var(--dark);
+.burger-menu::before,
+.burger-menu::after {
+  position: absolute;
+  content: "";
   width: 20px;
   height: 1px;
+}
+.burger-menu::before {
+  transform: rotate(45deg);
+}
+.burger-menu::after {
+  transform: rotate(-45deg);
 }
