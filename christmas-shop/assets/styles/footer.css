@@ -61,38 +61,22 @@ footer {
   width: 40px;
   height: 40px;
 }
-
-.telegram:hover,
-.facebook:hover,
-.instagram:hover,
-.x:hover {
-  background-color: none;
+#telegram-svg,
+#facebook-svg,
+#instagram-svg,
+#x-svg {
+  width: 24px;
+  height: 24px;
+  color: var(--dark);
 }
 
-.telegram {
-  background-image: url(../imgs/telegram.svg);
-  background-position: 50% 50%;
-  background-repeat: no-repeat;
-  cursor: pointer;
+#telegram-svg:hover,
+#facebook-svg:hover,
+#instagram-svg:hover,
+#x-svg:hover {
+  color: var(--primary-color);
 }
 
-.facebook {
-  background-image: url(../imgs/facebook.svg);
-  background-position: 50% 50%;
-  background-repeat: no-repeat;
-  cursor: pointer;
-}
-
-.instagram {
-  background-image: url(../imgs/instagram.svg);
-  background-position: 50% 50%;
-  background-repeat: no-repeat;
-  cursor: pointer;
-}
-
-.x {
-  background-image: url(../imgs/x.svg);
-  background-position: 50% 50%;
-  background-repeat: no-repeat;
-  cursor: pointer;
+.logo-link:hover {
+  color: var(--primary-color);
 }

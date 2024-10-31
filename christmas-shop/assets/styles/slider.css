@@ -1,5 +1,6 @@
 .slider-section {
   display: flex;
+  overflow: hidden;
   flex-direction: column;
   align-items: center;
   justify-content: center;
@@ -24,11 +25,11 @@
   color: var(--static-white);
   max-width: 2576px;
   width: 90dvw;
-  overflow: hidden;
   display: flex;
   flex-direction: row;
   padding-top: 20px;
   padding-bottom: 18px;
+  padding-left: 10px;
 }
 .slider-elem {
   margin: auto 0;
@@ -43,30 +44,42 @@
   display: flex;
   gap: 20px;
   justify-content: end;
-  margin-left: 90%;
+  margin: 0 10px 0 auto;
 }
 .btn {
   padding: 20px;
   width: 56px;
   height: 56px;
   border-radius: 20px;
-  border: 1px solid var(--static-white-40);
+  border: 1px solid var(--static-white);
   background-color: var(--primary-color);
+  color: var(--static-white);
+  cursor: pointer;
 }
-.left svg {
-  margin: auto;
-  transition: fill 0.2s;
-}
-.left:hover svg,
-.right:hover svg {
-  fill: var(--primary-color);
-  transition: 0.2s;
-}
+
 .right {
   margin: auto;
-  transform: rotate(180deg);
 }
-.active {
+.left {
+  margin: auto;
+}
+.activeNav {
   border: 1px solid var(--static-white);
-  fill: var(--static-white1);
+  color: var(--static-white);
+}
+.activeNav:hover {
+  color: var(--primary-color);
+  background-color: var(--static-white);
+}
+
+.inactiveNav {
+  cursor: default;
+  border: 1px solid var(--static-white-40);
+  background-color: var(--primary-color);
+  color: var(--static-white-40);
+}
+.inactiveNav:hover {
+  border: 1px solid var(--static-white-40);
+  background-color: var(--primary-color);
+  color: var(--static-white-40);
 }
