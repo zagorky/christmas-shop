@@ -1,14 +1,17 @@
 const burgerMenu = document.querySelector(".burger-menu");
 const burgerContainer = document.querySelector(".burger");
-const overlay = document.querySelector(".overlay");
+const navigation = document.querySelector(".navigation");
+
 function toggleBurgerMenu() {
-  burgerMenu.classList.toggle("open");
-  toggleOverlay("open");
+  if (window.innerWidth < 768) {
+    burgerMenu.classList.toggle("open");
+    toggleNav("open");
+  }
 }
 
-function toggleOverlay(value) {
-  if (value === "open") {
-    overlay.classList.toggle("open");
+function toggleNav(classValue) {
+  if (classValue === "open") {
+    navigation.classList.toggle("adaptiveNav");
   }
 }
 

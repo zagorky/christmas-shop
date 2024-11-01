@@ -30,6 +30,9 @@
 
 @media screen and (max-width: 767.9px) {
   /* header */
+  .burger-menu {
+    display: flex !important;
+  }
 
   .navigation {
     display: none;

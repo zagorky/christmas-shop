@@ -1,5 +1,5 @@
 .burger-menu {
-  display: flex;
+  display: none;
   cursor: pointer;
   width: 40px;
   height: 40px;
@@ -26,22 +26,22 @@
 }
 .burger-menu.open .burger-line.top {
   transform: translateY(5px) rotate(45deg);
+  z-index: 101;
 }
 .burger-menu.open .burger-line.bottom {
   transform: translateY(-5px) rotate(-45deg);
+  z-index: 101;
 }
 
-.overlay {
-  position: fixed;
-  right: -100vw;
+.adaptiveNav {
+  display: flex !important;
   width: 100dvw;
   height: 100dvh;
-  opacity: 50%;
-  background-color: var(--dark);
-  z-index: 10000;
-  transition: all 0.4s ease;
-  transform: translateX(0);
-}
-.overlay.open {
+  background-color: var(--static-white);
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
   transform: translateX(-100%);
+  transition: all 0.4s ease;
 }
