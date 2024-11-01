@@ -37,6 +37,10 @@
   .navigation {
     display: none;
   }
+  ul {
+    flex-direction: column;
+  }
+
   /* .burger-menu {
     display: flex;
   } */

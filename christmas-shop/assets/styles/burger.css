@@ -33,15 +33,16 @@
   z-index: 101;
 }
 
-.adaptiveNav {
+.navigation.adaptiveNav {
   display: flex !important;
   width: 100dvw;
   height: 100dvh;
-  background-color: var(--static-white);
   position: fixed;
-  top: 0;
-  left: 0;
+  top: 64px;
+  background-color: var(--static-white);
   z-index: 100;
-  transform: translateX(-100%);
   transition: all 0.4s ease;
+}
+.blocked {
+  overflow: hidden;
 }
