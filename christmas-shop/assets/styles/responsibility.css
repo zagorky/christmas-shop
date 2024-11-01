@@ -4,6 +4,19 @@
     padding-right: 50px;
     padding-left: 60px;
   }
+  /* slider */
+  .slider {
+    width: 100dvw;
+    padding-left: 10px;
+  }
+
+  .slider-container {
+    width: 100dvw;
+    align-items: flex-start;
+  }
+  .slider-text-container {
+    margin: 0 auto;
+  }
 
   /* footer */
   .contacts-info-container {
@@ -15,29 +28,15 @@
   }
 }
 
-@media screen and (max-width: 768.9px) {
+@media screen and (max-width: 767.9px) {
   /* header */
 
   .navigation {
     display: none;
   }
-  .burger-menu {
+  /* .burger-menu {
     display: flex;
-  }
-
-  /* gifts-slider */
-
-  .slider {
-    width: 100dvw;
-  }
-
-  .slider-container {
-    width: 100dvw;
-    align-items: flex-start;
-  }
-  .slider-text-container {
-    margin: 0 auto;
-  }
+  } */
 
   /* cta */
 
