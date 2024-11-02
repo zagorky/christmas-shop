@@ -1,6 +1,7 @@
 const burgerMenu = document.querySelector(".burger-menu");
 const burgerContainer = document.querySelector(".burger");
 const navigation = document.querySelector(".navigation");
+const navLinks = document.querySelectorAll(".nav-a");
 
 function toggleBurgerMenu() {
   if (window.innerWidth < 768) {
@@ -11,7 +12,6 @@ function toggleBurgerMenu() {
     toggleScroll("open");
   }
 }
-
 function toggleScroll(classValue) {
   if (burgerMenu.classList.contains(classValue)) {
     document.body.classList.add("blocked");
@@ -26,15 +26,17 @@ function toggleNav(classValue) {
     navigation.classList.toggle("adaptiveNav");
   }
 }
-
 function checkSize() {
   if (window.innerWidth > 768) {
-    navigation.classList.remove("adaptiveNav");
-    burgerMenu.classList.remove("open");
+    navigation.classList.toggle("adaptiveNav");
+    burgerMenu.classList.toggle("open");
   }
 }
 
 document.addEventListener("DOMContentLoaded", () => {
   burgerMenu.addEventListener("click", toggleBurgerMenu);
+  navLinks.forEach((link) => {
+    link.addEventListener("click", toggleBurgerMenu);
+  });
 });
 document.addEventListener("resize", checkSize);
