@@ -1,6 +1,7 @@
 const burgerMenu = document.querySelector(".burger-menu");
 const burgerContainer = document.querySelector(".burger");
 const navigation = document.querySelector(".navigation");
+const navLinks = document.querySelectorAll(".nav-a");
 
 function toggleBurgerMenu() {
   if (window.innerWidth < 768) {
@@ -36,5 +37,8 @@ function checkSize() {
 
 document.addEventListener("DOMContentLoaded", () => {
   burgerMenu.addEventListener("click", toggleBurgerMenu);
+  navLinks.forEach((link) => {
+    link.addEventListener("click", toggleBurgerMenu);
+  });
 });
 document.addEventListener("resize", checkSize);
