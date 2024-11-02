@@ -12,7 +12,6 @@ function toggleBurgerMenu() {
     toggleScroll("open");
   }
 }
-
 function toggleScroll(classValue) {
   if (burgerMenu.classList.contains(classValue)) {
     document.body.classList.add("blocked");
@@ -27,11 +26,10 @@ function toggleNav(classValue) {
     navigation.classList.toggle("adaptiveNav");
   }
 }
-
 function checkSize() {
   if (window.innerWidth > 768) {
-    navigation.classList.remove("adaptiveNav");
-    burgerMenu.classList.remove("open");
+    navigation.classList.toggle("adaptiveNav");
+    burgerMenu.classList.toggle("open");
   }
 }
 
