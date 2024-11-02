@@ -12,6 +12,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  max-width: 1276px;
 }
 .slider-text-container {
   display: flex;
@@ -24,12 +25,12 @@
 .slider {
   color: var(--static-white);
   max-width: 2576px;
-  width: 90dvw;
+  max-width: 90dvw;
+  width: 100%;
   display: flex;
   flex-direction: row;
   padding-top: 20px;
   padding-bottom: 18px;
-  padding-left: 10px;
 }
 .slider-elem {
   margin: auto 0;
