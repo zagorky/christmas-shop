@@ -26,10 +26,11 @@ function toggleNav(classValue) {
     navigation.classList.toggle("adaptiveNav");
   }
 }
+
 function checkSize() {
   if (window.innerWidth > 768) {
-    navigation.classList.toggle("adaptiveNav");
-    burgerMenu.classList.toggle("open");
+    navigation.classList.remove("adaptiveNav");
+    burgerMenu.classList.remove("open");
   }
 }
 
@@ -39,4 +40,4 @@ document.addEventListener("DOMContentLoaded", () => {
     link.addEventListener("click", toggleBurgerMenu);
   });
 });
-document.addEventListener("resize", checkSize);
+window.addEventListener("resize", checkSize);
