@@ -31,6 +31,7 @@
   flex-direction: row;
   padding-top: 20px;
   padding-bottom: 18px;
+  transition: transform 0.4s ease;
 }
 .slider-elem {
   margin: auto 0;
