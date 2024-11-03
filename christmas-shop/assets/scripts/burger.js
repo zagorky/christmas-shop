@@ -27,7 +27,6 @@ function toggleNav(classValue) {
   }
 }
 
-// have to fix
 function checkSize() {
   if (window.innerWidth > 768) {
     navigation.classList.remove("adaptiveNav");
@@ -41,4 +40,4 @@ document.addEventListener("DOMContentLoaded", () => {
     link.addEventListener("click", toggleBurgerMenu);
   });
 });
-document.addEventListener("resize", checkSize);
+window.addEventListener("resize", checkSize);
