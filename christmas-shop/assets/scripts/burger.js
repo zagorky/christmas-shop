@@ -26,10 +26,12 @@ function toggleNav(classValue) {
     navigation.classList.toggle("adaptiveNav");
   }
 }
+
+// have to fix
 function checkSize() {
   if (window.innerWidth > 768) {
-    navigation.classList.toggle("adaptiveNav");
-    burgerMenu.classList.toggle("open");
+    navigation.classList.remove("adaptiveNav");
+    burgerMenu.classList.remove("open");
   }
 }
 
