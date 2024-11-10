@@ -1,9 +1,6 @@
-// in index there are category, name  from json, imgs from another place
-// in gifts there are category, name  from json imgs from another place
-// in pop-up there are category, name, description, superpowers: live, create, love, dream
-
 const url = "./assets/data/gifts.json";
 let gifts = [];
+let lastGiftItem;
 
 fetch(url)
   .then((response) => {
@@ -14,6 +11,7 @@ fetch(url)
   })
   .then((data) => {
     gifts = data;
+    shuffleGifts(gifts);
     renderCards(gifts);
   })
   .catch((error) => console.error(error));
@@ -56,9 +54,23 @@ class Card {
 function renderCards(gifts) {
   const cardsContainer = document.querySelector(".cards-container");
   cardsContainer.innerHTML = "";
-  gifts.forEach((gift) => {
+
+  let returnGifts = checkPage();
+  returnGifts.forEach((gift) => {
     const { category, name, img, description, superpower } = gift;
     const card = new Card(category, name, img, description, superpower);
     card.render(cardsContainer);
   });
+}
+function checkPage() {
+  if (window.location.href.includes("gifts")) {
+    return gifts;
+  }
+  return gifts.slice(0, 4);
+}
+function shuffleGifts(gifts) {
+  for (let i = gifts.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [gifts[i], gifts[j]] = [gifts[j], gifts[i]];
+  }
 }
