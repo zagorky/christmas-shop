@@ -16,11 +16,12 @@ fetch(url)
   })
   .catch((error) => console.error(error));
 class Card {
-  constructor(category, name, img, description, superpower) {
+  constructor(category, name, img, description, className, superpower) {
     this.name = name;
     this.category = category;
     this.img = img;
     this.description = description;
+    this.className = className;
     this.superpower = superpower; //переделать, возвращает undefined((
     this.elem = this.createCardElem();
   }
@@ -34,7 +35,7 @@ class Card {
     card.classList.add("card");
     cardImg.classList.add("cards-img-for-work");
     cardText.classList.add("card-text-container");
-    cardH4.classList.add("header4", "for-work");
+    cardH4.classList.add("header4", `${this.className}`);
 
     cardImg.src = this.img;
     cardImg.alt = this.name;
@@ -57,8 +58,15 @@ function renderCards(gifts) {
 
   let returnGifts = checkPage();
   returnGifts.forEach((gift) => {
-    const { category, name, img, description, superpower } = gift;
-    const card = new Card(category, name, img, description, superpower);
+    const { category, name, img, description, className, superpower } = gift;
+    const card = new Card(
+      category,
+      name,
+      img,
+      description,
+      className,
+      superpower
+    );
     card.render(cardsContainer);
   });
 }
