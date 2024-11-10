@@ -17,36 +17,42 @@ fetch(url)
     renderCards(gifts);
   })
   .catch((error) => console.error(error));
-
 class Card {
   constructor(category, name, img, description, superpower) {
     this.name = name;
     this.category = category;
     this.img = img;
     this.description = description;
-    this.superpower = superpower;
+    this.superpower = superpower; //переделать, возвращает undefined((
     this.elem = this.createCardElem();
   }
   createCardElem() {
     const card = document.createElement("div");
+    const cardImg = document.createElement("img");
+    const cardText = document.createElement("div");
+    const cardH4 = document.createElement("h4");
+    const cardH3 = document.createElement("h3");
+
     card.classList.add("card");
-    card.innerHTML = `<div class="cards-img-for-work"><img src='${this.img}' alt='${this.name}' ></div>
-            <div class="card-text-container">
-              <h4 class="header4 for-work">${this.category}</h4>
-              <h3>${this.name}</h3>
-            </div>`;
-    card.addEventListener("click", () => this.showPopup());
+    cardImg.classList.add("cards-img-for-work");
+    cardText.classList.add("card-text-container");
+    cardH4.classList.add("header4", "for-work");
+
+    cardImg.src = this.img;
+    cardImg.alt = this.name;
+    cardH4.textContent = this.category;
+    cardH3.textContent = this.name;
+
+    card.appendChild(cardImg);
+    card.appendChild(cardText);
+    cardText.appendChild(cardH4);
+    cardText.appendChild(cardH3);
     return card;
   }
-  showPopup() {
-    console.log(this.event.target);
-  }
-
   render(parent) {
     parent.appendChild(this.elem);
   }
 }
-
 function renderCards(gifts) {
   const cardsContainer = document.querySelector(".cards-container");
   cardsContainer.innerHTML = "";
