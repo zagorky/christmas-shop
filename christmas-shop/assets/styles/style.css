@@ -115,7 +115,7 @@ main {
 .actionLarge {
   font-family: var(--primary-font-family);
   font-size: var(--large-acton-font-size);
-  font-weight: var(--secondary-font-weight);
+  font-weight: var(--primary-font-weight);
   line-height: 152%;
   letter-spacing: 0.16em;
   margin: 0;
@@ -170,6 +170,7 @@ main {
 .inactive:hover {
   color: var(--dark) !important;
   background-color: #ffffff20 !important;
+  transition: all 0.3s ease-in-out;
 }
 .wrapper {
   max-width: 1440px;

@@ -1,7 +1,7 @@
 .about-wrapper {
   display: flex;
   margin: 0 auto;
-  max-width: 1276px;
+  max-width: 1290px;
   padding: 60px 8px;
   flex-direction: column;
 }
