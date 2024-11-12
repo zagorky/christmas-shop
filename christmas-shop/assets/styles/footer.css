@@ -35,6 +35,7 @@
 .contact-card:hover,
 .contact-card:hover a {
   color: var(--primary-color);
+  transition: all 0.3s ease-in-out;
 }
 footer {
   padding-top: 60px;
@@ -58,9 +59,21 @@ footer {
 .facebook,
 .instagram,
 .x {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   width: 40px;
   height: 40px;
 }
+
+.telegram:hover,
+.facebook:hover,
+.instagram:hover,
+.x:hover {
+  transition: all 0.3s ease-in-out;
+  color: var(--primary-color);
+}
+
 #telegram-svg,
 #facebook-svg,
 #instagram-svg,
@@ -79,4 +92,5 @@ footer {
 
 .logo-link:hover {
   color: var(--primary-color);
+  transition: all 0.3s ease-in-out;
 }

@@ -46,7 +46,7 @@
   display: flex;
   gap: 20px;
   justify-content: end;
-  margin: 0 10px 0 auto;
+  margin: 0 0 0 auto;
 }
 .btn {
   padding: 20px;
@@ -72,6 +72,7 @@
 .activeNav:hover {
   color: var(--primary-color);
   background-color: var(--static-white);
+  transition: all 0.3s ease-in-out;
 }
 
 .inactiveNav {
@@ -84,4 +85,5 @@
   border: 1px solid var(--static-white-40);
   background-color: var(--primary-color);
   color: var(--static-white-40);
+  transition: all 0.3s ease-in-out;
 }

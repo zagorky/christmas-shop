@@ -12,7 +12,7 @@
   align-items: center;
   cursor: pointer;
   gap: 8px;
-  padding: 8px 20px;
+  padding: 8px 12px;
   margin: 0 8px;
 }
 .navigation {
@@ -44,6 +44,18 @@ li {
 }
 
 .nav-a:hover {
+  color: var(--primary-color);
+  background-color: var(--primary-10);
+  transition: all 0.3s ease-in-out;
+}
+
+.disabled {
+  cursor: default;
+  color: var(--primary-color);
+  background-color: var(--primary-10);
+}
+.disabled:hover {
+  cursor: default;
   color: var(--primary-color);
   background-color: var(--primary-10);
 }
