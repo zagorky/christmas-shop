@@ -29,7 +29,7 @@
   color: var(--dark);
 }
 .contact-card a {
-  padding-block: 40px;
+  padding-block: 20px;
   text-decoration: none;
   color: var(--dark);
   transition: all 0.4s ease-in-out;
@@ -43,8 +43,7 @@
 }
 
 footer {
-  padding-top: 60px;
-  padding-bottom: 60px;
+  padding-block: 60px;
 }
 .information-container {
   display: flex;
