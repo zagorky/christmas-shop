@@ -89,8 +89,3 @@ footer {
 #x-svg:hover {
   color: var(--primary-color);
 }
-
-.logo-link:hover {
-  color: var(--primary-color);
-  transition: all 0.3s ease-in-out;
-}

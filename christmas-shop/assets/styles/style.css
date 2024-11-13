@@ -170,7 +170,6 @@ main {
 .inactive:hover {
   color: var(--dark) !important;
   background-color: #ffffff20 !important;
-  transition: all 0.3s ease-in-out;
 }
 .wrapper {
   max-width: 1440px;
