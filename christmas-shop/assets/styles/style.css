@@ -176,3 +176,7 @@ main {
   width: 100%;
   margin: 0 auto;
 }
+
+a:-webkit-any-link {
+  text-decoration: none;
+}

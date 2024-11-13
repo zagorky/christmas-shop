@@ -24,19 +24,26 @@
   gap: 12px;
   background-color: #ecf3f8;
   border-radius: 20px;
-  padding-top: 20px;
-  padding-bottom: 20px;
+  /* padding-top: 20px;
+  padding-bottom: 20px; */
   cursor: pointer;
+  transition: all 0.05s ease-in-out;
+  color: var(--dark);
 }
 .contact-card a {
+  padding-block: 40px;
   text-decoration: none;
   color: var(--dark);
   transition: all 0.05s ease-in-out;
+  height: 100%;
+  width: 100%;
 }
+.contact-card-wrapper:hover,
 .contact-card:hover,
 .contact-card:hover a {
   color: var(--primary-color);
 }
+
 footer {
   padding-top: 60px;
   padding-bottom: 60px;
