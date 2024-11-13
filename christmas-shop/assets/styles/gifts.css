@@ -34,10 +34,10 @@
   border: none;
   background-color: var(--primary-color);
   cursor: pointer;
+  transition: all 0.3s ease-in-out;
 }
 .menu-btn:hover {
   background-color: var(--static-white-40);
-  transition: all 0.3s ease-in-out;
 }
 .activeBtn {
   background-color: var(--static-white-40);
