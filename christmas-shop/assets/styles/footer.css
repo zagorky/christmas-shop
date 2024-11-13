@@ -31,11 +31,11 @@
 .contact-card a {
   text-decoration: none;
   color: var(--dark);
+  transition: all 0.05s ease-in-out;
 }
 .contact-card:hover,
 .contact-card:hover a {
   color: var(--primary-color);
-  transition: all 0.3s ease-in-out;
 }
 footer {
   padding-top: 60px;
@@ -64,13 +64,13 @@ footer {
   justify-content: center;
   width: 40px;
   height: 40px;
+  transition: all 0.3s ease-in-out;
 }
 
 .telegram:hover,
 .facebook:hover,
 .instagram:hover,
 .x:hover {
-  transition: all 0.3s ease-in-out;
   color: var(--primary-color);
 }
 
@@ -81,6 +81,7 @@ footer {
   width: 24px;
   height: 24px;
   color: var(--dark);
+  transition: all 0.3s ease-in-out;
 }
 
 #telegram-svg:hover,
