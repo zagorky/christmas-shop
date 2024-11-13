@@ -57,22 +57,25 @@
   background-color: var(--primary-color);
   color: var(--static-white);
   cursor: pointer;
+  transition: all 0.3s ease-in-out;
 }
 
 .right {
   margin: auto;
+  transition: all 0.3s ease-in-out;
 }
 .left {
   margin: auto;
+  transition: all 0.3s ease-in-out;
 }
 .activeNav {
   border: 1px solid var(--static-white);
   color: var(--static-white);
+  transition: all 0.3s ease-in-out;
 }
 .activeNav:hover {
   color: var(--primary-color);
   background-color: var(--static-white);
-  transition: all 0.3s ease-in-out;
 }
 
 .inactiveNav {
@@ -80,10 +83,10 @@
   border: 1px solid var(--static-white-40);
   background-color: var(--primary-color);
   color: var(--static-white-40);
+  transition: all 0.3s ease-in-out;
 }
 .inactiveNav:hover {
   border: 1px solid var(--static-white-40);
   background-color: var(--primary-color);
   color: var(--static-white-40);
-  transition: all 0.3s ease-in-out;
 }
