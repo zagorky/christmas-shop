@@ -1,5 +1,9 @@
 @media screen and (max-width: 1060.9px) {
   /* about */
+  .about-wrapper {
+    padding: 60px 8px;
+    margin: 0 auto;
+  }
   .about-section-text-content {
     padding-right: 50px;
     padding-left: 60px;
@@ -9,7 +13,6 @@
     width: 100dvw;
     padding-left: 10px;
   }
-
   .slider-container {
     width: 100dvw;
     align-items: flex-start;
@@ -17,7 +20,6 @@
   .slider-text-container {
     margin: 0 auto;
   }
-
   /* footer */
   .contacts-info-container {
     display: flex;
@@ -28,30 +30,24 @@
   }
 }
 
-@media screen and (max-width: 767.9px) {
+@media screen and (max-width: 768.9px) {
   /* header */
   .burger-menu {
     display: flex !important;
   }
-
   .navigation {
     display: none;
   }
   ul {
     flex-direction: column;
   }
-
-  /* .burger-menu {
-    display: flex;
-  } */
-
+  .logo {
+    padding: 8px 20px;
+  }
   /* cta */
-
   .cta-container {
     padding: 0;
   }
-
-  /* gifts-page */
 }
 
 @media screen and (max-width: 700.9px) {
@@ -59,7 +55,6 @@
   .hero-secction-text-content {
     height: 452px;
   }
-
   /* about */
   .about-section {
     display: flex;
@@ -75,7 +70,6 @@
     height: 528px;
     object-fit: cover;
   }
-
   /* cta */
   .cta-section {
     padding: 60px 8px;
@@ -90,5 +84,9 @@
   }
   .menu-btn {
     padding: 12px 8px;
+  }
+  .gifts-h1 {
+    max-width: 364px;
+    transition: all 0.5s ease-in-out;
   }
 }
