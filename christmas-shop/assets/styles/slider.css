@@ -70,6 +70,7 @@
 }
 .left {
   margin: auto;
+  transform: rotate(-180deg);
   transition: all 0.3s ease-in-out;
 }
 .activeNav {
