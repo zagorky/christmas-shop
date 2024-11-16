@@ -5,7 +5,7 @@
 }
 
 .cta-section {
-  background-image: url(../imgs/bg-forest.png);
+  background-image: url(../imgs/bg-forest.png), url(../imgs/bg-snow.png);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: 50% 50%;
