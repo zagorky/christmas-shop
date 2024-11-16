@@ -13,7 +13,6 @@
     width: 100dvw;
     padding-left: 10px;
   }
-
   .slider-container {
     width: 100dvw;
     align-items: flex-start;
@@ -21,7 +20,6 @@
   .slider-text-container {
     margin: 0 auto;
   }
-
   /* footer */
   .contacts-info-container {
     display: flex;
@@ -37,7 +35,6 @@
   .burger-menu {
     display: flex !important;
   }
-
   .navigation {
     display: none;
   }
@@ -47,19 +44,10 @@
   .logo {
     padding: 8px 20px;
   }
-  /* hero */
-
-  /* .burger-menu {
-    display: flex;
-  } */
-
   /* cta */
-
   .cta-container {
     padding: 0;
   }
-
-  /* gifts-page */
 }
 
 @media screen and (max-width: 700.9px) {
@@ -67,7 +55,6 @@
   .hero-secction-text-content {
     height: 452px;
   }
-
   /* about */
   .about-section {
     display: flex;
@@ -83,7 +70,6 @@
     height: 528px;
     object-fit: cover;
   }
-
   /* cta */
   .cta-section {
     padding: 60px 8px;

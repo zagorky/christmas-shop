@@ -1,7 +1,7 @@
 .hero-section {
-  border-radius: 12px;
+  border-radius: 20px;
   display: flex;
-  background-image: url("../imgs/bg-snowball.png"), url("../imgs/bg-snow.png");
+  background-image: url("../imgs/bg-ball.png"), url("../imgs/bg-snow.png");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: 50% 50%;

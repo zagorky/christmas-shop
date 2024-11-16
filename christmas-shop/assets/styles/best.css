@@ -41,7 +41,7 @@
 }
 
 .cards-img-for-work {
-  background-image: url(../imgs/for-work.png);
+  background-image: url(../imgs/gift-for-work.png);
   background-size: 100% 100%;
   background-color: #ecf3f8;
   border-radius: 20px;
@@ -49,7 +49,7 @@
   height: 230px;
 }
 .cards-img-for-health {
-  background-image: url(../imgs/for-health.png);
+  background-image: url(../imgs/gift-for-health.png);
   background-size: 100% 100%;
   background-color: #ecf3f8;
   border-radius: 20px;
@@ -57,7 +57,7 @@
   height: 230px;
 }
 .cards-img-for-harmony {
-  background-image: url(../imgs/for-harmony.png);
+  background-image: url(../imgs/gift-for-harmony.png);
   background-size: 100% 100%;
   background-color: #ecf3f8;
   border-radius: 20px;
