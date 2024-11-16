@@ -53,7 +53,6 @@ body {
   text-transform: var(--primary-text-transform);
 }
 main {
-  background-image: url(../imgs/bg-snow.png);
   background-color: var(--primary-color);
   border-radius: 12px;
   width: 100%;
