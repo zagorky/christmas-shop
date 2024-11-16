@@ -116,7 +116,7 @@ main {
   font-size: var(--large-acton-font-size);
   font-weight: var(--primary-font-weight);
   line-height: 152%;
-  letter-spacing: 0.16em;
+  letter-spacing: 0.17em;
   margin: 0;
 }
 /* action small */
@@ -178,4 +178,7 @@ main {
 
 a:-webkit-any-link {
   text-decoration: none;
+}
+.hide {
+  display: none;
 }
