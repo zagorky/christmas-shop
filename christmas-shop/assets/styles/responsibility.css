@@ -1,5 +1,9 @@
 @media screen and (max-width: 1060.9px) {
   /* about */
+  .about-wrapper {
+    padding: 60px 8px;
+    margin: 0 auto;
+  }
   .about-section-text-content {
     padding-right: 50px;
     padding-left: 60px;
@@ -28,7 +32,7 @@
   }
 }
 
-@media screen and (max-width: 767.9px) {
+@media screen and (max-width: 768.9px) {
   /* header */
   .burger-menu {
     display: flex !important;
@@ -40,6 +44,10 @@
   ul {
     flex-direction: column;
   }
+  .logo {
+    padding: 8px 20px;
+  }
+  /* hero */
 
   /* .burger-menu {
     display: flex;
@@ -90,5 +98,9 @@
   }
   .menu-btn {
     padding: 12px 8px;
+  }
+  .gifts-h1 {
+    max-width: 364px;
+    transition: all 0.5s ease-in-out;
   }
 }
