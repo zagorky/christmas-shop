@@ -32,10 +32,12 @@
 }
 
 .about-section-img {
-  background-image: url(../imgs/santa2.png);
+  background-image: url(../imgs/santa.png);
   background-repeat: no-repeat;
   border-radius: 20px;
   background-size: cover;
   background-position: 50% 50%;
+  background-position: center;
+  background-origin: content-box;
   height: 100%;
 }
