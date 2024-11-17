@@ -10,13 +10,13 @@ class MenuElem {
     this.classNameTypography = "actionSmall";
     this.classNameMain = "menu-btn";
     this.text = category;
-    this.render = this.renderMenuElem();
     this.ability = ability;
-    this.parent = this.clearMenu();
+    this.renderMenuElem();
   }
   renderMenuElem() {
     this.renderInput();
     this.renderLabel();
+    this.checkAbility();
   }
   renderInput() {
     this.input.type = this.type;
@@ -29,19 +29,17 @@ class MenuElem {
     this.label.classList.add(this.classNameTypography, this.classNameMain);
     this.label.textContent = this.category.split(/(?=[A-Z])/).join(" ");
     menu.appendChild(this.label);
-    checkAbility();
   }
   checkAbility() {
-    if (this.ability === false) {
-      this.input.disabled = true;
-    } else {
-      this.label.classList.toggle("activeBtn");
-    }
+    this.ability
+      ? this.label.classList.toggle("activeBtn")
+      : (this.input.disabled = true);
   }
-  clearMenu() {
-    menu.innerHTML = "";
+  static clearMenu(parent) {
+    parent.innerHTML = "";
   }
 }
+MenuElem.clearMenu(menu);
 export const categoryAll = new MenuElem("all", true);
 export const categoryForWork = new MenuElem("forWork", false);
 export const categoryForHealth = new MenuElem("forHealth", false);
