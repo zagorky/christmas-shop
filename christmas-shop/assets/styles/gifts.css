@@ -44,3 +44,6 @@
   background-color: var(--static-white-40);
   cursor: default;
 }
+input {
+  display: none;
+}

@@ -29,23 +29,23 @@ class Card {
     const card = document.createElement("div");
     const cardImg = document.createElement("img");
     const cardText = document.createElement("div");
-    const cardH4 = document.createElement("h4");
     const cardH3 = document.createElement("h3");
+    const cardH4 = document.createElement("h4");
 
     card.classList.add("card");
     cardImg.classList.add("cards-img-for-work");
     cardText.classList.add("card-text-container");
-    cardH4.classList.add("header4", `${this.className}`);
+    cardH3.classList.add("header4", `${this.className}`);
 
     cardImg.src = this.img;
     cardImg.alt = this.name;
-    cardH4.textContent = this.category;
-    cardH3.textContent = this.name;
+    cardH3.textContent = this.category;
+    cardH4.textContent = this.name;
 
     card.appendChild(cardImg);
     card.appendChild(cardText);
-    cardText.appendChild(cardH4);
     cardText.appendChild(cardH3);
+    cardText.appendChild(cardH4);
     return card;
   }
   render(parent) {
