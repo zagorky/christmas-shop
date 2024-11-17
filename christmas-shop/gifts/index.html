@@ -15,7 +15,7 @@
     <link rel="stylesheet" href="../assets/styles/upButton.css" />
     <link
       rel="shortcut icon"
-      href="./assets/imgs/hozyajstvennaya_sumka_f2c0trh55st2.ico"
+      href="../assets/imgs/hozyajstvennaya_sumka_f2c0trh55st2.ico"
       type="image/x-icon"
     />
 
@@ -26,7 +26,7 @@
       <div class="overlay" id="overlay"></div>
 
       <header class="header">
-        <a class="logo-link" href="../index.html">
+        <a class="logo-link" href="../">
           <div class="logo">
             <svg
               width="24"
@@ -62,10 +62,10 @@
               <a class="actionSmall nav-a disabled">gifts</a>
             </li>
             <li>
-              <a class="actionSmall nav-a" href=",./index.html#about">about</a>
+              <a class="actionSmall nav-a" href="../#about">about</a>
             </li>
             <li>
-              <a class="actionSmall nav-a" href="../index.html#best">best</a>
+              <a class="actionSmall nav-a" href="../#best">best</a>
             </li>
             <li><a class="actionSmall nav-a" href="#contacts">contacts</a></li>
           </ul>
@@ -76,10 +76,42 @@
           Achieve health, harmony, and inner strength
         </h1>
         <div class="menu">
-          <button class="actionSmall menu-btn activeBtn">all</button
-          ><button class="actionSmall menu-btn">for work</button
-          ><button class="actionSmall menu-btn">for health</button
-          ><button class="actionSmall menu-btn">for harmony</button>
+          <input
+            name="menu"
+            id="all"
+            type="radio"
+            class="actionSmall menu-btn"
+          />
+          <label name="menu" for="all" class="actionSmall menu-btn activeBtn"
+            >all
+          </label>
+          <input
+            name="menu"
+            id="forWork"
+            type="radio"
+            class="actionSmall menu-btn"
+          />
+          <label name="menu" for="forWork" class="actionSmall menu-btn"
+            >for work
+          </label>
+          <input
+            name="menu"
+            id="forHealth"
+            type="radio"
+            class="actionSmall menu-btn"
+          />
+          <label name="menu" for="forHealth" class="actionSmall menu-btn"
+            >for health
+          </label>
+          <input
+            name="menu"
+            id="forHarmony"
+            type="radio"
+            class="actionSmall menu-btn"
+          />
+          <label name="menu" for="forHarmony" class="actionSmall menu-btn"
+            >for harmony
+          </label>
         </div>
         <div class="cards-container">
           <div class="card">
@@ -173,7 +205,7 @@
           <div class="contacts-info-container">
             <div class="contact-card-wrapper call-us contact-card">
               <a href="tel:+375(29)111-22-33" class="actionLarge contact-card">
-                <img src="./assets/imgs/santa-claus.svg" alt="" />
+                <img src="../assets/imgs/santa-claus.svg" alt="" />
                 +375 (29) 111-22-33
                 <h3 class="header3">Call Us</h3>
               </a>
@@ -184,14 +216,14 @@
                 class="actionLarge contact-card"
                 target="_blank"
               >
-                <img src="./assets/imgs/christmas-tree.svg" alt="" />
+                <img src="../assets/imgs/christmas-tree.svg" alt="" />
                 Magic forest
                 <h3 class="header3">meet us</h3>
               </a>
             </div>
             <div class="contact-card-wrapper write-us contact-card">
               <a class="actionLarge contact-card" href="mailto:gifts@magic.com">
-                <img src="./assets/imgs/snake.svg" alt="" />
+                <img src="../assets/imgs/snake.svg" alt="" />
                 gifts@magic.com
                 <h3 class="header3">write us</h3>
               </a>
@@ -299,10 +331,10 @@
         </div>
       </footer>
     </div>
-    <script type="module" src="./assets/scripts/index.js"></script>
-    <script type="module" src="./assets/scripts/popup.js"></script>
-    <script type="module" src="./assets/scripts/giftsGetData.js"></script>
-    <!-- <script type="module" src="./assets/scripts/upButton.js"></script> -->
-    <script type="module" src="./assets/scripts/burger.js"></script>
+    <script type="module" src="../assets/scripts/giftsMenu.js"></script>
+    <!-- <script type="module" src="../assets/scripts/popup.js"></script> -->
+    <script type="module" src="../assets/scripts/giftsGetData.js"></script>
+    <!-- <script type="module" src="../assets/scripts/upButton.js"></script> -->
+    <script type="module" src="../assets/scripts/burger.js"></script>
   </body>
 </html>
