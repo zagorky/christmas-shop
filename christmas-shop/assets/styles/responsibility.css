@@ -44,9 +44,55 @@
   .logo {
     padding: 8px 20px;
   }
-  /* cta */
-  .cta-container {
-    padding: 0;
+  .nav-a:hover {
+    color: var(--dark);
+    background-color: var(--static-white);
+    /* cta */
+    .cta-container {
+      padding: 0;
+    }
+    /* hero */
+
+    .explore-bnt-link:hover {
+      color: var(--static-white) !important;
+    }
+    .explore-btn:hover {
+      background-color: var(--dark);
+      border-radius: 20px;
+    }
+
+    /* best */
+    .card:hover {
+      color: var(--dark);
+    }
+    /* footer */
+    #telegram-svg:hover,
+    #facebook-svg:hover,
+    #instagram-svg:hover,
+    #x-svg:hover,
+    .telegram:hover,
+    .facebook:hover,
+    .instagram:hover,
+    .x:hover {
+      color: var(--dark);
+    }
+    .caption-link:hover {
+      color: var(--dark);
+    }
+    .contact-card-wrapper:hover,
+    .contact-card:hover,
+    .contact-card:hover a {
+      color: var(--dark);
+    }
+    /* gifts */
+    .menu-btn:hover {
+      background-color: var(--primery-color);
+    }
+    /* slider */
+    .activeNav:hover {
+      color: var(--static-white);
+      background-color: var(--primary-color);
+    }
   }
 }
 
