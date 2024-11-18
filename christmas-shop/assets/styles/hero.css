@@ -5,6 +5,7 @@
   background-repeat: no-repeat;
   background-size: cover;
   background-position: 50% 50%;
+  color: var(--static-white);
 }
 
 .hero-secction-text-content {
@@ -17,11 +18,9 @@
   max-width: 426px;
   width: 100%;
   height: 404px;
-  color: var(--static-white);
   text-align: center;
 }
 .explore-btn {
-  color: var(--static-white);
   background-color: var(--dark);
   text-align: center;
   cursor: pointer;
