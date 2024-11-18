@@ -38,7 +38,7 @@
 }
 
 .explore-bnt-link:hover {
-  /* color: var(--dark); */
+  color: var(--dark);
 }
 .explore-btn:hover {
   background-color: var(--static-white);

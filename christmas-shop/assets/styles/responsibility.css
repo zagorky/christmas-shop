@@ -24,6 +24,7 @@
   .contacts-info-container {
     display: flex;
     flex-direction: column;
+    padding-inline: 8px;
   }
   .contact-card {
     width: 100%;

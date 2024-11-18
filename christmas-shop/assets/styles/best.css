@@ -6,11 +6,14 @@
 }
 
 .card {
-  height: 342px;
   width: 310px;
   cursor: pointer;
   border-radius: 20px;
-  background-color: #ecf3f8;
+  background: linear-gradient(
+    180deg,
+    rgb(236, 243, 248) 79%,
+    rgb(255, 255, 255) 23%
+  );
   transition: all 0.3s ease-in-out;
 }
 .card:hover {
@@ -64,8 +67,9 @@
 
 .card-text-container {
   display: flex;
+  height: 112px;
   flex-direction: column;
-  padding: 20px 20px 44px 20px;
+  padding: 20px 20px 40px 20px;
   gap: 8px;
   border-radius: 20px;
   background-color: var(--static-white);
