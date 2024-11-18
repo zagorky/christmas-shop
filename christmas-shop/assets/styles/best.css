@@ -10,7 +10,7 @@
   width: 310px;
   cursor: pointer;
   border-radius: 20px;
-  background-color: var(--static-white);
+  background-color: #ecf3f8;
   transition: all 0.3s ease-in-out;
 }
 .card:hover {
@@ -43,7 +43,6 @@
 .cards-img-for-work {
   background-image: url(../imgs/gift-for-work.png);
   background-size: 100% 100%;
-  background-color: #ecf3f8;
   border-radius: 20px;
   width: 310px;
   height: 230px;
@@ -51,7 +50,6 @@
 .cards-img-for-health {
   background-image: url(../imgs/gift-for-health.png);
   background-size: 100% 100%;
-  background-color: #ecf3f8;
   border-radius: 20px;
   width: 310px;
   height: 230px;
@@ -59,7 +57,6 @@
 .cards-img-for-harmony {
   background-image: url(../imgs/gift-for-harmony.png);
   background-size: 100% 100%;
-  background-color: #ecf3f8;
   border-radius: 20px;
   width: 310px;
   height: 230px;
@@ -70,6 +67,8 @@
   flex-direction: column;
   padding: 20px 20px 44px 20px;
   gap: 8px;
+  border-radius: 20px;
+  background-color: var(--static-white);
 }
 
 .card-text-container h3 {
