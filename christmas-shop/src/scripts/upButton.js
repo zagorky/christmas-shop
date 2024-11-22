@@ -27,3 +27,4 @@ export default function initUpButton() {
   document.addEventListener('DOMContentLoaded', createUpButton);
   upButton.addEventListener('click', smoothScroll);
 }
+initUpButton();

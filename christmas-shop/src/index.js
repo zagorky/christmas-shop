@@ -2,8 +2,6 @@ import initBurger from './scripts/burger';
 
 import initGiftsGetData from './scripts/giftsGetData';
 
-import initGiftsMenu from './scripts/giftsMenu';
-
 import initUpButton from './scripts/upButton';
 
 import initTimer from './scripts/timer';
@@ -31,5 +29,3 @@ initTimer();
 initUpButton();
 
 //giftsMenu
-
-initGiftsMenu();
