@@ -1,0 +1,184 @@
+/* variables */
+
+:root {
+  /* colors */
+  --primary-color: #ff4646;
+  --static-white: #ffffff;
+  --tag-purple: #4361ff;
+  --primary-10: #ff464610;
+  --static-white-40: #ffffff60;
+  --tag-pink: #ff43f7;
+  --dark: #181c29;
+  --static-white-20: #ffffff80;
+  --tag-green: #06a44f;
+  /* font-families */
+  --primary-font-family: Montserrat, sans-serif;
+  --secondary-font-family: allura, cursive;
+  /* font-sizes */
+  --header1-font-size: 32px;
+  --header2-font-size: 24px;
+  --header3-font-size: 16px;
+  --header4-font-size: 12px;
+  --p-font-size: 16px;
+  --large-acton-font-size: 24px;
+  --small-acton-font-size: 12px;
+  --caption-font-size: 24px;
+  --slider-font-size: 80px;
+  /* font-weights */
+  --primary-font-weight: 600;
+  --secondary-font-weight: 400;
+}
+
+/* fonts */
+@font-face {
+  font-family: Montserrat;
+  src: url(../fonts/Montserrat-Regular.ttf);
+}
+@font-face {
+  font-family: allura;
+  src: url(../fonts/Allura-Regular.ttf);
+}
+
+/* styles */
+
+* {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+body {
+  font-family: var(--primary-font-family);
+  font-weight: var(--primary-font-weight);
+  line-height: var(--primary-line-height);
+  letter-spacing: var(--primary-letter-spacing);
+  text-transform: var(--primary-text-transform);
+}
+main {
+  background-color: var(--primary-color);
+  border-radius: 20px;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  border: none;
+  overflow: hidden;
+}
+
+/* header1 */
+.header1 {
+  font-family: var(--primary-font-family);
+  font-size: var(--header1-font-size);
+  font-weight: var(--primary-font-weight);
+  line-height: 150%;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  margin: 0;
+}
+/* header2 */
+.header2 {
+  font-family: var(--primary-font-family);
+  font-size: var(--header2-font-size);
+  font-weight: var(--primary-font-weight);
+  line-height: 152%;
+  letter-spacing: 0.17em;
+  text-transform: uppercase;
+  margin: 0;
+}
+/* header3 */
+.header3 {
+  font-family: var(--primary-font-family);
+  font-size: var(--header3-font-size);
+  font-weight: var(--primary-font-weight);
+  line-height: 152%;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin: 0;
+}
+/* header4 */
+.header4 {
+  font-family: var(--primary-font-family);
+  font-size: var(--header4-font-size);
+  font-weight: var(--primary-font-weight);
+  line-height: 130%;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  margin: 0;
+}
+/* p */
+.p {
+  font-family: var(--primary-font-family);
+  font-size: var(--p-font-size);
+  font-weight: var(--secondary-font-weight);
+  line-height: 148%;
+  margin: 0;
+}
+/* action large */
+.actionLarge {
+  font-family: var(--primary-font-family);
+  font-size: var(--large-acton-font-size);
+  font-weight: var(--primary-font-weight);
+  line-height: 152%;
+  letter-spacing: 0.17em;
+  margin: 0;
+}
+/* action small */
+.actionSmall {
+  font-family: var(--primary-font-family);
+  font-size: var(--small-acton-font-size);
+  font-weight: var(--primary-font-weight);
+  line-height: 130%;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  margin: 0;
+}
+/* caption */
+.caption {
+  font-family: var(--secondary-font-family);
+  font-size: var(--caption-font-size);
+  font-weight: var(--secondary-font-weight);
+  line-height: 100%;
+  letter-spacing: 0.05em;
+  margin: 0;
+}
+/* slider */
+.slider-text {
+  font-family: var(--primary-font-family);
+  font-size: var(--slider-font-size);
+  font-weight: var(--secondary-font-weight);
+  text-transform: uppercase;
+  margin: 0;
+  font-weight: 600;
+  letter-spacing: 0.016em;
+}
+
+.for-work {
+  color: var(--tag-purple);
+}
+.for-health {
+  color: var(--tag-green);
+}
+.for-harmony {
+  color: var(--tag-pink);
+}
+.logo-link {
+  text-decoration: none;
+  color: var(--dark);
+  align-self: center;
+}
+.inactive {
+  cursor: default;
+}
+.inactive:hover {
+  color: var(--dark) !important;
+  background-color: #ffffff20 !important;
+}
+.wrapper {
+  max-width: 1440px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+a:-webkit-any-link {
+  text-decoration: none;
+}
+.hide {
+  display: none;
+}

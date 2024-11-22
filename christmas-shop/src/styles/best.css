@@ -1,0 +1,80 @@
+.cards-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  justify-content: center;
+}
+
+.card {
+  width: 310px;
+  cursor: pointer;
+  border-radius: 20px;
+  background: linear-gradient(
+    180deg,
+    rgb(236, 243, 248) 79%,
+    rgb(255, 255, 255) 23%
+  );
+  transition: all 0.3s ease-in-out;
+}
+.card:hover {
+  color: var(--primary-color);
+}
+
+.best-gifts-section {
+  padding-top: 60px;
+  padding-bottom: 61px;
+  background-image: url(../imgs/bg-snow.png);
+  background-size: cover;
+  background-position: 50% 50%;
+}
+.best-gifts-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.best-gifts-text-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 20px;
+  gap: 12px;
+  color: var(--static-white);
+  margin: 0 auto 20px auto;
+}
+
+.cards-img-for-work {
+  background-image: url(../imgs/gift-for-work.png);
+  background-size: 100% 100%;
+  border-radius: 20px;
+  width: 310px;
+  height: 230px;
+}
+.cards-img-for-health {
+  background-image: url(../imgs/gift-for-health.png);
+  background-size: 100% 100%;
+  border-radius: 20px;
+  width: 310px;
+  height: 230px;
+}
+.cards-img-for-harmony {
+  background-image: url(../imgs/gift-for-harmony.png);
+  background-size: 100% 100%;
+  border-radius: 20px;
+  width: 310px;
+  height: 230px;
+}
+
+.card-text-container {
+  display: flex;
+  height: 112px;
+  flex-direction: column;
+  padding: 20px 20px 40px 20px;
+  gap: 8px;
+  border-radius: 20px;
+  background-color: var(--static-white);
+}
+
+.card-text-container h3 {
+  margin: 0;
+}
