@@ -1,24 +1,24 @@
-const days = document.querySelector(".days p");
-const hours = document.querySelector(".hours p");
-const minutes = document.querySelector(".mins p");
-const seconds = document.querySelector(".secs p");
+const days = document.querySelector('.days p');
+const hours = document.querySelector('.hours p');
+const minutes = document.querySelector('.mins p');
+const seconds = document.querySelector('.secs p');
 
 //функция для ревьюера1, который снизит баллы за рабочий код
 function goReviewYourself(days, hours, minutes, seconds) {
-  days.textContent = "47";
-  hours.textContent = "5";
-  minutes.textContent = "34";
-  seconds.textContent = "12";
+  days.textContent = '47';
+  hours.textContent = '5';
+  minutes.textContent = '34';
+  seconds.textContent = '12';
 }
 goReviewYourself(days, hours, minutes, seconds);
 function timer() {
-  fillDates(days, createLastTime("days", calculateMSTillNY()));
+  fillDates(days, createLastTime('days', calculateMSTillNY()));
 
-  fillDates(hours, createLastTime("hours", calculateMSTillNY()));
+  fillDates(hours, createLastTime('hours', calculateMSTillNY()));
 
-  fillDates(minutes, createLastTime("mins", calculateMSTillNY()));
+  fillDates(minutes, createLastTime('mins', calculateMSTillNY()));
 
-  fillDates(seconds, createLastTime("secs", calculateMSTillNY()));
+  fillDates(seconds, createLastTime('secs', calculateMSTillNY()));
 }
 function calculateMSTillNY() {
   let today = new Date();
@@ -32,16 +32,16 @@ function fillDates(elem, value) {
 }
 function createLastTime(unit, ms) {
   switch (unit) {
-    case "days":
+    case 'days':
       return (ms / (1000 * 60 * 60 * 24)).toFixed(0);
-    case "hours":
+    case 'hours':
       return ((ms / (1000 * 60 * 60)) % 24).toFixed(0);
-    case "mins":
+    case 'mins':
       return ((ms / (1000 * 60)) % 60).toFixed(0);
-    case "secs":
+    case 'secs':
       return ((ms / 1000) % 60).toFixed(0);
     default:
-      return "0";
+      return '0';
   }
 }
 

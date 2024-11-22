@@ -1,6 +1,6 @@
-const slider = document.querySelector(".slider");
-const prevBtn = document.querySelector(".left");
-const nextBtn = document.querySelector(".right");
+const slider = document.querySelector('.slider');
+const prevBtn = document.querySelector('.left');
+const nextBtn = document.querySelector('.right');
 
 const sliderWidth = slider.scrollWidth;
 let sliderVisibleWidth;
@@ -25,29 +25,29 @@ function switchOffBnt() {
   const maxOffset = sliderWidth - sliderVisibleWidth;
 
   if (currentOffset <= 0) {
-    prevBtn.classList.add("inactiveNav");
-    prevBtn.classList.remove("activeNav");
+    prevBtn.classList.add('inactiveNav');
+    prevBtn.classList.remove('activeNav');
   } else {
-    prevBtn.classList.add("activeNav");
-    prevBtn.classList.remove("inactiveNav");
+    prevBtn.classList.add('activeNav');
+    prevBtn.classList.remove('inactiveNav');
   }
 
   if (currentOffset >= maxOffset) {
-    nextBtn.classList.add("inactiveNav");
-    nextBtn.classList.remove("activeNav");
+    nextBtn.classList.add('inactiveNav');
+    nextBtn.classList.remove('activeNav');
   } else {
-    nextBtn.classList.add("activeNav");
-    nextBtn.classList.remove("inactiveNav");
+    nextBtn.classList.add('activeNav');
+    nextBtn.classList.remove('inactiveNav');
   }
 }
 
-window.addEventListener("resize", () => {
+window.addEventListener('resize', () => {
   calculateSliderReplacing();
   moveSlider(offset);
   switchOffBnt();
 });
 
-prevBtn.addEventListener("click", () => {
+prevBtn.addEventListener('click', () => {
   calculateSliderReplacing();
   if (currentOffset > 0) {
     currentOffset -= offset;
@@ -56,7 +56,7 @@ prevBtn.addEventListener("click", () => {
   }
 });
 
-nextBtn.addEventListener("click", () => {
+nextBtn.addEventListener('click', () => {
   calculateSliderReplacing();
   if (currentOffset < sliderWidth - sliderVisibleWidth) {
     currentOffset += offset;

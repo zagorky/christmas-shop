@@ -1,7 +1,7 @@
-const overlay = document.querySelector(".overlay");
+const overlay = document.querySelector('.overlay');
 
 function toggleOverlay(value) {
-  if (value === "open") {
-    overlay.classList.toggle("open");
+  if (value === 'open') {
+    overlay.classList.toggle('open');
   }
 }

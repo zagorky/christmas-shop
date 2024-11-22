@@ -61,7 +61,7 @@
   color: var(--static-white);
   cursor: pointer;
   transition: all 0.3s ease-in-out;
-  font-family: "Arial", "Helvetica", sans-serif;
+  font-family: 'Arial', 'Helvetica', sans-serif;
 }
 
 .right {

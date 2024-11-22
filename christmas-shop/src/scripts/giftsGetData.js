@@ -1,11 +1,11 @@
-const url = "./assets/data/gifts.json";
+const url = './assets/data/gifts.json';
 let gifts = [];
 let lastGiftItem;
 
 fetch(url)
   .then((response) => {
     if (!response.ok) {
-      throw new Error("error" + response.statusText);
+      throw new Error('error' + response.statusText);
     }
     return response.json();
   })
@@ -26,16 +26,16 @@ class Card {
     this.elem = this.createCardElem();
   }
   createCardElem() {
-    const card = document.createElement("div");
-    const cardImg = document.createElement("img");
-    const cardText = document.createElement("div");
-    const cardH3 = document.createElement("h3");
-    const cardH4 = document.createElement("h4");
+    const card = document.createElement('div');
+    const cardImg = document.createElement('img');
+    const cardText = document.createElement('div');
+    const cardH3 = document.createElement('h3');
+    const cardH4 = document.createElement('h4');
 
-    card.classList.add("card");
-    cardImg.classList.add("cards-img-for-work");
-    cardText.classList.add("card-text-container");
-    cardH3.classList.add("header4", `${this.className}`);
+    card.classList.add('card');
+    cardImg.classList.add('cards-img-for-work');
+    cardText.classList.add('card-text-container');
+    cardH3.classList.add('header4', `${this.className}`);
 
     cardImg.src = this.img;
     cardImg.alt = this.name;
@@ -53,8 +53,8 @@ class Card {
   }
 }
 function renderCards(gifts) {
-  const cardsContainer = document.querySelector(".cards-container");
-  cardsContainer.innerHTML = "";
+  const cardsContainer = document.querySelector('.cards-container');
+  cardsContainer.innerHTML = '';
 
   let returnGifts = checkPage();
   returnGifts.forEach((gift) => {
@@ -65,13 +65,13 @@ function renderCards(gifts) {
       img,
       description,
       className,
-      superpower
+      superpower,
     );
     card.render(cardsContainer);
   });
 }
 function checkPage() {
-  if (window.location.href.includes("gifts")) {
+  if (window.location.href.includes('gifts')) {
     return gifts;
   }
   return gifts.slice(0, 4);
