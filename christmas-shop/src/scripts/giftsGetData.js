@@ -72,7 +72,7 @@ function clearContainer(elem) {
   elem.innerHTML = '';
 }
 
-function initGiftsGetData() {
+export default function initGiftsGetData() {
   fetch(url)
     .then((response) => {
       if (!response.ok) {
@@ -88,4 +88,3 @@ function initGiftsGetData() {
     })
     .catch((error) => console.error(error));
 }
-export { initGiftsGetData };

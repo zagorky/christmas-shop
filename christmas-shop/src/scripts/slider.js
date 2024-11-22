@@ -70,7 +70,7 @@ setSliderVisibleWidth();
 calculateSliderReplacing();
 switchOffBnt();
 
-function initSlider() {
+export default function initSlider() {
   window.addEventListener('resize', () => {
     calculateSliderReplacing();
     moveSlider(offset);
@@ -99,5 +99,3 @@ function initSlider() {
   calculateSliderReplacing();
   switchOffBnt();
 }
-
-export { initSlider };

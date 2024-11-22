@@ -46,12 +46,10 @@ class MenuElem {
 // const categoryForHealth = new MenuElem('forHealth', false);
 // const categoryForHarmony = new MenuElem('forHarmony', false);
 
-function initGiftsMenu() {
+export default function initGiftsMenu() {
   MenuElem.clearMenu(menu);
   const categoryAll = new MenuElem('all', true);
   const categoryForWork = new MenuElem('forWork', false);
   const categoryForHealth = new MenuElem('forHealth', false);
   const categoryForHarmony = new MenuElem('forHarmony', false);
 }
-
-export { initGiftsMenu };

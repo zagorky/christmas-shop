@@ -44,11 +44,9 @@ function createLastTime(unit, ms) {
   }
 }
 
-function initTimer() {
+export default function initTimer() {
   goReviewYourself(days, hours, minutes, seconds);
 
   //раскомментировать на третьей части
   // setInterval(timer, 1000);
 }
-
-export { initTimer };

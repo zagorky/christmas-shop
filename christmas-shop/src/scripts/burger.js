@@ -34,7 +34,7 @@ function checkSize() {
   }
 }
 
-function initBurger() {
+export default function initBurger() {
   document.addEventListener('DOMContentLoaded', () => {
     burgerMenu.addEventListener('click', toggleBurgerMenu);
     navLinks.forEach((link) => {
@@ -43,5 +43,3 @@ function initBurger() {
   });
   window.addEventListener('resize', checkSize);
 }
-
-export { initBurger };

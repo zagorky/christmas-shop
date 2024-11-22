@@ -1,14 +1,14 @@
-import { initBurger } from './scripts/burger';
+import initBurger from './scripts/burger';
 
-import { initGiftsGetData } from './scripts/giftsGetData';
+import initGiftsGetData from './scripts/giftsGetData';
 
-import { initGiftsMenu } from './scripts/giftsMenu';
+import initGiftsMenu from './scripts/giftsMenu';
 
-import { initUpButton } from './scripts/upButton';
+import initUpButton from './scripts/upButton';
 
-import { initTimer } from './scripts/timer';
+import initTimer from './scripts/timer';
 
-import { initSlider } from './scripts/slider';
+import initSlider from './scripts/slider';
 
 // burger
 
