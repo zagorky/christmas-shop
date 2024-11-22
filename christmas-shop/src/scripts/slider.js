@@ -25,20 +25,21 @@ function switchOffBnt() {
   const maxOffset = sliderWidth - sliderVisibleWidth;
 
   if (currentOffset <= 0) {
-    prevBtn.classList.add('inactiveNav');
-    prevBtn.classList.remove('activeNav');
+    switchClassName(prevBtn, 'inactiveNav', 'activeNav');
   } else {
-    prevBtn.classList.add('activeNav');
-    prevBtn.classList.remove('inactiveNav');
+    switchClassName(prevBtn, 'activeNav', 'inactiveNav');
   }
 
   if (currentOffset >= maxOffset) {
-    nextBtn.classList.add('inactiveNav');
-    nextBtn.classList.remove('activeNav');
+    switchClassName(nextBtn, 'inactiveNav', 'activeNav');
   } else {
-    nextBtn.classList.add('activeNav');
-    nextBtn.classList.remove('inactiveNav');
+    switchClassName(nextBtn, 'activeNav', 'inactiveNav');
   }
+}
+
+function switchClassName(elem, addClass, removeClass) {
+  elem.classList.add(addClass);
+  elem.classList.remove(removeClass);
 }
 
 window.addEventListener('resize', () => {
@@ -68,3 +69,11 @@ nextBtn.addEventListener('click', () => {
 setSliderVisibleWidth();
 calculateSliderReplacing();
 switchOffBnt();
+
+export {
+  setSliderVisibleWidth,
+  calculateSliderReplacing,
+  switchOffBnt,
+  prevBtn,
+  nextBtn,
+};

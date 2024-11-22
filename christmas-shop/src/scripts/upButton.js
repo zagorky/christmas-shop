@@ -25,3 +25,4 @@ function smoothScroll(event) {
 
 document.addEventListener('DOMContentLoaded', createUpButton);
 upButton.addEventListener('click', smoothScroll);
+export { createUpButton, smoothScroll, upButton };

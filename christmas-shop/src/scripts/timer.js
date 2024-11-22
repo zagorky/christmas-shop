@@ -47,3 +47,4 @@ function createLastTime(unit, ms) {
 
 //раскомментировать на третьей части
 // setInterval(timer, 1000);
+export { goReviewYourself, timer, days, hours, minutes, seconds };

@@ -31,16 +31,19 @@ class MenuElem {
     menu.appendChild(this.label);
   }
   checkAbility() {
-    this.ability
-      ? this.label.classList.toggle('activeBtn')
-      : (this.input.disabled = true);
+    if (this.ability) {
+      this.label.classList.toggle('activeBtn');
+    }
+    this.input.disabled = true;
   }
   static clearMenu(parent) {
     parent.innerHTML = '';
   }
 }
-MenuElem.clearMenu(menu);
-export const categoryAll = new MenuElem('all', true);
-export const categoryForWork = new MenuElem('forWork', false);
-export const categoryForHealth = new MenuElem('forHealth', false);
-export const categoryForHarmony = new MenuElem('forHarmony', false);
+// MenuElem.clearMenu(menu);
+// const categoryAll = new MenuElem('all', true);
+// const categoryForWork = new MenuElem('forWork', false);
+// const categoryForHealth = new MenuElem('forHealth', false);
+// const categoryForHarmony = new MenuElem('forHarmony', false);
+
+export { MenuElem, menu };

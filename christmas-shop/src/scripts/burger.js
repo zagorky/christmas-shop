@@ -41,3 +41,14 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 });
 window.addEventListener('resize', checkSize);
+
+export {
+  toggleBurgerMenu,
+  checkSize,
+  burgerContainer,
+  burgerMenu,
+  navLinks,
+  navigation,
+  toggleNav,
+  toggleScroll,
+};

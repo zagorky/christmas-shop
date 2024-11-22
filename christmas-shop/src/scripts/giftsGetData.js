@@ -1,20 +1,20 @@
-const url = './assets/data/gifts.json';
+const url = './src/data/gifts.json';
 let gifts = [];
-let lastGiftItem;
 
-fetch(url)
-  .then((response) => {
-    if (!response.ok) {
-      throw new Error('error' + response.statusText);
-    }
-    return response.json();
-  })
-  .then((data) => {
-    gifts = data;
-    shuffleGifts(gifts);
-    renderCards(gifts);
-  })
-  .catch((error) => console.error(error));
+// fetch(url)
+//   .then((response) => {
+//     if (!response.ok) {
+//       throw new Error('error' + response.statusText);
+//     }
+//     return response.json();
+//   })
+//   .then((data) => {
+//     gifts = data;
+//     clearContainer(document.querySelector('.cards-container'));
+//     shuffleGifts(gifts);
+//     renderCards(gifts);
+//   })
+//   .catch((error) => console.error(error));
 class Card {
   constructor(category, name, img, description, className, superpower) {
     this.name = name;
@@ -82,3 +82,7 @@ function shuffleGifts(gifts) {
     [gifts[i], gifts[j]] = [gifts[j], gifts[i]];
   }
 }
+function clearContainer(elem) {
+  elem.innerHTML = '';
+}
+export { url, Card, renderCards, checkPage, shuffleGifts, gifts };
