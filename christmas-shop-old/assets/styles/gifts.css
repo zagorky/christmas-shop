@@ -1,0 +1,49 @@
+.gifts-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  background-image: url(../imgs/bg-garland.png);
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: contain;
+  padding-top: 60px;
+  padding-bottom: 60px;
+  border-radius: 20px;
+}
+
+.menu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  margin: 20px auto;
+}
+
+.gifts-h1 {
+  max-width: 426px;
+  text-align: center;
+  color: var(--static-white);
+  transition: all 0.5s ease-in-out;
+}
+
+.menu-btn {
+  border-radius: 12px;
+  padding: 12px 20px;
+  color: var(--static-white);
+  border: none;
+  background-color: var(--primary-color);
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+.menu-btn:hover {
+  background-color: var(--static-white-40);
+}
+.activeBtn {
+  background-color: var(--static-white-40);
+  cursor: default;
+}
+input {
+  display: none;
+}
