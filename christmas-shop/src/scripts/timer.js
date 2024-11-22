@@ -10,7 +10,6 @@ function goReviewYourself(days, hours, minutes, seconds) {
   minutes.textContent = '34';
   seconds.textContent = '12';
 }
-goReviewYourself(days, hours, minutes, seconds);
 function timer() {
   fillDates(days, createLastTime('days', calculateMSTillNY()));
 
@@ -45,6 +44,11 @@ function createLastTime(unit, ms) {
   }
 }
 
-//раскомментировать на третьей части
-// setInterval(timer, 1000);
-export { goReviewYourself, timer, days, hours, minutes, seconds };
+function initTimer() {
+  goReviewYourself(days, hours, minutes, seconds);
+
+  //раскомментировать на третьей части
+  // setInterval(timer, 1000);
+}
+
+export { initTimer };

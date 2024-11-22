@@ -70,10 +70,34 @@ setSliderVisibleWidth();
 calculateSliderReplacing();
 switchOffBnt();
 
-export {
-  setSliderVisibleWidth,
-  calculateSliderReplacing,
-  switchOffBnt,
-  prevBtn,
-  nextBtn,
-};
+function initSlider() {
+  window.addEventListener('resize', () => {
+    calculateSliderReplacing();
+    moveSlider(offset);
+    switchOffBnt();
+  });
+
+  prevBtn.addEventListener('click', () => {
+    calculateSliderReplacing();
+    if (currentOffset > 0) {
+      currentOffset -= offset;
+      moveSlider(currentOffset);
+      switchOffBnt();
+    }
+  });
+
+  nextBtn.addEventListener('click', () => {
+    calculateSliderReplacing();
+    if (currentOffset < sliderWidth - sliderVisibleWidth) {
+      currentOffset += offset;
+      moveSlider(currentOffset);
+      switchOffBnt();
+    }
+  });
+
+  setSliderVisibleWidth();
+  calculateSliderReplacing();
+  switchOffBnt();
+}
+
+export { initSlider };

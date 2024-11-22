@@ -34,21 +34,14 @@ function checkSize() {
   }
 }
 
-document.addEventListener('DOMContentLoaded', () => {
-  burgerMenu.addEventListener('click', toggleBurgerMenu);
-  navLinks.forEach((link) => {
-    link.addEventListener('click', toggleBurgerMenu);
+function initBurger() {
+  document.addEventListener('DOMContentLoaded', () => {
+    burgerMenu.addEventListener('click', toggleBurgerMenu);
+    navLinks.forEach((link) => {
+      link.addEventListener('click', toggleBurgerMenu);
+    });
   });
-});
-window.addEventListener('resize', checkSize);
+  window.addEventListener('resize', checkSize);
+}
 
-export {
-  toggleBurgerMenu,
-  checkSize,
-  burgerContainer,
-  burgerMenu,
-  navLinks,
-  navigation,
-  toggleNav,
-  toggleScroll,
-};
+export { initBurger };

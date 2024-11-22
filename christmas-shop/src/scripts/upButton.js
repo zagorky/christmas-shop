@@ -23,6 +23,9 @@ function smoothScroll(event) {
   window.scrollTo({ top: 0, behavior: 'smooth' });
 }
 
-document.addEventListener('DOMContentLoaded', createUpButton);
-upButton.addEventListener('click', smoothScroll);
-export { createUpButton, smoothScroll, upButton };
+function initUpButton() {
+  document.addEventListener('DOMContentLoaded', createUpButton);
+  upButton.addEventListener('click', smoothScroll);
+}
+
+export { initUpButton };
