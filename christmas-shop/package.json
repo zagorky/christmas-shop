@@ -5,7 +5,7 @@
   "type": "module",
   "main": "index.js",
   "scripts": {
-    "deploy": "gh-pages -d dist -e christmas-shop",
+    "deploy": "npm run built && gh-pages -d dist -e christmas-shop",
     "dev": "vite dev",
     "build": "vite build",
     "format": "prettier --write .",
