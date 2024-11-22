@@ -40,20 +40,21 @@ window.addEventListener('resize', checkSize);
 
 //giftsGetData
 
-fetch(url)
-  .then((response) => {
-    if (!response.ok) {
-      throw new Error('error' + response.statusText);
-    }
-    return response.json();
-  })
-  .then((data) => {
-    gifts = data;
+//сделала какую то хрень
+// fetch(url)
+//   .then((response) => {
+//     if (!response.ok) {
+//       throw new Error('error' + response.statusText);
+//     }
+//     return response.json();
+//   })
+//   .then((data) => {
+//     gifts = data;
 
-    shuffleGifts(gifts);
-    renderCards(gifts);
-  })
-  .catch((error) => console.error(error));
+//     shuffleGifts(gifts);
+//     renderCards(gifts);
+//   })
+//   .catch((error) => console.error(error));
 
 //slider
 
