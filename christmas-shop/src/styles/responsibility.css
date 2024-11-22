@@ -118,6 +118,15 @@
     height: 528px;
     object-fit: cover;
   }
+  /* slider */
+  .slider {
+    padding-top: 18px;
+    padding-bottom: 14px;
+  }
+  /* best */
+  .best-gifts-section {
+    padding-top: 64px;
+  }
   /* cta */
   .cta-section {
     padding: 60px 8px;

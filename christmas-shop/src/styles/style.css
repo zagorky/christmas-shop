@@ -51,6 +51,7 @@ body {
   line-height: var(--primary-line-height);
   letter-spacing: var(--primary-letter-spacing);
   text-transform: var(--primary-text-transform);
+  margin: 0;
 }
 main {
   background-color: var(--primary-color);
