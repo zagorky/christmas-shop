@@ -12,7 +12,9 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "modern-normalize": "^3.0.1",
+    "modern-normalize": "^3.0.1"
+  },
+  "devDependencies": {
     "prettier": "^3.3.3"
   }
 }
