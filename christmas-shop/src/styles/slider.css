@@ -1,0 +1,97 @@
+.slider-section {
+  display: flex;
+  overflow: hidden;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-top: 60px;
+  padding-bottom: 57px;
+  background-image: url(../imgs/bg-snow.png);
+  background-size: cover;
+  background-position: 50% 50%;
+}
+.slider-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  max-width: 1276px;
+}
+.slider-text-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: var(--static-white);
+  gap: 12px;
+}
+.slider {
+  color: var(--static-white);
+  max-width: 2576px;
+  max-width: 90dvw;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  padding-top: 20px;
+  padding-bottom: 18px;
+  transition: transform 0.4s ease;
+}
+.slider-elem {
+  margin: auto 0;
+}
+.slider-elem-img img {
+  width: 200px;
+  height: 200px;
+  border-radius: 20px;
+  margin: 0 20px;
+}
+.bnt-container {
+  display: flex;
+  gap: 20px;
+  justify-content: end;
+  margin: 0 10px 0 auto;
+}
+.btn {
+  padding: 20px;
+  width: 56px;
+  height: 56px;
+  border-radius: 20px;
+  border: 1px solid var(--static-white);
+  background-color: var(--primary-color);
+  color: var(--static-white);
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  font-family: 'Arial', 'Helvetica', sans-serif;
+}
+
+.right {
+  margin: auto;
+  transition: all 0.3s ease-in-out;
+}
+.left {
+  margin: auto;
+  transform: rotate(-180deg);
+  transition: all 0.3s ease-in-out;
+}
+.activeNav {
+  border: 1px solid var(--static-white);
+  color: var(--static-white);
+  transition: all 0.3s ease-in-out;
+}
+.activeNav:hover {
+  color: var(--primary-color);
+  background-color: var(--static-white);
+}
+
+.inactiveNav {
+  cursor: default;
+  border: 1px solid var(--static-white-40);
+  background-color: var(--primary-color);
+  color: var(--static-white-40);
+  transition: all 0.3s ease-in-out;
+}
+.inactiveNav:hover {
+  border: 1px solid var(--static-white-40);
+  background-color: var(--primary-color);
+  color: var(--static-white-40);
+}
