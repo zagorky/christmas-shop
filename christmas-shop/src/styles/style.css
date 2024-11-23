@@ -45,6 +45,9 @@
   box-sizing: border-box;
   scroll-behavior: smooth;
 }
+html {
+  background-color: var(--static-white);
+}
 body {
   font-family: var(--primary-font-family);
   font-weight: var(--primary-font-weight);
@@ -165,13 +168,7 @@ main {
   color: var(--dark);
   align-self: center;
 }
-.inactive {
-  cursor: default;
-}
-.inactive:hover {
-  color: var(--dark) !important;
-  background-color: #ffffff20 !important;
-}
+
 .wrapper {
   max-width: 1440px;
   width: 100%;

@@ -36,11 +36,3 @@
   color: var(--static-white);
   border: none;
 }
-
-.explore-bnt-link:hover {
-  color: var(--dark);
-}
-.explore-btn:hover {
-  background-color: var(--static-white);
-  border-radius: 20px;
-}

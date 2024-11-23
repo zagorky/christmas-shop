@@ -45,17 +45,7 @@ li {
   cursor: pointer;
 }
 
-.nav-a:hover {
-  color: var(--primary-color);
-  background-color: var(--primary-10);
-}
-
 .disabled {
-  cursor: default;
-  color: var(--primary-color);
-  background-color: var(--primary-10);
-}
-.disabled:hover {
   cursor: default;
   color: var(--primary-color);
   background-color: var(--primary-10);

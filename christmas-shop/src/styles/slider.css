@@ -28,7 +28,6 @@
 .slider {
   color: var(--static-white);
   max-width: 2576px;
-  max-width: 90dvw;
   width: 100%;
   display: flex;
   flex-direction: row;
@@ -49,7 +48,7 @@
   display: flex;
   gap: 20px;
   justify-content: end;
-  margin: 0 10px 0 auto;
+  margin: 0 5px 0 auto;
 }
 .btn {
   padding: 20px;
@@ -74,13 +73,9 @@
   transition: all 0.3s ease-in-out;
 }
 .activeNav {
-  border: 1px solid var(--static-white);
-  color: var(--static-white);
+  border: 1px solid var(--static-white) !important;
+  color: var(--static-white) !important;
   transition: all 0.3s ease-in-out;
-}
-.activeNav:hover {
-  color: var(--primary-color);
-  background-color: var(--static-white);
 }
 
 .inactiveNav {
@@ -89,9 +84,4 @@
   background-color: var(--primary-color);
   color: var(--static-white-40);
   transition: all 0.3s ease-in-out;
-}
-.inactiveNav:hover {
-  border: 1px solid var(--static-white-40);
-  background-color: var(--primary-color);
-  color: var(--static-white-40);
 }
