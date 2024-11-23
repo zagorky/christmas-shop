@@ -40,10 +40,8 @@ class MenuElem {
     parent.innerHTML = '';
   }
 }
-MenuElem.clearMenu(menu);
+
 const categoryAll = new MenuElem('all', true);
 const categoryForWork = new MenuElem('forWork', false);
 const categoryForHealth = new MenuElem('forHealth', false);
 const categoryForHarmony = new MenuElem('forHarmony', false);
-
-export { MenuElem, menu };

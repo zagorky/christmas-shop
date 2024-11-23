@@ -6,6 +6,7 @@ const navLinks = document.querySelectorAll('.nav-a');
 function toggleBurgerMenu() {
   if (window.innerWidth < 768) {
     burgerMenu.classList.toggle('open');
+    burgerMenu.classList.toggle('actionLarge'); // пока не работает, подумать
     toggleNav('open');
     toggleScroll('open');
   } else {
@@ -43,3 +44,4 @@ export default function initBurger() {
   });
   window.addEventListener('resize', checkSize);
 }
+initBurger();
