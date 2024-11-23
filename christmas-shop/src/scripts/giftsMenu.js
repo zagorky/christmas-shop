@@ -47,4 +47,3 @@ export default function initGiftsMenu() {
   new MenuElem('forHealth', false);
   new MenuElem('forHarmony', false);
 }
-initGiftsMenu();
