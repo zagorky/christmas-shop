@@ -41,7 +41,10 @@ class MenuElem {
   }
 }
 
-const categoryAll = new MenuElem('all', true);
-const categoryForWork = new MenuElem('forWork', false);
-const categoryForHealth = new MenuElem('forHealth', false);
-const categoryForHarmony = new MenuElem('forHarmony', false);
+export default function initGiftsMenu() {
+  new MenuElem('all', true);
+  new MenuElem('forWork', false);
+  new MenuElem('forHealth', false);
+  new MenuElem('forHarmony', false);
+}
+initGiftsMenu();

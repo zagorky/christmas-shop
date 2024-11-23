@@ -118,6 +118,7 @@ main {
   font-weight: var(--primary-font-weight);
   line-height: 152%;
   letter-spacing: 0.17em;
+  text-transform: uppercase;
   margin: 0;
 }
 /* action small */

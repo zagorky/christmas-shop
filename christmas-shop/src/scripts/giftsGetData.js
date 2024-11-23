@@ -1,8 +1,27 @@
 const url = './src/data/gifts.json';
 let gifts = [];
 
+export default function initGiftsGetData() {
+  fetch(url)
+    .then((response) => {
+      if (!response.ok) {
+        throw new Error('error' + response.statusText);
+      }
+      return response.json();
+    })
+    .then((data) => {
+      gifts = data;
+      clearContainer(document.querySelector('.cards-container'));
+      shuffleGifts(gifts);
+      renderCards(gifts);
+    })
+    .catch((error) => console.error(error));
+}
+
 class Card {
-  constructor(category, name, img, description, className, superpower) {
+  constructor(cardProps) {
+    const { category, name, img, description, className, superpower } =
+      cardProps;
     this.name = name;
     this.category = category;
     this.img = img;
@@ -22,6 +41,7 @@ class Card {
     cardImg.classList.add('cards-img-for-work');
     cardText.classList.add('card-text-container');
     cardH3.classList.add('header4', `${this.className}`);
+    cardH4.classList.add('header3');
 
     cardImg.src = this.img;
     cardImg.alt = this.name;
@@ -38,21 +58,22 @@ class Card {
     parent.appendChild(this.elem);
   }
 }
-function renderCards(gifts) {
+
+function renderCards() {
   const cardsContainer = document.querySelector('.cards-container');
   cardsContainer.innerHTML = '';
 
   let returnGifts = checkPage();
   returnGifts.forEach((gift) => {
     const { category, name, img, description, className, superpower } = gift;
-    const card = new Card(
+    const card = new Card({
       category,
       name,
       img,
       description,
       className,
       superpower,
-    );
+    });
     card.render(cardsContainer);
   });
 }
@@ -70,21 +91,4 @@ function shuffleGifts(gifts) {
 }
 function clearContainer(elem) {
   elem.innerHTML = '';
-}
-
-export default function initGiftsGetData() {
-  fetch(url)
-    .then((response) => {
-      if (!response.ok) {
-        throw new Error('error' + response.statusText);
-      }
-      return response.json();
-    })
-    .then((data) => {
-      gifts = data;
-      clearContainer(document.querySelector('.cards-container'));
-      shuffleGifts(gifts);
-      renderCards(gifts);
-    })
-    .catch((error) => console.error(error));
 }
