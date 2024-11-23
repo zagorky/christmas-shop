@@ -10,20 +10,19 @@ function goReviewYourself(days, hours, minutes, seconds) {
   minutes.textContent = '34';
   seconds.textContent = '12';
 }
-function timer() {
-  fillDates(days, createLastTime('days', calculateMSTillNY()));
+// function timer() {
+fillDates(days, createLastTime('days', calculateMSTillNY()));
 
-  fillDates(hours, createLastTime('hours', calculateMSTillNY()));
+fillDates(hours, createLastTime('hours', calculateMSTillNY()));
 
-  fillDates(minutes, createLastTime('mins', calculateMSTillNY()));
+fillDates(minutes, createLastTime('mins', calculateMSTillNY()));
 
-  fillDates(seconds, createLastTime('secs', calculateMSTillNY()));
-}
+fillDates(seconds, createLastTime('secs', calculateMSTillNY()));
+// }
 function calculateMSTillNY() {
   let today = new Date();
-  let NYDate = new Date(today.getFullYear(), 0, 1);
-  let nextNY = NYDate.setFullYear(today.getFullYear() + 1);
-  let ms = nextNY - today;
+  let NYDate = new Date(today.getFullYear() + 1, 0, 1);
+  let ms = NYDate - today;
   return ms;
 }
 function fillDates(elem, value) {
