@@ -48,9 +48,9 @@ class MenuElem {
   }
 }
 
-export default function initGiftMenu() {
-  new MenuElem('All', sortAndRenderData);
-  new MenuElem('For-Work', sortAndRenderData);
-  new MenuElem('For-Health', sortAndRenderData);
-  new MenuElem('For-Harmony', sortAndRenderData);
-}
+const categories = ['All', 'For-Work', 'For-Health', 'For-Harmony'];
+categories.forEach((category) => {
+  new MenuElem(category, sortAndRenderData);
+});
+
+export { categories };
