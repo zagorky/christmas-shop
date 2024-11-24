@@ -15,6 +15,7 @@ class MenuElem {
   renderMenuElem() {
     this.renderInput();
     this.renderLabel();
+    this.addInputEventListener();
   }
   renderInput() {
     this.input.type = this.type;

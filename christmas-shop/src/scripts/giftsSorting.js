@@ -26,6 +26,7 @@ export default function initSorting() {
       }
     });
   });
+
   function filterData(category) {
     const filtederGifts = giftsData.filter((gift) => {
       gift.category === category;
