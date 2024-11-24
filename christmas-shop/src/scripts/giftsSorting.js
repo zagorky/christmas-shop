@@ -3,7 +3,7 @@ import { renderCards, checkPage, clearContainer } from './giftsGetData';
 
 function filterData(category) {
   let filteredGifts = giftsData.filter((gift) => {
-    return gift.category == category;
+    return gift.category === category;
   });
   return filteredGifts;
 }
