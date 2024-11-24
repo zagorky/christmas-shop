@@ -38,10 +38,8 @@ class Card {
     cardH3.textContent = this.category;
     cardH4.textContent = this.name;
 
-    card.appendChild(cardImg);
-    card.appendChild(cardText);
-    cardText.appendChild(cardH3);
-    cardText.appendChild(cardH4);
+    card.append(cardImg, cardText);
+    cardText.append(cardH3, cardH4);
     return card;
   }
   render(parent) {

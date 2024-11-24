@@ -5,7 +5,7 @@ function createUpButton() {
   upButton.href = '#top';
   upButton.title = 'Up';
   upButton.innerHTML = '&#129121;';
-  document.body.appendChild(upButton);
+  document.body.append(upButton);
   addUpButtonToPage();
 }
 
