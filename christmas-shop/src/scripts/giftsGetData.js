@@ -1,6 +1,7 @@
 import giftsData from '../data/gifts.json';
 let gifts = [];
 
+// https://gist.github.com/TELEUZI/0fadffb59a84c07bfdf97e0353d3281c#%D0%BB%D0%B8%D0%BA%D0%B2%D0%B8%D0%B4%D0%B8%D1%80%D1%83%D0%B5%D0%BC-%D0%BC%D0%B0%D1%80%D1%82%D1%8B%D1%88%D0%BA%D0%B8%D0%BD-%D1%82%D1%80%D1%83%D0%B4-
 export default function initGiftsGetData() {
   gifts = giftsData;
   clearContainer(document.querySelector('.cards-container'));
@@ -10,37 +11,53 @@ export default function initGiftsGetData() {
 
 class Card {
   constructor(cardProps) {
-    const { category, name, img, description, className, superpower } =
-      cardProps;
+    const { category, name, img, description, className } = cardProps;
     this.name = name;
     this.category = category;
     this.img = img;
     this.description = description;
     this.className = className;
-    this.superpower = superpower; //переделать, возвращает undefined((
-    this.elem = this.createCardElem();
+    this.elem = this.createCardElems();
   }
-  createCardElem() {
-    const card = document.createElement('div');
-    const cardImg = document.createElement('img');
-    const cardText = document.createElement('div');
-    const cardH3 = document.createElement('h3');
-    const cardH4 = document.createElement('h4');
-
-    card.classList.add('card');
-    cardImg.classList.add('cards-img-for-work');
-    cardText.classList.add('card-text-container');
-    cardH3.classList.add('header4', `${this.className}`);
-    cardH4.classList.add('header3');
-
-    cardImg.src = this.img;
-    cardImg.alt = this.name;
-    cardH3.textContent = this.category;
-    cardH4.textContent = this.name;
+  createCardElems() {
+    const card = this.createElem({ nodeElem: 'div', className: ['card'] });
+    const cardImg = this.createElem({
+      nodeElem: 'img',
+      className: ['cards-img-for-work'],
+      src: this.img,
+      alt: this.name,
+    });
+    const cardText = this.createElem({
+      nodeElem: 'div',
+      className: ['card-text-container'],
+    });
+    const cardH3 = this.createElem({
+      nodeElem: 'h3',
+      className: ['header4', this.className],
+      text: this.category,
+    });
+    const cardH4 = this.createElem({
+      nodeElem: 'h4',
+      className: ['header3'],
+      text: this.name,
+    });
 
     card.append(cardImg, cardText);
     cardText.append(cardH3, cardH4);
     return card;
+  }
+  createElem(props) {
+    const { nodeElem, className = [], src, alt, text } = props;
+    const elem = document.createElement(nodeElem);
+    elem.classList.add(...className);
+    if (src && alt) {
+      elem.src = src;
+      elem.alt = alt;
+    }
+    if (text) {
+      elem.textContent = text;
+    }
+    return elem;
   }
   render(parent) {
     parent.appendChild(this.elem);
@@ -53,14 +70,13 @@ function renderCards() {
 
   let returnGifts = checkPage();
   returnGifts.forEach((gift) => {
-    const { category, name, img, description, className, superpower } = gift;
+    const { category, name, img, description, className } = gift;
     const card = new Card({
       category,
       name,
       img,
       description,
       className,
-      superpower,
     });
     card.render(cardsContainer);
   });
@@ -83,3 +99,5 @@ function shuffleGifts(gifts) {
 function clearContainer(elem) {
   elem.innerHTML = '';
 }
+
+export { Card };
