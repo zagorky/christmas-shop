@@ -40,7 +40,10 @@
   .navigation {
     display: none;
   }
+  nav,
   ul {
+    display: flex;
+    justify-content: center;
     flex-direction: column;
   }
   .logo {
