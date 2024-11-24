@@ -2,7 +2,7 @@ const daysElem = document.querySelector('.days p');
 const hoursElem = document.querySelector('.hours p');
 const minutesElem = document.querySelector('.mins p');
 const secondsElem = document.querySelector('.secs p');
-let msTillNy;
+
 //функция для ревьюера1, который снизит баллы за рабочий код
 // function goReviewYourself(daysElem, hoursElem, minutesElem, secondsElem) {
 //   daysElem.textContent = '47';
@@ -10,25 +10,30 @@ let msTillNy;
 //   minutesElem.textContent = '34';
 //   secondsElem.textContent = '12';
 // }
+
 function timer() {
-  calculateMSTillNY();
-  fillDates(daysElem, createLastTime('days', msTillNy));
+  let msTillNY = calculateMSTillNY();
 
-  fillDates(hoursElem, createLastTime('hours', msTillNy));
+  fillDates(daysElem, createLastTime('days', msTillNY));
 
-  fillDates(minutesElem, createLastTime('mins', msTillNy));
+  fillDates(hoursElem, createLastTime('hours', msTillNY));
 
-  fillDates(secondsElem, createLastTime('secs', msTillNy));
+  fillDates(minutesElem, createLastTime('mins', msTillNY));
+
+  fillDates(secondsElem, createLastTime('secs', msTillNY));
 }
+
 function calculateMSTillNY() {
-  let today = new Date();
-  let NYDate = new Date(today.getFullYear() + 1, 0, 1);
-  msTillNy = NYDate - today;
-  return msTillNy;
+  const today = new Date();
+  const NYDate = new Date(today.getFullYear() + 1, 0, 1);
+  let msTillNY = NYDate - today;
+  return msTillNY;
 }
+
 function fillDates(elem, value) {
   elem.textContent = `${value}`;
 }
+
 function createLastTime(elem, ms) {
   switch (elem) {
     case 'days':
