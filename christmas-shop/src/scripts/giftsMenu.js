@@ -41,9 +41,9 @@ class MenuElem {
   }
 }
 
-export default function initGiftsMenu() {
-  new MenuElem('all', true);
-  new MenuElem('forWork', false);
-  new MenuElem('forHealth', false);
-  new MenuElem('forHarmony', false);
-}
+const categoryALL = new MenuElem('all', true);
+const categoryForWork = new MenuElem('forWork', false);
+const categoryForHealth = new MenuElem('forHealth', false);
+const categoryForHarmony = new MenuElem('forHarmony', false);
+
+export { categoryALL, categoryForWork, categoryForHealth, categoryForHarmony };

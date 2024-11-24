@@ -52,4 +52,3 @@ export default function initBurger() {
   });
   window.addEventListener('resize', checkSize);
 }
-initBurger();
