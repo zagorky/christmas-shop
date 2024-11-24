@@ -1,11 +1,7 @@
-import giftsData from '../data/gifts.json';
-let gifts = [];
+import sortAndRenderData from './giftsSorting';
 
 export default function initGiftsGetData() {
-  gifts = giftsData;
-  clearContainer(document.querySelector('.cards-container'));
-  shuffleGifts(gifts);
-  renderCards(gifts);
+  sortAndRenderData('All');
 }
 
 class Card {
@@ -22,7 +18,7 @@ class Card {
     const card = this.createElem({ nodeElem: 'div', cssClasses: ['card'] });
     const cardImg = this.createElem({
       nodeElem: 'img',
-      cssClasses: ['cards-img-for-work'],
+      cssClasses: ['cards-img'],
       attributes: { src: '.' + `${this.img}`, alt: this.name }, //костыль детектед
     });
     const cardText = this.createElem({
@@ -59,16 +55,15 @@ class Card {
     return elem;
   }
   render(parent) {
-    parent.appendChild(this.elem);
+    parent.append(this.elem);
   }
 }
 
-function renderCards() {
+function renderCards(filteredData) {
   const cardsContainer = document.querySelector('.cards-container');
-  cardsContainer.innerHTML = '';
+  console.log('я рендер');
 
-  let returnGifts = checkPage();
-  returnGifts.forEach((gift) => {
+  filteredData.forEach((gift) => {
     const { category, name, img, description, className } = gift;
     const card = new Card({
       category,
@@ -81,22 +76,28 @@ function renderCards() {
   });
 }
 
-function checkPage() {
+function checkPage(gifts) {
+  console.log('я проверка');
+
   if (window.location.href.includes('gifts')) {
     return gifts;
   }
+  // раскомментировать на третьей части
+  // shuffleGifts(gifts);
   return gifts.slice(0, 4);
 }
 
-function shuffleGifts(gifts) {
-  for (let i = gifts.length - 1; i > 0; i--) {
-    const j = Math.floor(Math.random() * (i + 1));
-    [gifts[i], gifts[j]] = [gifts[j], gifts[i]];
-  }
+// раскомментировать на третьей части
+// function shuffleGifts(gifts) {
+//   for (let i = gifts.length - 1; i > 0; i--) {
+//     const j = Math.floor(Math.random() * (i + 1));
+//     [gifts[i], gifts[j]] = [gifts[j], gifts[i]];
+//   }
+// }
+
+function clearContainer(container) {
+  container.innerHTML = '';
+  console.log('я очистка');
 }
 
-function clearContainer(elem) {
-  elem.innerHTML = '';
-}
-
-export { Card, clearContainer, renderCards };
+export { Card, clearContainer, renderCards, checkPage };
