@@ -49,12 +49,11 @@ class Card {
     const { nodeElem, cssClasses = [], attributes = {}, text } = props;
     const elem = document.createElement(nodeElem);
     elem.classList.add(...cssClasses);
-    if (Object.keys(attributes).length > 0) {
-      const attr = Object.entries(attributes);
-      attr.forEach(([key, value]) => {
-        elem.setAttribute(key, value);
-      });
-    }
+
+    Object.entries(attributes).forEach(([key, value]) => {
+      elem.setAttribute(key, value);
+    });
+
     if (text) {
       elem.textContent = text;
     }
