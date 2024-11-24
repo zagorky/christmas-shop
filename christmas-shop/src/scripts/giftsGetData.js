@@ -23,7 +23,7 @@ class Card {
     const cardImg = this.createElem({
       nodeElem: 'img',
       cssClasses: ['cards-img-for-work'],
-      attributes: { src: this.img, alt: this.name },
+      attributes: { src: '.' + `${this.img}`, alt: this.name }, //костыль детектед
     });
     const cardText = this.createElem({
       nodeElem: 'div',
