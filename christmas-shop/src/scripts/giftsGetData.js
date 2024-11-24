@@ -20,25 +20,24 @@ class Card {
     this.elem = this.createCardElems();
   }
   createCardElems() {
-    const card = this.createElem({ nodeElem: 'div', className: ['card'] });
+    const card = this.createElem({ nodeElem: 'div', cssClasses: ['card'] });
     const cardImg = this.createElem({
       nodeElem: 'img',
-      className: ['cards-img-for-work'],
-      src: this.img,
-      alt: this.name,
+      cssClasses: ['cards-img-for-work'],
+      attributes: { src: this.img, alt: this.name },
     });
     const cardText = this.createElem({
       nodeElem: 'div',
-      className: ['card-text-container'],
+      cssClasses: ['card-text-container'],
     });
     const cardH3 = this.createElem({
       nodeElem: 'h3',
-      className: ['header4', this.className],
+      cssClasses: ['header4', this.className],
       text: this.category,
     });
     const cardH4 = this.createElem({
       nodeElem: 'h4',
-      className: ['header3'],
+      cssClasses: ['header3'],
       text: this.name,
     });
 
@@ -47,12 +46,14 @@ class Card {
     return card;
   }
   createElem(props) {
-    const { nodeElem, className = [], src, alt, text } = props;
+    const { nodeElem, cssClasses = [], attributes = {}, text } = props;
     const elem = document.createElement(nodeElem);
-    elem.classList.add(...className);
-    if (src && alt) {
-      elem.src = src;
-      elem.alt = alt;
+    elem.classList.add(...cssClasses);
+    if (Object.keys(attributes).length > 0) {
+      const attr = Object.entries(attributes);
+      attr.forEach(([key, value]) => {
+        elem.setAttribute(key, value);
+      });
     }
     if (text) {
       elem.textContent = text;
