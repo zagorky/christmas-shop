@@ -47,5 +47,7 @@ li {
 .disabled {
   cursor: default;
   color: var(--primary-color);
+  border: 12px solid #ffffff00;
+
   background-color: var(--primary-10);
 }

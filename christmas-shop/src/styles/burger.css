@@ -34,15 +34,15 @@
 }
 
 .navigation.adaptiveNav {
-  display: flex !important;
-  justify-content: center;
+  display: block;
   width: 100dvw;
   height: 100dvh;
   position: fixed;
-  top: 64px;
+  top: 60px;
   background-color: var(--static-white);
   z-index: 100;
   transition: all 0.4s ease;
+  padding-top: 350px;
 }
 .blocked {
   overflow: hidden;
