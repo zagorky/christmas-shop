@@ -2,9 +2,10 @@ const burgerMenu = document.querySelector('.burger-menu');
 // const burgerContainer = document.querySelector('.burger');
 const navigation = document.querySelector('.navigation');
 const navLinks = document.querySelectorAll('.nav-a');
+const TABLET_SCREEN_WIDTH = 769;
 
 function toggleBurgerMenu() {
-  if (window.innerWidth < 769) {
+  if (window.innerWidth < TABLET_SCREEN_WIDTH) {
     burgerMenu.classList.toggle('open');
     toggleNav('open');
     toggleScroll('open');
@@ -30,7 +31,7 @@ function toggleNav(classValue) {
 }
 
 function checkSize() {
-  if (window.innerWidth > 768) {
+  if (window.innerWidth > TABLET_SCREEN_WIDTH) {
     navigation.classList.remove('adaptiveNav');
     burgerMenu.classList.remove('open');
     changeTypographyClass('actionLarge', 'actionSmall');
