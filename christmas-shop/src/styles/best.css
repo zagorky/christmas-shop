@@ -16,9 +16,6 @@
   );
   transition: all 0.3s ease-in-out;
 }
-.card:hover {
-  color: var(--primary-color);
-}
 
 .best-gifts-section {
   padding-top: 60px;

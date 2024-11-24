@@ -1,90 +1,102 @@
-const url = './src/data/gifts.json';
+import giftsData from '../data/gifts.json';
 let gifts = [];
 
+export default function initGiftsGetData() {
+  gifts = giftsData;
+  clearContainer(document.querySelector('.cards-container'));
+  shuffleGifts(giftsData);
+  renderCards(gifts);
+}
+
 class Card {
-  constructor(category, name, img, description, className, superpower) {
+  constructor(cardProps) {
+    const { category, name, img, description, className } = cardProps;
     this.name = name;
     this.category = category;
     this.img = img;
     this.description = description;
     this.className = className;
-    this.superpower = superpower; //переделать, возвращает undefined((
-    this.elem = this.createCardElem();
+    this.elem = this.createCardElems();
   }
-  createCardElem() {
-    const card = document.createElement('div');
-    const cardImg = document.createElement('img');
-    const cardText = document.createElement('div');
-    const cardH3 = document.createElement('h3');
-    const cardH4 = document.createElement('h4');
+  createCardElems() {
+    const card = this.createElem({ nodeElem: 'div', cssClasses: ['card'] });
+    const cardImg = this.createElem({
+      nodeElem: 'img',
+      cssClasses: ['cards-img-for-work'],
+      attributes: { src: this.img, alt: this.name },
+    });
+    const cardText = this.createElem({
+      nodeElem: 'div',
+      cssClasses: ['card-text-container'],
+    });
+    const cardH3 = this.createElem({
+      nodeElem: 'h3',
+      cssClasses: ['header4', this.className],
+      text: this.category,
+    });
+    const cardH4 = this.createElem({
+      nodeElem: 'h4',
+      cssClasses: ['header3'],
+      text: this.name,
+    });
 
-    card.classList.add('card');
-    cardImg.classList.add('cards-img-for-work');
-    cardText.classList.add('card-text-container');
-    cardH3.classList.add('header4', `${this.className}`);
-
-    cardImg.src = this.img;
-    cardImg.alt = this.name;
-    cardH3.textContent = this.category;
-    cardH4.textContent = this.name;
-
-    card.appendChild(cardImg);
-    card.appendChild(cardText);
-    cardText.appendChild(cardH3);
-    cardText.appendChild(cardH4);
+    card.append(cardImg, cardText);
+    cardText.append(cardH3, cardH4);
     return card;
+  }
+  createElem(props) {
+    const { nodeElem, cssClasses = [], attributes = {}, text } = props;
+    const elem = document.createElement(nodeElem);
+    elem.classList.add(...cssClasses);
+
+    Object.entries(attributes).forEach(([key, value]) => {
+      elem.setAttribute(key, value);
+    });
+
+    if (text) {
+      elem.textContent = text;
+    }
+    return elem;
   }
   render(parent) {
     parent.appendChild(this.elem);
   }
 }
-function renderCards(gifts) {
+
+function renderCards() {
   const cardsContainer = document.querySelector('.cards-container');
   cardsContainer.innerHTML = '';
 
   let returnGifts = checkPage();
   returnGifts.forEach((gift) => {
-    const { category, name, img, description, className, superpower } = gift;
-    const card = new Card(
+    const { category, name, img, description, className } = gift;
+    const card = new Card({
       category,
       name,
       img,
       description,
       className,
-      superpower,
-    );
+    });
     card.render(cardsContainer);
   });
 }
+
 function checkPage() {
   if (window.location.href.includes('gifts')) {
     return gifts;
   }
   return gifts.slice(0, 4);
 }
+
 function shuffleGifts(gifts) {
   for (let i = gifts.length - 1; i > 0; i--) {
     const j = Math.floor(Math.random() * (i + 1));
     [gifts[i], gifts[j]] = [gifts[j], gifts[i]];
   }
 }
+
 function clearContainer(elem) {
   elem.innerHTML = '';
 }
 
-export default function initGiftsGetData() {
-  fetch(url)
-    .then((response) => {
-      if (!response.ok) {
-        throw new Error('error' + response.statusText);
-      }
-      return response.json();
-    })
-    .then((data) => {
-      gifts = data;
-      clearContainer(document.querySelector('.cards-container'));
-      shuffleGifts(gifts);
-      renderCards(gifts);
-    })
-    .catch((error) => console.error(error));
-}
+export { Card };

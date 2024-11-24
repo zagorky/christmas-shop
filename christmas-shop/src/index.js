@@ -1,13 +1,11 @@
 import initBurger from './scripts/burger';
-import initGiftsGetData from './scripts/giftsGetData';
-// import initUpButton from './scripts/upButton';
+import initGiftsGetData from '../src/scripts/giftsGetData';
 import initTimer from './scripts/timer';
-import initSlider from './scripts/slider';
+// import initSlider from './scripts/slider';
 
 window.addEventListener('load', () => {
   initBurger();
   initGiftsGetData();
-  initSlider();
+  // initSlider();
   initTimer();
-  // initUpButton();
 });

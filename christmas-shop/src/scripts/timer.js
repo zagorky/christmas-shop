@@ -1,52 +1,57 @@
-const days = document.querySelector('.days p');
-const hours = document.querySelector('.hours p');
-const minutes = document.querySelector('.mins p');
-const seconds = document.querySelector('.secs p');
+const daysElem = document.querySelector('.days p');
+const hoursElem = document.querySelector('.hours p');
+const minutesElem = document.querySelector('.mins p');
+const secondsElem = document.querySelector('.secs p');
 
 //функция для ревьюера1, который снизит баллы за рабочий код
-function goReviewYourself(days, hours, minutes, seconds) {
-  days.textContent = '47';
-  hours.textContent = '5';
-  minutes.textContent = '34';
-  seconds.textContent = '12';
-}
+// function goReviewYourself(daysElem, hoursElem, minutesElem, secondsElem) {
+//   daysElem.textContent = '47';
+//   hoursElem.textContent = '5';
+//   minutesElem.textContent = '34';
+//   secondsElem.textContent = '12';
+// }
+
 function timer() {
-  fillDates(days, createLastTime('days', calculateMSTillNY()));
+  let msTillNY = calculateMSTillNY();
 
-  fillDates(hours, createLastTime('hours', calculateMSTillNY()));
+  fillDates(daysElem, createLastTime('days', msTillNY));
 
-  fillDates(minutes, createLastTime('mins', calculateMSTillNY()));
+  fillDates(hoursElem, createLastTime('hours', msTillNY));
 
-  fillDates(seconds, createLastTime('secs', calculateMSTillNY()));
+  fillDates(minutesElem, createLastTime('mins', msTillNY));
+
+  fillDates(secondsElem, createLastTime('secs', msTillNY));
 }
+
 function calculateMSTillNY() {
-  let today = new Date();
-  let NYDate = new Date(today.getFullYear(), 0, 1);
-  let nextNY = NYDate.setFullYear(today.getFullYear() + 1);
-  let ms = nextNY - today;
-  return ms;
+  const today = new Date();
+  const NYDate = new Date(today.getFullYear() + 1, 0, 1);
+  let msTillNY = NYDate - today;
+  return msTillNY;
 }
+
 function fillDates(elem, value) {
-  elem.textContent = `${value} `;
+  elem.textContent = `${value}`;
 }
-function createLastTime(unit, ms) {
-  switch (unit) {
+
+function createLastTime(elem, ms) {
+  switch (elem) {
     case 'days':
-      return (ms / (1000 * 60 * 60 * 24)).toFixed(0);
+      return Math.floor(ms / (1000 * 60 * 60 * 24));
     case 'hours':
-      return ((ms / (1000 * 60 * 60)) % 24).toFixed(0);
+      return Math.floor((ms / (1000 * 60 * 60)) % 24);
     case 'mins':
-      return ((ms / (1000 * 60)) % 60).toFixed(0);
+      return Math.floor((ms / (1000 * 60)) % 60);
     case 'secs':
-      return ((ms / 1000) % 60).toFixed(0);
+      return Math.floor((ms / 1000) % 60);
     default:
       return '0';
   }
 }
 
 export default function initTimer() {
-  goReviewYourself(days, hours, minutes, seconds);
+  // goReviewYourself(daysElem, hoursElem, minutesElem, secondsElem);
 
   //раскомментировать на третьей части
-  // setInterval(timer, 1000);
+  setInterval(timer, 1000);
 }

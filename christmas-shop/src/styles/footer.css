@@ -36,11 +36,6 @@
   height: 100%;
   width: 100%;
 }
-.contact-card-wrapper:hover,
-.contact-card:hover,
-.contact-card:hover a {
-  color: var(--primary-color);
-}
 
 footer {
   padding-block: 60px;
@@ -72,13 +67,6 @@ footer {
   transition: all 0.3s ease-in-out;
 }
 
-.telegram:hover,
-.facebook:hover,
-.instagram:hover,
-.x:hover {
-  color: var(--primary-color);
-}
-
 #telegram-svg,
 #facebook-svg,
 #instagram-svg,
@@ -86,21 +74,11 @@ footer {
   width: 40px;
   height: 40px;
   color: var(--dark);
-  transition: all 0.3s ease-in-out;
+  transition: color 0.3s ease-in-out;
   border: solid 9px var(--static-white);
-}
-
-#telegram-svg:hover,
-#facebook-svg:hover,
-#instagram-svg:hover,
-#x-svg:hover {
-  color: var(--primary-color);
 }
 
 .caption-link {
   color: var(--dark);
-  transition: all 0.3s ease-in-out;
-}
-.caption-link:hover {
-  color: var(--primary-color);
+  transition: color 0.3s ease-in-out;
 }

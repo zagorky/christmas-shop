@@ -5,12 +5,14 @@ function createUpButton() {
   upButton.href = '#top';
   upButton.title = 'Up';
   upButton.innerHTML = '&#129121;';
-  document.body.appendChild(upButton);
+  document.body.append(upButton);
   addUpButtonToPage();
 }
+
 function addUpButtonToPage() {
   window.addEventListener('scroll', checkScroll);
 }
+
 function checkScroll() {
   if (window.scrollY >= 200) {
     upButton.style.display = 'block';
@@ -18,13 +20,13 @@ function checkScroll() {
     upButton.style.display = 'none';
   }
 }
+
 function smoothScroll(event) {
   event.preventDefault();
   window.scrollTo({ top: 0, behavior: 'smooth' });
 }
 
 export default function initUpButton() {
-  document.addEventListener('DOMContentLoaded', createUpButton);
+  createUpButton();
   upButton.addEventListener('click', smoothScroll);
 }
-initUpButton();

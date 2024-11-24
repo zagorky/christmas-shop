@@ -11,10 +11,10 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 8px;
   gap: 8px;
   cursor: pointer;
   width: 100%;
+  border: 10px solid var(--static-white);
 }
 
 .burger-line.top,
@@ -34,14 +34,15 @@
 }
 
 .navigation.adaptiveNav {
-  display: flex !important;
+  display: block;
   width: 100dvw;
   height: 100dvh;
   position: fixed;
-  top: 64px;
+  top: 60px;
   background-color: var(--static-white);
   z-index: 100;
   transition: all 0.4s ease;
+  padding-top: 350px;
 }
 .blocked {
   overflow: hidden;

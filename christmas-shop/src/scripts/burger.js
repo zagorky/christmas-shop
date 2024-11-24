@@ -1,12 +1,12 @@
 const burgerMenu = document.querySelector('.burger-menu');
-const burgerContainer = document.querySelector('.burger');
+// const burgerContainer = document.querySelector('.burger');
 const navigation = document.querySelector('.navigation');
 const navLinks = document.querySelectorAll('.nav-a');
+const TABLET_SCREEN_WIDTH = 769;
 
 function toggleBurgerMenu() {
-  if (window.innerWidth < 768) {
+  if (window.innerWidth < TABLET_SCREEN_WIDTH) {
     burgerMenu.classList.toggle('open');
-    burgerMenu.classList.toggle('actionLarge'); // пока не работает, подумать
     toggleNav('open');
     toggleScroll('open');
   } else {
@@ -16,8 +16,10 @@ function toggleBurgerMenu() {
 function toggleScroll(classValue) {
   if (burgerMenu.classList.contains(classValue)) {
     document.body.classList.add('blocked');
+    changeTypographyClass('actionSmall', 'actionLarge');
   } else {
     document.body.classList.remove('blocked');
+    changeTypographyClass('actionLarge', 'actionSmall');
   }
 }
 function toggleNav(classValue) {
@@ -29,19 +31,24 @@ function toggleNav(classValue) {
 }
 
 function checkSize() {
-  if (window.innerWidth > 768) {
+  if (window.innerWidth > TABLET_SCREEN_WIDTH) {
     navigation.classList.remove('adaptiveNav');
     burgerMenu.classList.remove('open');
+    changeTypographyClass('actionLarge', 'actionSmall');
   }
 }
 
+function changeTypographyClass(oldClass, newClass) {
+  navLinks.forEach((elem) => {
+    elem.classList.add(newClass);
+    elem.classList.remove(oldClass);
+  });
+}
+
 export default function initBurger() {
-  document.addEventListener('DOMContentLoaded', () => {
-    burgerMenu.addEventListener('click', toggleBurgerMenu);
-    navLinks.forEach((link) => {
-      link.addEventListener('click', toggleBurgerMenu);
-    });
+  burgerMenu.addEventListener('click', toggleBurgerMenu);
+  navLinks.forEach((link) => {
+    link.addEventListener('click', toggleBurgerMenu);
   });
   window.addEventListener('resize', checkSize);
 }
-initBurger();

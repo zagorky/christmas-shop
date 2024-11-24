@@ -22,13 +22,13 @@ class MenuElem {
     this.input.type = this.type;
     this.input.name = this.name;
     this.input.id = this.category;
-    menu.appendChild(this.input);
+    menu.append(this.input);
   }
   renderLabel() {
     this.label.htmlFor = this.category;
     this.label.classList.add(this.classNameTypography, this.classNameMain);
     this.label.textContent = this.category.split(/(?=[A-Z])/).join(' ');
-    menu.appendChild(this.label);
+    menu.append(this.label);
   }
   checkAbility() {
     if (this.ability) {
@@ -41,7 +41,9 @@ class MenuElem {
   }
 }
 
-const categoryAll = new MenuElem('all', true);
+const categoryALL = new MenuElem('all', true);
 const categoryForWork = new MenuElem('forWork', false);
 const categoryForHealth = new MenuElem('forHealth', false);
 const categoryForHarmony = new MenuElem('forHarmony', false);
+
+export { categoryALL, categoryForWork, categoryForHealth, categoryForHarmony };

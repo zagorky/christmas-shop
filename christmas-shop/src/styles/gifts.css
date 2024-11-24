@@ -37,9 +37,7 @@
   cursor: pointer;
   transition: all 0.3s ease-in-out;
 }
-.menu-btn:hover {
-  background-color: var(--static-white-40);
-}
+
 .activeBtn {
   background-color: var(--static-white-40);
   cursor: default;
