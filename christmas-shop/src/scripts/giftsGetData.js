@@ -4,7 +4,7 @@ let gifts = [];
 export default function initGiftsGetData() {
   gifts = giftsData;
   clearContainer(document.querySelector('.cards-container'));
-  shuffleGifts(giftsData);
+  shuffleGifts(gifts);
   renderCards(gifts);
 }
 
@@ -99,4 +99,4 @@ function clearContainer(elem) {
   elem.innerHTML = '';
 }
 
-export { Card };
+export { Card, clearContainer, renderCards };
