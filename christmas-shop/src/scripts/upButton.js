@@ -22,12 +22,12 @@ function checkScroll() {
   }
 }
 
-function smoothScroll(event) {
+function scrollToTop(event) {
   event.preventDefault();
   window.scrollTo({ top: 0, behavior: 'smooth' });
 }
 
 export default function initUpButton() {
   createUpButton();
-  upButton.addEventListener('click', smoothScroll);
+  upButton.addEventListener('click', scrollToTop);
 }
