@@ -1,4 +1,4 @@
-import sortAndRenderData from './giftsSorting';
+import initSorting from './giftsSorting';
 
 const menu = document.querySelector('.menu');
 
@@ -50,7 +50,7 @@ class MenuElem {
 
 const categories = ['All', 'For-Work', 'For-Health', 'For-Harmony'];
 categories.forEach((category) => {
-  new MenuElem(category, sortAndRenderData);
+  new MenuElem(category, initSorting);
 });
 
 export { categories };
