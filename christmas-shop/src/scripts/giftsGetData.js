@@ -15,12 +15,15 @@ class Card {
     this.elem = this.createCardElems();
   }
   createCardElems() {
+    let cardClass = this.category.toLowerCase().replace(' ', '-');
+    console.log(cardClass);
+
     const card = this.createElem({ nodeElem: 'div', cssClasses: ['card'] });
     const cardImg = this.createElem({
       nodeElem: 'img',
-      cssClasses: ['cards-img'],
-      attributes: { src: '.' + `${this.img}`, alt: this.name }, //костыль детектед
+      cssClasses: [`cards-img-${cardClass}`],
     });
+
     const cardText = this.createElem({
       nodeElem: 'div',
       cssClasses: ['card-text-container'],
