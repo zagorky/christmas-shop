@@ -32,7 +32,7 @@ function createLastTime(elem, ms) {
 }
 
 function initTimer(nodeElems) {
-  let { daysElem, hoursElem, minutesElem, secondsElem } = nodeElems;
+  const { daysElem, hoursElem, minutesElem, secondsElem } = nodeElems;
   function timer() {
     let msTillNY = calculateMSTillNY();
 
