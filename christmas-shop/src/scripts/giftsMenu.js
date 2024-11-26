@@ -14,12 +14,8 @@ class MenuElem {
     this.text = category;
     this.input.onchange = () => {
       onChange(this.category.replace(/-/g, ' '));
-      menu.querySelectorAll('.menu-btn').forEach((label) => {
-        label.classList.remove('activeBtn');
-      });
-      this.label.classList.add('activeBtn');
+      this.checkActibeMenuElem();
     };
-
     this.renderMenuElem();
   }
   renderMenuElem() {
@@ -43,6 +39,15 @@ class MenuElem {
       this.label.classList.add('activeBtn');
     }
     menu?.append(this.label);
+  }
+
+  checkActibeMenuElem() {
+    Array.from(menu.children).forEach((child) => {
+      if (child.tagName === 'LABEL') {
+        child.classList.remove('activeBtn');
+      }
+    });
+    this.label.classList.add('activeBtn');
   }
 }
 
