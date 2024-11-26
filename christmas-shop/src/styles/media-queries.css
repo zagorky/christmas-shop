@@ -188,3 +188,12 @@
     pointer-events: none;
   }
 }
+@media (hover: hover) and (pointer: coarse) {
+  .inactiveNav:hover,
+  .contact-card:hover {
+    color: inherit;
+    background-color: inherit;
+    border: none;
+    cursor: auto;
+  }
+}
