@@ -6,9 +6,7 @@ class MenuElem {
   constructor(category, onChange) {
     this.input = document.createElement('input');
     this.label = document.createElement('label');
-
     this.category = category;
-
     this.name = 'menu';
     this.type = 'radio';
     this.classNameTypography = 'actionSmall';

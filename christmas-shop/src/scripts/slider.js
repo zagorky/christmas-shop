@@ -1,36 +1,42 @@
+import { TABLET_SCREEN_WIDTH } from './burger';
+
 const slider = document.querySelector('.slider');
 const prevBtn = document.querySelector('.left');
 const nextBtn = document.querySelector('.right');
 
 const sliderWidth = slider.scrollWidth;
 let sliderVisibleWidth;
-let offset = 0;
-let currentOffset = 0;
-let click = 3;
+let OFFSET = 0;
+let CURRENT_OFFSET = 0;
 
 function setSliderVisibleWidth() {
   return (sliderVisibleWidth = slider.clientWidth);
 }
 function calculateSliderReplacing() {
   sliderVisibleWidth = setSliderVisibleWidth();
-  return (offset = (sliderWidth - sliderVisibleWidth) / changeNumbersOfClick());
+  return (OFFSET = (sliderWidth - sliderVisibleWidth) / changeNumbersOfClick());
 }
 function changeNumbersOfClick() {
-  return window.innerWidth >= 768 ? (click = 3) : (click = 6);
+  let NUMBER_OF_CLICK;
+  if (window.innerWidth >= TABLET_SCREEN_WIDTH) {
+    return (NUMBER_OF_CLICK = 3);
+  } else {
+    return (NUMBER_OF_CLICK = 6);
+  }
 }
-function moveSlider(offset) {
-  slider.style.transform = `translateX(-${offset}px)`;
+function moveSlider(OFFSET) {
+  slider.style.transform = `translateX(-${OFFSET}px)`;
 }
 function switchOffBnt() {
-  const maxOffset = sliderWidth - sliderVisibleWidth;
+  const MAX_OFFSET = sliderWidth - sliderVisibleWidth;
 
-  if (currentOffset <= 0) {
+  if (CURRENT_OFFSET <= 0) {
     switchClassName(prevBtn, 'inactiveNav', 'activeNav');
   } else {
     switchClassName(prevBtn, 'activeNav', 'inactiveNav');
   }
 
-  if (currentOffset >= maxOffset) {
+  if (CURRENT_OFFSET >= MAX_OFFSET) {
     switchClassName(nextBtn, 'inactiveNav', 'activeNav');
   } else {
     switchClassName(nextBtn, 'activeNav', 'inactiveNav');
@@ -42,55 +48,27 @@ function switchClassName(elem, addClass, removeClass) {
   elem.classList.remove(removeClass);
 }
 
-window.addEventListener('resize', () => {
-  calculateSliderReplacing();
-  moveSlider(offset);
-  switchOffBnt();
-});
-
-prevBtn.addEventListener('click', () => {
-  calculateSliderReplacing();
-  if (currentOffset > 0) {
-    currentOffset -= offset;
-    moveSlider(currentOffset);
-    switchOffBnt();
-  }
-});
-
-nextBtn.addEventListener('click', () => {
-  calculateSliderReplacing();
-  if (currentOffset < sliderWidth - sliderVisibleWidth) {
-    currentOffset += offset;
-    moveSlider(currentOffset);
-    switchOffBnt();
-  }
-});
-
-setSliderVisibleWidth();
-calculateSliderReplacing();
-switchOffBnt();
-
 export default function initSlider() {
   window.addEventListener('resize', () => {
     calculateSliderReplacing();
-    moveSlider(offset);
+    moveSlider(OFFSET);
     switchOffBnt();
   });
 
   prevBtn.addEventListener('click', () => {
     calculateSliderReplacing();
-    if (currentOffset > 0) {
-      currentOffset -= offset;
-      moveSlider(currentOffset);
+    if (CURRENT_OFFSET > 0) {
+      CURRENT_OFFSET -= OFFSET;
+      moveSlider(CURRENT_OFFSET);
       switchOffBnt();
     }
   });
 
   nextBtn.addEventListener('click', () => {
     calculateSliderReplacing();
-    if (currentOffset < sliderWidth - sliderVisibleWidth) {
-      currentOffset += offset;
-      moveSlider(currentOffset);
+    if (CURRENT_OFFSET < sliderWidth - sliderVisibleWidth) {
+      CURRENT_OFFSET += OFFSET;
+      moveSlider(CURRENT_OFFSET);
       switchOffBnt();
     }
   });

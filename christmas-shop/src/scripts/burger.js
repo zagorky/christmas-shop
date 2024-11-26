@@ -1,5 +1,4 @@
 const burgerMenu = document.querySelector('.burger-menu');
-// const burgerContainer = document.querySelector('.burger');
 const navigation = document.querySelector('.navigation');
 const navLinks = document.querySelectorAll('.nav-a');
 const TABLET_SCREEN_WIDTH = 769;
@@ -52,3 +51,5 @@ export default function initBurger() {
   });
   window.addEventListener('resize', checkSize);
 }
+
+export { TABLET_SCREEN_WIDTH };

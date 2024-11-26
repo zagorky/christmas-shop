@@ -14,7 +14,8 @@ function addUpButtonToPage() {
 }
 
 function checkScroll() {
-  if (window.scrollY >= 200) {
+  const SCROLL_DOWN_OFFSET = 200;
+  if (window.scrollY >= SCROLL_DOWN_OFFSET) {
     upButton.style.display = 'block';
   } else {
     upButton.style.display = 'none';
