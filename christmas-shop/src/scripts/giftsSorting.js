@@ -29,7 +29,13 @@ function checkPage(gifts) {
   if (window.location.href.includes('gifts')) {
     return gifts.slice(0, 12); // убрать слайс перед 3 частью
   }
-  // раскомментировать на третьей части
-  // shuffleGifts(gifts);
+  shuffleGifts(gifts);
   return gifts.slice(0, 4);
+}
+
+function shuffleGifts(gifts) {
+  for (let i = gifts.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [gifts[i], gifts[j]] = [gifts[j], gifts[i]];
+  }
 }

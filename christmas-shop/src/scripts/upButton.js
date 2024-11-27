@@ -1,10 +1,13 @@
-const upButton = document.createElement('a');
+import createElem from './helper';
+
+const upButton = createElem({
+  nodeElem: 'a',
+  cssClasses: ['upButton'],
+  attr: { href: '#top', title: 'Up' },
+  text: '\u{1f861}',
+});
 
 function createUpButton() {
-  upButton.classList.add('upButton');
-  upButton.href = '#top';
-  upButton.title = 'Up';
-  upButton.innerHTML = '&#129121;';
   document.body.append(upButton);
   addUpButtonToPage();
 }

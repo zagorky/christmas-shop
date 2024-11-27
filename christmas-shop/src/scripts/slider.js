@@ -62,6 +62,7 @@ export default function initSlider() {
       moveSlider(CURRENT_OFFSET);
       switchOffBnt();
     }
+    console.log('назад');
   });
 
   nextBtn.addEventListener('click', () => {
@@ -71,6 +72,7 @@ export default function initSlider() {
       moveSlider(CURRENT_OFFSET);
       switchOffBnt();
     }
+    console.log('вперед');
   });
 
   setSliderVisibleWidth();

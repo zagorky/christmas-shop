@@ -44,9 +44,7 @@ function initTimer(nodeElems) {
 
     fillDates(secondsElem, createLastTime('secs', msTillNY));
   }
-  // goReviewYourself(daysElem, hoursElem, minutesElem, secondsElem);
 
-  //раскомментировать на третьей части
   setInterval(timer, 1000);
 }
 

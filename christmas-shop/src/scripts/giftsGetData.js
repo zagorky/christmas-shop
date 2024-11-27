@@ -1,4 +1,5 @@
 import initSorting from './giftsSorting';
+// import initPopup from './popup';
 
 export default function initGiftsGetData() {
   initSorting('All');
@@ -6,25 +7,27 @@ export default function initGiftsGetData() {
 
 class Card {
   constructor(cardProps) {
-    const { category, name, img, description, className } = cardProps;
+    const { category, name, description, className, superpower } = cardProps;
     this.name = name;
     this.category = category;
-    this.img = img;
     this.description = description;
     this.className = className;
+    this.superpower = superpower;
     this.elem = this.createCardElems();
+    this.elem.addEventListener('click', this.createPopup());
   }
   createCardElems() {
-    let cardClass = this.category.toLowerCase().replace(' ', '-');
-    console.log(cardClass);
+    const cssClass = this.category.toLowerCase().replace(' ', '-');
 
-    const card = this.createElem({ nodeElem: 'div', cssClasses: ['card'] });
+    const card = this.createElem({
+      nodeElem: 'div',
+      cssClasses: ['card'],
+    });
     const cardImg = this.createElem({
       nodeElem: 'div',
-      cssClasses: [`cards-img-${cardClass}`],
+      cssClasses: [`cards-img-${cssClass}`],
     });
-
-    const cardText = this.createElem({
+    const cardTextContainer = this.createElem({
       nodeElem: 'div',
       cssClasses: ['card-text-container'],
     });
@@ -39,9 +42,12 @@ class Card {
       text: this.name,
     });
 
-    card.append(cardImg, cardText);
-    cardText.append(cardH3, cardH4);
+    card.append(cardImg, cardTextContainer);
+    cardTextContainer.append(cardH3, cardH4);
     return card;
+  }
+  createPopup() {
+    console.log('я попап');
   }
   createElem(props) {
     const { nodeElem, cssClasses = [], attributes = {}, text } = props;
@@ -57,6 +63,7 @@ class Card {
     }
     return elem;
   }
+
   render(parent) {
     parent.append(this.elem);
   }
@@ -67,24 +74,16 @@ function renderCards(filteredData) {
   console.log('я рендер');
 
   filteredData.forEach((gift) => {
-    const { category, name, img, description, className } = gift;
+    const { category, name, description, className, superpower } = gift;
     const card = new Card({
       category,
       name,
-      img,
       description,
       className,
+      superpower,
     });
     card.render(cardsContainer);
   });
 }
-
-// раскомментировать на третьей части
-// function shuffleGifts(gifts) {
-//   for (let i = gifts.length - 1; i > 0; i--) {
-//     const j = Math.floor(Math.random() * (i + 1));
-//     [gifts[i], gifts[j]] = [gifts[j], gifts[i]];
-//   }
-// }
 
 export { Card, renderCards };

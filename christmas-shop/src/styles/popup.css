@@ -12,3 +12,10 @@
 .overlay.open {
   transform: translateX(-100%);
 }
+
+.popup-container {
+  background-color: aliceblue;
+}
+.popup-text-container {
+  background-color: aqua;
+}
