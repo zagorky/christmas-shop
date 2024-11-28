@@ -15,7 +15,22 @@
 
 .popup-container {
   background-color: aliceblue;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  border-radius: 20px;
+  background: linear-gradient(
+    180deg,
+    rgb(236, 243, 248) 79%,
+    rgb(255, 255, 255) 23%
+  );
+  z-index: 100;
+  cursor: pointer;
+  max-width: 400px;
 }
-.popup-text-container {
-  background-color: aqua;
+
+.popup-close-btn {
+  background-color: aliceblue;
+  width: 40px;
 }

@@ -14,7 +14,9 @@ class Card {
     this.className = className;
     this.superpower = superpower;
     this.elem = this.createCardElems();
-    this.elem.addEventListener('click', this.createPopup());
+    this.elem.addEventListener('click', () => {
+      document.body.append(this.createPopup());
+    });
   }
   createCardElems() {
     const cssClass = this.category.toLowerCase().replace(' ', '-');
@@ -47,7 +49,71 @@ class Card {
     return card;
   }
   createPopup() {
+    const cssClass = this.category.toLowerCase().replace(' ', '-');
+
     console.log('я попап');
+    const popupContainer = this.createElem({
+      nodeElem: 'div',
+      cssClasses: ['popup-container'],
+    });
+
+    const popupImg = this.createElem({
+      nodeElem: 'div',
+      cssClasses: [`cards-img-${cssClass}`],
+    });
+    const popupTextContainer = this.createElem({
+      nodeElem: 'div',
+      cssClasses: ['card-text-container'],
+    });
+    const popupH3 = this.createElem({
+      nodeElem: 'h3',
+      cssClasses: ['header4', this.className],
+      text: this.category,
+    });
+    const popupH4 = this.createElem({
+      nodeElem: 'h4',
+      cssClasses: ['header3'],
+      text: this.name,
+    });
+    const popupDecsription = this.createElem({
+      nodeElem: 'p',
+      cssClasses: ['p'],
+      text: this.description,
+    });
+    const popupListHeader = this.createElem({
+      nodeElem: 'h4',
+      cssClasses: ['header4'],
+      text: 'Adds superpowers to:',
+    });
+    const popupUl = this.createElem({
+      nodeElem: 'ul',
+      cssClasses: ['popup-up'],
+      text: '',
+    });
+    const popupLi = this.createElem({
+      nodeElem: 'li',
+      cssClasses: ['popup-li'],
+      text: '',
+    });
+
+    popupContainer.append(popupImg, popupTextContainer);
+    popupTextContainer.append(
+      popupH3,
+      popupH4,
+      popupDecsription,
+      popupListHeader,
+      popupUl,
+      popupLi,
+    );
+    return popupContainer;
+  }
+
+  closepopup() {
+    const closeBtn = this.createElem({
+      nodeElem: 'div',
+      cssClasses: ['popup-close-btn'],
+    });
+    console.log(closeBtn);
   }
   createElem(props) {
     const { nodeElem, cssClasses = [], attributes = {}, text } = props;

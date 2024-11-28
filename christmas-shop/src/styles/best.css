@@ -40,13 +40,6 @@
   margin: 0 auto 20px auto;
 }
 
-.cards-img {
-  background-image: url(../imgs/for-work.png);
-  background-size: 100% 100%;
-  border-radius: 20px;
-  width: 310px;
-  height: 226px;
-}
 .cards-img-for-work {
   background-image: url(../imgs/for-work.png);
   background-size: 100% 100%;
