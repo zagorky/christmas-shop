@@ -11,13 +11,13 @@ class Card {
       name,
       description,
       className,
-      superpower = {},
+      superpowers = {},
     } = cardProps;
     this.name = name;
     this.category = category;
     this.description = description;
     this.className = className;
-    this.superpower = superpower;
+    this.superpowers = superpowers;
     this.elem = this.createCardElems();
     this.elem.addEventListener('click', () => {
       document.body.append(this.createPopup());
@@ -54,6 +54,10 @@ class Card {
     return card;
   }
   createPopup() {
+    const overlay = this.createElem({
+      nodeElem: 'div',
+      cssClasses: ['overlay'],
+    });
     const cssClass = this.category.toLowerCase().replace(' ', '-');
 
     console.log('я попап');
@@ -64,11 +68,11 @@ class Card {
 
     const popupImg = this.createElem({
       nodeElem: 'div',
-      cssClasses: [`cards-img-${cssClass}`],
+      cssClasses: [`popup-img-${cssClass}`],
     });
     const popupTextContainer = this.createElem({
       nodeElem: 'div',
-      cssClasses: ['card-text-container'],
+      cssClasses: ['popup-text-container'],
     });
     const popupH3 = this.createElem({
       nodeElem: 'h3',
@@ -93,13 +97,23 @@ class Card {
     const closeBtn = this.createElem({
       nodeElem: 'button',
       cssClasses: ['popup-close-btn'],
-      text: 'X',
     });
 
-    const popupSuperpowerList = this.createPopupSuperpowerList(this.superpower);
+    const popupSuperpowerList = this.createPopupSuperpowerList(
+      this.superpowers,
+    );
 
-    closeBtn.addEventListener('click', () => popupContainer.remove());
-    popupContainer.append(popupImg, popupTextContainer, closeBtn);
+    closeBtn.addEventListener('click', () => {
+      popupContainer.remove();
+      overlay.style.visibility = 'hidden';
+      overlay.remove();
+    });
+    overlay.addEventListener('click', () => {
+      popupContainer.remove();
+      overlay.style.visibility = 'hidden';
+      overlay.remove();
+    });
+
     popupTextContainer.append(
       popupH3,
       popupH4,
@@ -107,20 +121,33 @@ class Card {
       popupListHeader,
       popupSuperpowerList,
     );
-    return popupContainer;
+    popupContainer.append(popupImg, popupTextContainer, closeBtn);
+    overlay.append(popupContainer);
+    overlay.style.visibility = 'visible';
+    return overlay;
   }
+
   createPopupSuperpowerList() {
     const ul = this.createElem({
       nodeElem: 'ul',
       cssClasses: ['popup-ul'],
       text: '',
     });
-    Object.entries(this.superpower).forEach(([key, value]) => {
+    Object.entries(this.superpowers).forEach(([key, value]) => {
       const li = this.createElem({
         nodeElem: 'li',
         cssClasses: ['popup-li'],
-        text: `${key.charAt(0).toUpperCase()} : ${value}`,
+        text: `${key.toUpperCase()} ${value}`,
       });
+
+      for (let i = 1; i <= value[1]; i += 1) {
+        const superpowerLogo = this.createElem({
+          nodeElem: 'img',
+          attributes: { alt: '', src: '/imgs/superpowerLogo.svg' },
+          cssClasses: ['superpowerLogo'],
+        });
+        li.append(superpowerLogo);
+      }
       ul.append(li);
     });
     return ul;
@@ -151,13 +178,13 @@ function renderCards(filteredData) {
   console.log('я рендер');
 
   filteredData.forEach((gift) => {
-    const { category, name, description, className, superpower = {} } = gift;
+    const { category, name, description, className, superpowers = {} } = gift;
     const card = new Card({
       category,
       name,
       description,
       className,
-      superpower,
+      superpowers,
     });
     card.render(cardsContainer);
   });

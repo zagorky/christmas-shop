@@ -1,19 +1,19 @@
 .overlay {
   position: fixed;
-  right: -100vw;
+  top: 0;
+  left: 0;
   width: 100dvw;
   height: 100dvh;
-  opacity: 50%;
-  background-color: var(--dark);
+  background-color: #2a2a2aaa;
   z-index: 100;
   transition: all 0.4s ease;
+  visibility: hidden;
   transform: translateX(0);
-}
-.overlay.open {
-  transform: translateX(-100%);
 }
 
 .popup-container {
+  position: relative;
+  top: 5%;
   background-color: aliceblue;
   margin: auto;
   display: flex;
@@ -25,12 +25,63 @@
     rgb(236, 243, 248) 79%,
     rgb(255, 255, 255) 23%
   );
-  z-index: 100;
+  z-index: 1011;
   cursor: pointer;
   max-width: 400px;
+  width: 100%;
+  height: auto;
 }
 
+.popup-close-btn::before {
+  content: '\1F7A9';
+  font-size: 30px;
+}
 .popup-close-btn {
-  background-color: aliceblue;
-  width: 40px;
+  border: none;
+  background-color: #2a2a2a00;
+  cursor: pointer;
+  position: absolute;
+  top: 12px;
+  left: 378px;
+}
+.popup-ul {
+  display: flex;
+  flex-direction: column;
+}
+.popup-img-for-work {
+  background-image: url(../imgs/for-work.png);
+  background-size: 100%;
+  background-position: center;
+  border-radius: 20px;
+  max-width: 400px;
+  width: 100%;
+  min-height: 230px;
+}
+.popup-img-for-health {
+  background-image: url(../imgs/for-health.png);
+  background-size: 100%;
+  background-position: center;
+  border-radius: 20px;
+  max-width: 400px;
+  width: 100%;
+  min-height: 230px;
+}
+.popup-img-for-harmony {
+  background-image: url(../imgs/for-harmony.png);
+  background-size: 100%;
+  background-position: center;
+  border-radius: 20px;
+  max-width: 400px;
+  width: 100%;
+  min-height: 230px;
+}
+
+.popup-text-container {
+  display: flex;
+  min-height: 112px;
+  flex-direction: column;
+  padding: 20px 20px 40px 20px;
+  gap: 8px;
+  border-radius: 20px;
+  background-color: var(--static-white);
 }
