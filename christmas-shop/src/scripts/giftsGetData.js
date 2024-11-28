@@ -1,5 +1,4 @@
 import initSorting from './giftsSorting';
-// import initPopup from './popup';
 
 export default function initGiftsGetData() {
   initSorting('All');
@@ -7,7 +6,13 @@ export default function initGiftsGetData() {
 
 class Card {
   constructor(cardProps) {
-    const { category, name, description, className, superpower } = cardProps;
+    const {
+      category,
+      name,
+      description,
+      className,
+      superpower = {},
+    } = cardProps;
     this.name = name;
     this.category = category;
     this.description = description;
@@ -85,36 +90,42 @@ class Card {
       cssClasses: ['header4'],
       text: 'Adds superpowers to:',
     });
-    const popupUl = this.createElem({
-      nodeElem: 'ul',
-      cssClasses: ['popup-up'],
-      text: '',
-    });
-    const popupLi = this.createElem({
-      nodeElem: 'li',
-      cssClasses: ['popup-li'],
-      text: '',
+    const closeBtn = this.createElem({
+      nodeElem: 'button',
+      cssClasses: ['popup-close-btn'],
+      text: 'X',
     });
 
-    popupContainer.append(popupImg, popupTextContainer);
+    const popupSuperpowerList = this.createPopupSuperpowerList(this.superpower);
+
+    closeBtn.addEventListener('click', () => popupContainer.remove());
+    popupContainer.append(popupImg, popupTextContainer, closeBtn);
     popupTextContainer.append(
       popupH3,
       popupH4,
       popupDecsription,
       popupListHeader,
-      popupUl,
-      popupLi,
+      popupSuperpowerList,
     );
     return popupContainer;
   }
-
-  closepopup() {
-    const closeBtn = this.createElem({
-      nodeElem: 'div',
-      cssClasses: ['popup-close-btn'],
+  createPopupSuperpowerList() {
+    const ul = this.createElem({
+      nodeElem: 'ul',
+      cssClasses: ['popup-ul'],
+      text: '',
     });
-    console.log(closeBtn);
+    Object.entries(this.superpower).forEach(([key, value]) => {
+      const li = this.createElem({
+        nodeElem: 'li',
+        cssClasses: ['popup-li'],
+        text: `${key.charAt(0).toUpperCase()} : ${value}`,
+      });
+      ul.append(li);
+    });
+    return ul;
   }
+
   createElem(props) {
     const { nodeElem, cssClasses = [], attributes = {}, text } = props;
     const elem = document.createElement(nodeElem);
@@ -140,7 +151,7 @@ function renderCards(filteredData) {
   console.log('я рендер');
 
   filteredData.forEach((gift) => {
-    const { category, name, description, className, superpower } = gift;
+    const { category, name, description, className, superpower = {} } = gift;
     const card = new Card({
       category,
       name,
