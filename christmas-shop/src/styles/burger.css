@@ -34,7 +34,7 @@
 }
 
 .navigation.adaptiveNav {
-  display: block;
+  display: flex;
   width: 100dvw;
   height: 100dvh;
   position: fixed;
@@ -42,7 +42,6 @@
   background-color: var(--static-white);
   z-index: 100;
   transition: all 0.4s ease;
-  padding-top: 350px;
 }
 .blocked {
   overflow: hidden;
