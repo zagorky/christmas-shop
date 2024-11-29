@@ -20,7 +20,9 @@ class Card {
     this.superpowers = superpowers;
     this.elem = this.createCardElems();
     this.elem.addEventListener('click', () => {
-      document.body.append(this.createPopup());
+      const popupDialog = this.createPopup();
+      document.body.append(popupDialog);
+      popupDialog.showModal();
     });
   }
   createCardElems() {
@@ -54,9 +56,9 @@ class Card {
     return card;
   }
   createPopup() {
-    const overlay = this.createElem({
-      nodeElem: 'div',
-      cssClasses: ['overlay'],
+    const dialog = this.createElem({
+      nodeElem: 'dialog',
+      cssClasses: ['popup-dialog'],
     });
     const cssClass = this.category.toLowerCase().replace(' ', '-');
 
@@ -104,14 +106,14 @@ class Card {
     );
 
     closeBtn.addEventListener('click', () => {
-      popupContainer.remove();
-      overlay.style.visibility = 'hidden';
-      overlay.remove();
+      dialog.close();
+      dialog.remove();
     });
-    overlay.addEventListener('click', () => {
-      popupContainer.remove();
-      overlay.style.visibility = 'hidden';
-      overlay.remove();
+    dialog.addEventListener('click', (event) => {
+      if (event.target === dialog) {
+        dialog.close();
+        dialog.remove();
+      }
     });
 
     popupTextContainer.append(
@@ -122,9 +124,8 @@ class Card {
       popupSuperpowerList,
     );
     popupContainer.append(popupImg, popupTextContainer, closeBtn);
-    overlay.append(popupContainer);
-    overlay.style.visibility = 'visible';
-    return overlay;
+    dialog.append(popupContainer);
+    return dialog;
   }
 
   createPopupSuperpowerList() {

@@ -1,19 +1,17 @@
-.overlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100dvw;
-  height: 100dvh;
+.popup-dialog {
+  border: none;
   background-color: #2a2a2aaa;
   z-index: 100;
-  transition: all 0.4s ease;
-  visibility: hidden;
-  transform: translateX(0);
+  padding: 0;
+  max-width: 100%;
+  width: 100%;
+  min-height: 100%;
+  height: auto;
 }
 
 .popup-container {
   position: relative;
-  top: 5%;
+  top: calc(100dvh - 80%);
   background-color: aliceblue;
   margin: auto;
   display: flex;
@@ -25,7 +23,7 @@
     rgb(236, 243, 248) 79%,
     rgb(255, 255, 255) 23%
   );
-  z-index: 1011;
+  z-index: 101;
   cursor: pointer;
   max-width: 400px;
   width: 100%;
@@ -42,7 +40,7 @@
   cursor: pointer;
   position: absolute;
   top: 12px;
-  left: 378px;
+  left: 348px;
 }
 .popup-ul {
   display: flex;
@@ -84,4 +82,8 @@
   gap: 8px;
   border-radius: 20px;
   background-color: var(--static-white);
+}
+.superpowerLogo {
+  width: 16px;
+  height: 16px;
 }
