@@ -30,21 +30,45 @@
   height: auto;
 }
 
-.popup-close-btn::before {
-  content: '\1F7A9';
-  font-size: 30px;
-}
 .popup-close-btn {
   border: none;
+  background-image: url(../../public/imgs/close.svg);
+  width: 40px;
+  height: 40px;
   background-color: #2a2a2a00;
   cursor: pointer;
   position: absolute;
   top: 12px;
   left: 348px;
 }
+.popup-close-btn:focus-visible {
+  outline: none;
+}
 .popup-ul {
   display: flex;
   flex-direction: column;
+  margin: 0;
+  padding: 0;
+}
+.popup-li {
+  width: 100%;
+}
+.listElem {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.activeLogo {
+  color: var(--primary-color);
+}
+
+.superpowerName {
+  width: 184px;
+}
+
+.popup-text-container {
+  width: 100%;
 }
 .popup-img-for-work {
   background-image: url(../imgs/for-work.png);
@@ -86,4 +110,5 @@
 .superpowerLogo {
   width: 16px;
   height: 16px;
+  color: var(--primary-10);
 }
