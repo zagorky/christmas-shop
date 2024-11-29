@@ -27,7 +27,7 @@ function checkPage(gifts) {
   console.log('я проверка');
 
   if (window.location.href.includes('gifts')) {
-    return gifts.slice(0, 12); // убрать слайс перед 3 частью
+    return gifts;
   }
   shuffleGifts(gifts);
   return gifts.slice(0, 4);
