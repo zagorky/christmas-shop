@@ -33,6 +33,8 @@ function checkSize() {
   if (window.innerWidth > TABLET_SCREEN_WIDTH) {
     navigation.classList.remove('adaptiveNav');
     burgerMenu.classList.remove('open');
+    document.body.classList.remove('blocked');
+
     changeTypographyClass('actionLarge', 'actionSmall');
   }
 }

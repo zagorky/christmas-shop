@@ -38,7 +38,19 @@
     display: flex !important;
   }
   .navigation {
-    display: none;
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 42px;
+    right: 0;
+    background-color: var(--static-white);
+    z-index: 100;
+    transform: translateX(100%);
+    transition:
+      transform 0.4s ease,
+      visibility 0.2s ease;
+    visibility: hidden;
   }
   nav,
   ul {

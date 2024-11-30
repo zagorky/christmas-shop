@@ -41,7 +41,8 @@
   top: 60px;
   background-color: var(--static-white);
   z-index: 100;
-  transition: all 0.4s ease;
+  visibility: visible;
+  transform: translateX(0);
 }
 .blocked {
   overflow: hidden;
