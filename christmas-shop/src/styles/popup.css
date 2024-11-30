@@ -59,9 +59,6 @@
   align-items: center;
   gap: 12px;
 }
-.activeLogo {
-  color: var(--primary-color);
-}
 
 .superpowerName {
   width: 184px;
