@@ -63,7 +63,6 @@ class Card {
     });
     const cssClass = this.category.toLowerCase().replace(' ', '-');
 
-    console.log('я попап');
     const popupContainer = this.createElem({
       nodeElem: 'div',
       cssClasses: ['popup-container'],
@@ -207,7 +206,6 @@ class Card {
 
 function renderCards(filteredData) {
   const cardsContainer = document.querySelector('.cards-container');
-  console.log('я рендер');
 
   filteredData.forEach((gift) => {
     const { category, name, description, className, superpowers = {} } = gift;

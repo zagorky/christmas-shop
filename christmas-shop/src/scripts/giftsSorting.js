@@ -20,12 +20,9 @@ function fillFilteredData(category) {
 }
 function clearContainer(container) {
   container.innerHTML = '';
-  console.log('я очистка');
 }
 
 function checkPage(gifts) {
-  console.log('я проверка');
-
   if (window.location.href.includes('gifts')) {
     return gifts;
   }
