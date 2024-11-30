@@ -7,7 +7,7 @@ const timerData = {
 
 function calculateMSTillNY() {
   const today = new Date();
-  const NYDate = new Date(today.getFullYear() + 1, 0, 1);
+  const NYDate = new Date(Date.UTC(today.getUTCFullYear() + 1, 0, 1));
   let msTillNY = NYDate - today;
   return msTillNY;
 }
