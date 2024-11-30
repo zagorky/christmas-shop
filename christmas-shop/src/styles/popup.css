@@ -1,17 +1,19 @@
 .popup-dialog {
   border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   background-color: #2a2a2aaa;
   z-index: 100;
   padding: 0;
-  max-width: 100%;
+  max-width: 100vw;
   width: 100%;
-  min-height: 100%;
-  height: auto;
+  min-height: 100vh;
+  height: 100%;
 }
 
 .popup-container {
   position: relative;
-  top: calc(100dvh - 80%);
   background-color: aliceblue;
   margin: auto;
   display: flex;
