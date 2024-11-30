@@ -22,7 +22,8 @@ class Card {
     this.elem.addEventListener('click', () => {
       const popupDialog = this.createPopup();
       document.body.append(popupDialog);
-      document.body.style.overfloy = 'hidden';
+      document.body.style.overflow = 'hidden';
+
       popupDialog.showModal();
     });
   }
@@ -108,11 +109,13 @@ class Card {
 
     closeBtn.addEventListener('click', () => {
       dialog.close();
+      document.body.style.overflow = 'auto';
       dialog.remove();
     });
     dialog.addEventListener('click', (event) => {
       if (event.target === dialog) {
         dialog.close();
+        document.body.style.overflow = 'auto';
         dialog.remove();
       }
     });
@@ -129,14 +132,14 @@ class Card {
     return dialog;
   }
 
-  createPopupSuperpowerList() {
+  createPopupSuperpowerList(superpowers) {
     const ul = this.createElem({
       nodeElem: 'ul',
       cssClasses: ['popup-ul'],
       text: '',
     });
 
-    Object.entries(this.superpowers).forEach(([key, value]) => {
+    Object.entries(superpowers).forEach(([key, value]) => {
       const listElem = this.createElem({
         nodeElem: 'div',
         cssClasses: ['listElem'],
