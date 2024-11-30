@@ -22,8 +22,7 @@ class Card {
     this.elem.addEventListener('click', () => {
       const popupDialog = this.createPopup();
       document.body.append(popupDialog);
-      document.body.style.overflow = 'hidden';
-
+      document.body.classList.add('blocked');
       popupDialog.showModal();
     });
   }
@@ -109,13 +108,13 @@ class Card {
 
     closeBtn.addEventListener('click', () => {
       dialog.close();
-      document.body.style.overflow = 'auto';
+      document.body.classList.remove('blocked');
       dialog.remove();
     });
     dialog.addEventListener('click', (event) => {
       if (event.target === dialog) {
         dialog.close();
-        document.body.style.overflow = 'auto';
+        document.body.classList.remove('blocked');
         dialog.remove();
       }
     });
