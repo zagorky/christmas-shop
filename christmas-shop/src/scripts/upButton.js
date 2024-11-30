@@ -1,3 +1,4 @@
+import { TABLET_SCREEN_WIDTH } from './burger';
 import createElem from './helper';
 
 const upButton = createElem({
@@ -19,11 +20,25 @@ function createUpButton() {
 
 function addUpButtonToPage() {
   window.addEventListener('scroll', checkScroll);
+  window.addEventListener('resize', checkPageSize);
+}
+
+function checkPageSize() {
+  if (window.innerWidth < TABLET_SCREEN_WIDTH) {
+    upButton.style.display = 'block';
+    return true;
+  } else {
+    upButton.style.display = 'none';
+    return false;
+  }
 }
 
 function checkScroll() {
   const SCROLL_DOWN_OFFSET = 300;
-  if (window.scrollY >= SCROLL_DOWN_OFFSET) {
+  if (
+    window.scrollY >= SCROLL_DOWN_OFFSET &&
+    window.innerWidth < TABLET_SCREEN_WIDTH
+  ) {
     upButton.style.display = 'block';
   } else {
     upButton.style.display = 'none';
