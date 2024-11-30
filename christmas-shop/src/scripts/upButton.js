@@ -19,21 +19,11 @@ function createUpButton() {
 }
 
 function addUpButtonToPage() {
-  window.addEventListener('scroll', checkScroll);
-  window.addEventListener('resize', checkPageSize);
+  window.addEventListener('scroll', checkScrollAndPageWidth);
+  window.addEventListener('resize', checkScrollAndPageWidth);
 }
 
-function checkPageSize() {
-  if (window.innerWidth < TABLET_SCREEN_WIDTH) {
-    upButton.style.display = 'block';
-    return true;
-  } else {
-    upButton.style.display = 'none';
-    return false;
-  }
-}
-
-function checkScroll() {
+function checkScrollAndPageWidth() {
   const SCROLL_DOWN_OFFSET = 300;
   if (
     window.scrollY >= SCROLL_DOWN_OFFSET &&
