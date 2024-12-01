@@ -1,81 +1,101 @@
+import { sliderItemsData } from '../data/sliderData';
 import { TABLET_SCREEN_WIDTH } from './burger';
+import createElem from './helper';
 
-const slider = document.querySelector('.slider');
-const prevBtn = document.querySelector('.left');
-const nextBtn = document.querySelector('.right');
+const sliderContainer = document.querySelector('.slider');
+const buttonContainer = document.querySelector('.bnt-container');
 
-const sliderWidth = slider.scrollWidth;
-let sliderVisibleWidth;
-let OFFSET = 0;
-let CURRENT_OFFSET = 0;
+const leftBtn = createElem({
+  nodeElem: 'button',
+  cssClasses: ['left', 'btn', 'inactiveNav'],
+  child: `                <svg
+                  width="14"
+                  height="14"
+                  viewBox="0 0 14 14"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M1 7H13.5M13.5 7L7.5 1M13.5 7L7.5 13"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>`,
+});
 
-function setSliderVisibleWidth() {
-  return (sliderVisibleWidth = slider.clientWidth);
+const rightBtn = createElem({
+  nodeElem: 'button',
+  cssClasses: ['right', 'btn'],
+  child: `<svg
+                  width="14"
+                  height="14"
+                  viewBox="0 0 14 14"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M1 7H13.5M13.5 7L7.5 1M13.5 7L7.5 13"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>`,
+});
+
+const TOTAL_SLIDER_WIDTH = 2148;
+console.log(TOTAL_SLIDER_WIDTH);
+
+let currentOffset = 0;
+
+function moveSlider(direction) {
+  let visibleSliderWidth = sliderContainer.offsetWidth;
+  let offset = calculateOffset(visibleSliderWidth);
+  let directionValue = direction === 'left' ? offset : -offset;
+
+  currentOffset += directionValue;
+  currentOffset = Math.min(
+    Math.max(currentOffset, -(TOTAL_SLIDER_WIDTH - visibleSliderWidth)),
+    0,
+  );
+
+  sliderContainer.style.transform = `translateX(${currentOffset}px)`;
+  updateButtonState();
 }
-function calculateSliderReplacing() {
-  sliderVisibleWidth = setSliderVisibleWidth();
-  return (OFFSET = (sliderWidth - sliderVisibleWidth) / changeNumbersOfClick());
-}
-function changeNumbersOfClick() {
-  let NUMBER_OF_CLICK;
-  if (window.innerWidth >= TABLET_SCREEN_WIDTH) {
-    return (NUMBER_OF_CLICK = 3);
-  } else {
-    return (NUMBER_OF_CLICK = 6);
-  }
-}
-function moveSlider(OFFSET) {
-  slider.style.transform = `translateX(-${OFFSET}px)`;
-}
-function switchOffBnt() {
-  const MAX_OFFSET = sliderWidth - sliderVisibleWidth;
 
-  if (CURRENT_OFFSET <= 0) {
-    switchClassName(prevBtn, 'inactiveNav', 'activeNav');
-  } else {
-    switchClassName(prevBtn, 'activeNav', 'inactiveNav');
-  }
-
-  if (CURRENT_OFFSET >= MAX_OFFSET) {
-    switchClassName(nextBtn, 'inactiveNav', 'activeNav');
-  } else {
-    switchClassName(nextBtn, 'activeNav', 'inactiveNav');
-  }
+function calculateOffset(visibleSliderWidth) {
+  let numberOfClicks = visibleSliderWidth < TABLET_SCREEN_WIDTH ? 6 : 3;
+  let offset = (TOTAL_SLIDER_WIDTH - visibleSliderWidth) / numberOfClicks;
+  return offset;
 }
 
-function switchClassName(elem, addClass, removeClass) {
-  elem.classList.add(addClass);
-  elem.classList.remove(removeClass);
+function updateButtonState() {
+  leftBtn.classList.toggle('inactiveNav', currentOffset === 0);
+  rightBtn.classList.toggle(
+    'inactiveNav',
+    currentOffset <= -(TOTAL_SLIDER_WIDTH - sliderContainer.offsetWidth),
+  );
 }
 
 export default function initSlider() {
+  sliderItemsData.forEach((elem) => {
+    const sliderElem = createElem(elem);
+    sliderContainer.append(sliderElem);
+  });
+
+  buttonContainer.append(leftBtn, rightBtn);
+
   window.addEventListener('resize', () => {
-    calculateSliderReplacing();
-    moveSlider(OFFSET);
-    switchOffBnt();
+    sliderContainer.style.transform = `translateX(0)`;
+    currentOffset = 0;
+    updateButtonState();
   });
 
-  prevBtn.addEventListener('click', () => {
-    calculateSliderReplacing();
-    if (CURRENT_OFFSET > 0) {
-      CURRENT_OFFSET -= OFFSET;
-      moveSlider(CURRENT_OFFSET);
-      switchOffBnt();
-    }
-    console.log('назад');
+  rightBtn.addEventListener('click', () => {
+    moveSlider('right');
   });
-
-  nextBtn.addEventListener('click', () => {
-    calculateSliderReplacing();
-    if (CURRENT_OFFSET < sliderWidth - sliderVisibleWidth) {
-      CURRENT_OFFSET += OFFSET;
-      moveSlider(CURRENT_OFFSET);
-      switchOffBnt();
-    }
-    console.log('вперед');
+  leftBtn.addEventListener('click', () => {
+    moveSlider('left');
   });
-
-  setSliderVisibleWidth();
-  calculateSliderReplacing();
-  switchOffBnt();
+  updateButtonState();
 }

@@ -182,6 +182,7 @@ class Card {
   }
 
   createElem(props) {
+    // ваынести
     const { nodeElem, cssClasses = [], attributes = {}, text, child } = props;
     const elem = document.createElement(nodeElem);
     elem.classList.add(...cssClasses);

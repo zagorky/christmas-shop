@@ -6,6 +6,6 @@ import initSlider from './scripts/slider';
 window.addEventListener('load', () => {
   initBurger();
   initGiftsGetData();
-  initSlider();
   initTimer(timerData);
+  initSlider();
 });

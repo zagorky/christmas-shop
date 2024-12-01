@@ -1,5 +1,12 @@
 export default function createElem(props) {
-  const { nodeElem, cssClasses = [], attributes = {}, text, child } = props;
+  const {
+    nodeElem,
+    cssClasses = [],
+    attributes = {},
+    text,
+    child,
+    difficultChild,
+  } = props;
   const elem = document.createElement(nodeElem);
   elem.classList.add(...cssClasses);
 
@@ -11,6 +18,10 @@ export default function createElem(props) {
   }
   if (child) {
     elem.insertAdjacentHTML('afterbegin', `${child}`);
+  }
+  if (difficultChild) {
+    const childElem = createElem(difficultChild);
+    elem.append(childElem);
   }
   return elem;
 }

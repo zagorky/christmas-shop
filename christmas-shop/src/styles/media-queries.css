@@ -150,9 +150,14 @@
   }
 
   /* slider */
-  .activeNav:hover {
-    color: var(--primary-color) !important;
+  .btn:hover {
+    color: var(--primary-color);
     background-color: var(--static-white);
+  }
+  .inactiveNav:hover {
+    color: var(--static-white-40);
+    background-color: inherit;
+    cursor: default;
   }
 
   /* footer */
@@ -181,8 +186,6 @@
 @media (hover: none) and (pointer: coarse) {
   /* header */
   .card:hover,
-  .activeNav:hover,
-  .inactive:hover,
   .caption-link:hover {
     color: inherit;
     background-color: inherit;
@@ -208,15 +211,14 @@
 
 @media (hover: none) and (pointer: fine) {
   .disabled,
-  .inactiveNav,
   .inactive {
     cursor: default;
     pointer-events: none;
   }
 }
 @media (hover: hover) and (pointer: coarse) {
-  .inactiveNav:hover,
-  .contact-card:hover {
+  .contact-card:hover,
+  .inactiveNav:hover {
     color: inherit;
     background-color: inherit;
     border: none;
