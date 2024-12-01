@@ -14,7 +14,7 @@ const sliderItemsData = [
     difficultChild: {
       nodeElem: 'img',
       attributes: {
-        src: './src/imgs/snowman.png',
+        src: './imgs/snowman.png',
         alt: 'snowman',
       },
     },
@@ -34,7 +34,7 @@ const sliderItemsData = [
     difficultChild: {
       nodeElem: 'img',
       attributes: {
-        src: './src/imgs/christmas-trees.png',
+        src: './imgs/christmas-trees.png',
         alt: 'christmas-trees',
       },
     },
@@ -54,7 +54,7 @@ const sliderItemsData = [
     difficultChild: {
       nodeElem: 'img',
       attributes: {
-        src: './src/imgs/christmas-tree-ball.png',
+        src: './imgs/christmas-tree-ball.png',
         alt: 'christmas-tree-ball',
       },
     },
@@ -74,7 +74,7 @@ const sliderItemsData = [
     difficultChild: {
       nodeElem: 'img',
       attributes: {
-        src: './src/imgs/fairytale-house.png',
+        src: './imgs/fairytale-house.png',
         alt: 'fairytale-house',
       },
     },
