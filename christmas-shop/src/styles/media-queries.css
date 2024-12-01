@@ -45,9 +45,8 @@
     top: 42px;
     left: 0;
     z-index: 100;
-    background-color: var(--static-white);
     transform: translateX(100%);
-    /* transition: transform 0.3s ease; */
+    background-color: var(--static-white);
   }
 
   nav,
@@ -82,7 +81,7 @@
     z-index: 100;
     background-color: var(--static-white);
     transform: translateX(100%);
-    transition: transform 0.3s ease;
+    /* transition: transform 0.2s ease; */
   }
 }
 
