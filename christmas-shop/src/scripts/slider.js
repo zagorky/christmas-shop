@@ -44,7 +44,6 @@ const rightBtn = createElem({
 });
 
 const TOTAL_SLIDER_WIDTH = 2148.5;
-console.log(TOTAL_SLIDER_WIDTH);
 
 let currentOffset = 0;
 
