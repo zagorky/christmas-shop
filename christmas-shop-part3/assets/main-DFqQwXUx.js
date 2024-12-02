@@ -187,10 +187,7 @@ function moveSlider(direction) {
   const remainingDistance =
     TOTAL_SLIDER_WIDTH - visibleSliderWidth + currentOffset;
 
-  if (
-    direction === 'right' ||
-    (direction === 'left' && remainingDistance < offset)
-  ) {
+  if (direction === 'right' && remainingDistance < offset) {
     directionValue = -remainingDistance;
   }
 
@@ -249,4 +246,4 @@ window.addEventListener('load', () => {
   initTimer(timerData);
   initSlider();
 });
-//# sourceMappingURL=main-DolBlHeU.js.map
+//# sourceMappingURL=main-DFqQwXUx.js.map
