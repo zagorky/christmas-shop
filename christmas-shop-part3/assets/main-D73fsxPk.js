@@ -181,28 +181,31 @@ const TOTAL_SLIDER_WIDTH = 1988 + 80;
 let currentOffset = 0;
 
 function moveSlider(direction) {
+  let numberOfClicks = calculateNumberOfClicks(visibleSliderWidth);
   let visibleSliderWidth = sliderContainer.offsetWidth;
   let offset = calculateOffset(visibleSliderWidth);
   let directionValue = direction === 'left' ? +offset : -offset;
-  const remainingDistance =
-    TOTAL_SLIDER_WIDTH - visibleSliderWidth + currentOffset;
-
-  if (direction === 'right' && remainingDistance < offset) {
-    directionValue = -remainingDistance;
-  }
+  const remainingDistance = TOTAL_SLIDER_WIDTH - offset * numberOfClicks;
 
   currentOffset += directionValue;
   currentOffset = Math.min(
-    Math.max(currentOffset, -(TOTAL_SLIDER_WIDTH - visibleSliderWidth)),
+    Math.max(
+      currentOffset,
+      -(TOTAL_SLIDER_WIDTH - visibleSliderWidth) +
+        remainingDistance / numberOfClicks,
+    ),
     0,
   );
 
   sliderContainer.style.transform = `translateX(${currentOffset}px)`;
   updateButtonState();
 }
-
-function calculateOffset(visibleSliderWidth) {
+function calculateNumberOfClicks(visibleSliderWidth) {
   let numberOfClicks = visibleSliderWidth < TABLET_SCREEN_WIDTH ? 6 : 3;
+  return numberOfClicks;
+}
+function calculateOffset(visibleSliderWidth) {
+  let numberOfClicks = calculateNumberOfClicks(visibleSliderWidth);
   let offset = Math.floor(
     (TOTAL_SLIDER_WIDTH - visibleSliderWidth) / numberOfClicks,
   );
@@ -246,4 +249,4 @@ window.addEventListener('load', () => {
   initTimer(timerData);
   initSlider();
 });
-//# sourceMappingURL=main-DFqQwXUx.js.map
+//# sourceMappingURL=main-D73fsxPk.js.map
