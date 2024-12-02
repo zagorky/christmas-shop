@@ -200,9 +200,7 @@ function calculateNumberOfClicks(visibleSliderWidth) {
 }
 function calculateOffset(visibleSliderWidth) {
   let numberOfClicks = calculateNumberOfClicks(visibleSliderWidth);
-  let offset = Math.floor(
-    (TOTAL_SLIDER_WIDTH - visibleSliderWidth) / numberOfClicks,
-  );
+  let offset = (TOTAL_SLIDER_WIDTH - visibleSliderWidth) / numberOfClicks;
   return offset;
 }
 
@@ -243,4 +241,4 @@ window.addEventListener('load', () => {
   initTimer(timerData);
   initSlider();
 });
-//# sourceMappingURL=main-CDs_ocQS.js.map
+//# sourceMappingURL=main-STNr3prV.js.map
