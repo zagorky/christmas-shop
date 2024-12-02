@@ -43,7 +43,7 @@ const rightBtn = createElem({
                 </svg>`,
 });
 
-const TOTAL_SLIDER_WIDTH = 2148;
+const TOTAL_SLIDER_WIDTH = 2148.5;
 console.log(TOTAL_SLIDER_WIDTH);
 
 let currentOffset = 0;
@@ -55,7 +55,10 @@ function moveSlider(direction) {
 
   currentOffset += directionValue;
   currentOffset = Math.min(
-    Math.max(currentOffset, -(TOTAL_SLIDER_WIDTH - visibleSliderWidth)),
+    Math.max(
+      currentOffset,
+      -Math.round(TOTAL_SLIDER_WIDTH - visibleSliderWidth),
+    ),
     0,
   );
 
