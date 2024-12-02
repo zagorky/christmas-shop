@@ -185,6 +185,14 @@ function moveSlider(direction) {
   let offset = calculateOffset(visibleSliderWidth);
   let directionValue =
     direction === 'left' ? +offset.toFixed(0) : -offset.toFixed(0);
+  const remainingDistance =
+    TOTAL_SLIDER_WIDTH - visibleSliderWidth + currentOffset;
+
+  if (remainingDistance > 0 && remainingDistance < 3 && direction === 'right') {
+    currentOffset = -(TOTAL_SLIDER_WIDTH - visibleSliderWidth);
+  } else {
+    currentOffset += directionValue;
+  }
 
   currentOffset += directionValue;
   currentOffset = Math.min(
@@ -241,4 +249,4 @@ window.addEventListener('load', () => {
   initTimer(timerData);
   initSlider();
 });
-//# sourceMappingURL=main-CheWYpnc.js.map
+//# sourceMappingURL=main-Cszemaea.js.map
