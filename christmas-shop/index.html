@@ -3,11 +3,17 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./src/styles.css" />
 
+    <link
+      rel="stylesheet"
+      href="node_modules/modern-normalize/modern-normalize.css"
+    />
 
     <link
       rel="shortcut icon"
-      href="./assets/hozyajstvennaya_sumka_f2c0trh55st2-BGF4kxhj.ico"
+      href="./src/imgs/hozyajstvennaya_sumka_f2c0trh55st2.ico"
+
       type="image/x-icon"
     />
     <title>Christmas Shop</title>
@@ -98,65 +104,8 @@
               <p class="caption">Become Happier!</p>
               <h2 class="header2">in the new 2025</h2>
             </div>
-            <div class="slider">
-              <div class="slider-elem"><p class="slider-text">live</p></div>
-              <div class="slider-elem-img">
-                <img src="./assets/snowman-CtIqi_Y3.png" alt="snowman" />
-              </div>
-              <div class="slider-elem"><p class="slider-text">create</p></div>
-              <div class="slider-elem-img">
-                <img
-                  src="./assets/christmas-trees-hbGs1Mjd.png"
-                  alt="christmas-tree-ball"
-                />
-              </div>
-              <div class="slider-elem"><p class="slider-text">love</p></div>
-              <div class="slider-elem-img">
-                <img
-                  src="./assets/christmas-tree-ball-Cula2XyV.png"
-                  alt="christmas-trees"
-                />
-              </div>
-              <div class="slider-elem">
-                <p class="slider-text">harmony</p>
-              </div>
-              <div class="slider-elem-img">
-                <img src="./assets/snowman-CtIqi_Y3.png" alt="snowman" />
-              </div>
-            </div>
-            <div class="bnt-container">
-              <button class="left btn inactiveNav">
-                <svg
-                  width="14"
-                  height="14"
-                  viewBox="0 0 14 14"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M1 7H13.5M13.5 7L7.5 1M13.5 7L7.5 13"
-                    stroke="currentColor"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  />
-                </svg></button
-              ><button class="right btn activeNav">
-                <svg
-                  width="14"
-                  height="14"
-                  viewBox="0 0 14 14"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M1 7H13.5M13.5 7L7.5 1M13.5 7L7.5 13"
-                    stroke="currentColor"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  />
-                </svg>
-              </button>
-            </div>
+            <div class="slider"></div>
+            <div class="bnt-container"></div>
           </div>
         </section>
         <section id="best" class="best-gifts-section">
@@ -220,21 +169,23 @@
                         <h4 class="header4">days</h4>
                       </div>
                     </div>
-                    <img src="data:image/svg+xml,%3csvg%20width='1'%20height='20'%20viewBox='0%200%201%2020'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cline%20x1='0.5'%20y1='20'%20x2='0.500001'%20y2='-2.18557e-08'%20stroke='white'%20stroke-opacity='0.4'/%3e%3c/svg%3e" alt="" />
+                    <img src="./src/imgs/Separator.svg" alt="" />
                     <div class="hours-container">
                       <div class="hours">
                         <p class="header2"></p>
                         <h4 class="header4">hours</h4>
                       </div>
                     </div>
-                    <img src="data:image/svg+xml,%3csvg%20width='1'%20height='20'%20viewBox='0%200%201%2020'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cline%20x1='0.5'%20y1='20'%20x2='0.500001'%20y2='-2.18557e-08'%20stroke='white'%20stroke-opacity='0.4'/%3e%3c/svg%3e" alt="" />
+                    <img src="./src/imgs/Separator.svg" alt="" />
+
                     <div class="mins-container">
                       <div class="mins">
                         <p class="header2"></p>
                         <h4 class="header4">minutes</h4>
                       </div>
                     </div>
-                    <img src="data:image/svg+xml,%3csvg%20width='1'%20height='20'%20viewBox='0%200%201%2020'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cline%20x1='0.5'%20y1='20'%20x2='0.500001'%20y2='-2.18557e-08'%20stroke='white'%20stroke-opacity='0.4'/%3e%3c/svg%3e" alt="" />
+                    <img src="./src/imgs/Separator.svg" alt="" />
+
                     <div class="secs-container">
                       <div class="secs">
                         <p class="header2"></p>
@@ -253,7 +204,8 @@
           <div class="contacts-info-container">
             <div class="contact-card-wrapper call-us contact-card">
               <a href="tel:375291112233" class="actionLarge contact-card">
-                <img src="./assets/santa-claus-DTbVeNVy.svg" alt="" />
+                <img src="./src/imgs/santa-claus.svg" alt="" />
+
                 +375 (29) 111-22-33
                 <h3 class="header3">Call Us</h3>
               </a>
@@ -264,14 +216,16 @@
                 class="actionLarge contact-card"
                 target="_blank"
               >
-                <img src="./assets/christmas-tree-BnwTWv-E.svg" alt="" />
+                <img src="./src/imgs/christmas-tree.svg" alt="" />
+
                 Magic forest
                 <h3 class="header3">meet us</h3>
               </a>
             </div>
             <div class="contact-card-wrapper write-us contact-card">
               <a class="actionLarge contact-card" href="mailto:gifts@magic.com">
-                <img src="./assets/snake-D6zQIxV2.svg" alt="" />
+                <img src="./src/imgs/snake.svg" alt="" />
+
                 gifts@magic.com
                 <h3 class="header3">write us</h3>
               </a>
@@ -379,5 +333,6 @@
         </div>
       </footer>
     </div>
+    <script type="module" src="./src/index.js"></script>
   </body>
 </html>

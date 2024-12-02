@@ -1,0 +1,14 @@
+.upButton {
+  display: none;
+  position: fixed;
+  bottom: 8px;
+  right: 8px;
+  z-index: 102;
+  cursor: pointer;
+  border-radius: 100px;
+  border: 1px solid var(--primary-color);
+  background-color: var(--static-white);
+  color: var(--primary-color);
+  padding: 15px 16px 13px 16px;
+  text-decoration: none;
+}
