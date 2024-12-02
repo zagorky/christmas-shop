@@ -45,11 +45,13 @@ function changeTypographyClass(oldClass, newClass) {
 export default function initBurger() {
   burgerMenu.addEventListener('click', () => {
     toggleBurgerMenu();
+    window.scrollTo({ top: 0, behavior: 'smooth' });
   });
   navLinks.forEach((link) => {
     link.addEventListener('click', () => {
       toggleBurgerMenu();
       document.body.classList.remove('blocked');
+      window.scrollTo({ top: 0, behavior: 'smooth' });
     });
   });
   window.addEventListener('resize', () => {
