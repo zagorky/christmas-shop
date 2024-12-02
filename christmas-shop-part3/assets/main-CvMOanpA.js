@@ -188,10 +188,7 @@ function moveSlider(direction) {
 
   currentOffset += directionValue;
   currentOffset = Math.min(
-    Math.max(
-      currentOffset,
-      -Math.round(TOTAL_SLIDER_WIDTH - visibleSliderWidth),
-    ),
+    Math.max(currentOffset, -(TOTAL_SLIDER_WIDTH - visibleSliderWidth)),
     0,
   );
 
@@ -201,8 +198,10 @@ function moveSlider(direction) {
 
 function calculateOffset(visibleSliderWidth) {
   let numberOfClicks = visibleSliderWidth < TABLET_SCREEN_WIDTH ? 6 : 3;
-  let offset = (TOTAL_SLIDER_WIDTH - visibleSliderWidth) / numberOfClicks;
-  return offset;
+  let offset = Math.floor(
+    (TOTAL_SLIDER_WIDTH - visibleSliderWidth) / numberOfClicks,
+  );
+  return Math.max(offset, 1);
 }
 
 function updateButtonState() {
@@ -242,4 +241,4 @@ window.addEventListener('load', () => {
   initTimer(timerData);
   initSlider();
 });
-//# sourceMappingURL=main-3B2KlG6U.js.map
+//# sourceMappingURL=main-CvMOanpA.js.map
