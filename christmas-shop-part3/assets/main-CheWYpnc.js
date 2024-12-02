@@ -176,7 +176,7 @@ const rightBtn = createElem({
                 </svg>`,
 });
 
-const TOTAL_SLIDER_WIDTH = 1988;
+const TOTAL_SLIDER_WIDTH = 1988 + 82;
 
 let currentOffset = 0;
 
@@ -241,4 +241,4 @@ window.addEventListener('load', () => {
   initTimer(timerData);
   initSlider();
 });
-//# sourceMappingURL=main-0lTEQlQS.js.map
+//# sourceMappingURL=main-CheWYpnc.js.map
