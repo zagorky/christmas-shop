@@ -191,7 +191,7 @@ function moveSlider(direction) {
     0,
   );
 
-  sliderContainer.style.transform = `translateX(${currentOffset + 3}px)`;
+  sliderContainer.style.transform = `translateX(${currentOffset}px)`;
   updateButtonState();
 }
 function calculateNumberOfClicks(visibleSliderWidth) {
@@ -243,4 +243,4 @@ window.addEventListener('load', () => {
   initTimer(timerData);
   initSlider();
 });
-//# sourceMappingURL=main-B-jBnWp9.js.map
+//# sourceMappingURL=main-CDs_ocQS.js.map
