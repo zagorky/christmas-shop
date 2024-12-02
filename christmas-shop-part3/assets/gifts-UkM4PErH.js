@@ -1,4 +1,4 @@
-import{c as a,T as r,b as l,i as c,a as h}from"./helper-C2LKX3sF.js";const n=a({nodeElem:"a",cssClasses:["upButton"],attr:{href:"#top",title:"Up"},child:`<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+import{c as a,T as r,b as l,i as c,a as h}from"./helper-BFKPCzJS.js";const n=a({nodeElem:"a",cssClasses:["upButton"],attr:{href:"#top",title:"Up"},child:`<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M12 5V19" stroke="#FF4646" stroke-linecap="round" stroke-linejoin="round"/>
 <path d="M18 11L12 5" stroke="#FF4646" stroke-linecap="round" stroke-linejoin="round"/>
 <path d="M6 11L12 5" stroke="#FF4646" stroke-linecap="round" stroke-linejoin="round"/>
