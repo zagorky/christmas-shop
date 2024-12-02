@@ -1,4 +1,4 @@
-import { c as createElem, T as TABLET_SCREEN_WIDTH, b as initSorting, i as initBurger, a as initGiftsGetData } from './helper-DjWgrCZf.js';
+import { c as createElem, T as TABLET_SCREEN_WIDTH, b as initSorting, i as initBurger, a as initGiftsGetData } from './helper-CvapV7_2.js';
 
 // import { i as h } from './burger-BjnlU_c_.js';
 // const m = [
@@ -512,4 +512,4 @@ window.addEventListener('load', () => {
   initGiftsGetData();
   initUpButton();
 });
-//# sourceMappingURL=gifts-CSbogIjI.js.map
+//# sourceMappingURL=gifts-n0MFQq1B.js.map

@@ -1,4 +1,4 @@
-import { c as createElem, T as TABLET_SCREEN_WIDTH, i as initBurger, a as initGiftsGetData } from './helper-DjWgrCZf.js';
+import { c as createElem, T as TABLET_SCREEN_WIDTH, i as initBurger, a as initGiftsGetData } from './helper-CvapV7_2.js';
 
 // import{i as r}from"./burger-BjnlU_c_.js";const s=document.querySelector(".days p"),c=document.querySelector(".hours p"),u=document.querySelector(".mins p"),i=document.querySelector(".secs p");function m(e,t,n,o){e.textContent="47",t.textContent="5",n.textContent="34",o.textContent="12"}function d(){m(s,c,u,i)}window.addEventListener("load",()=>{r(),d()});
 
@@ -241,4 +241,4 @@ window.addEventListener('load', () => {
   initTimer(timerData);
   initSlider();
 });
-//# sourceMappingURL=main-BS2rjBQi.js.map
+//# sourceMappingURL=main-0lTEQlQS.js.map

@@ -818,4 +818,4 @@ function createElem(props) {
 }
 
 export { TABLET_SCREEN_WIDTH as T, initGiftsGetData as a, initSorting as b, createElem as c, initBurger as i };
-//# sourceMappingURL=helper-DjWgrCZf.js.map
+//# sourceMappingURL=helper-CvapV7_2.js.map
