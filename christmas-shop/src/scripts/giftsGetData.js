@@ -88,7 +88,7 @@ class Card {
     });
     const popupDecsription = this.createElem({
       nodeElem: 'p',
-      cssClasses: ['p'],
+      cssClasses: ['p', 'card-desc'],
       text: this.description,
     });
     const popupListHeader = this.createElem({

@@ -25,7 +25,7 @@
     rgb(236, 243, 248) 79%,
     rgb(255, 255, 255) 23%
   );
-  z-index: 101;
+  z-index: 1;
   max-width: 400px;
   width: 100%;
   height: auto;
@@ -46,11 +46,16 @@
 .popup-close-btn:focus-visible {
   outline: none;
 }
+.card-desc {
+  padding-bottom: 12px;
+}
+
 .popup-ul {
   display: flex;
   flex-direction: column;
   margin: 0;
   padding: 0;
+  gap: 0;
 }
 .popup-li {
   width: 100%;
@@ -64,6 +69,10 @@
 
 .superpowerName {
   width: 184px;
+  text-transform: lowercase;
+}
+.superpowerName::first-letter {
+  text-transform: uppercase;
 }
 
 .popup-text-container {
@@ -101,7 +110,7 @@
   display: flex;
   min-height: 112px;
   flex-direction: column;
-  padding: 20px 20px 40px 20px;
+  padding: 20px;
   gap: 8px;
   border-radius: 20px;
   background-color: var(--static-white);

@@ -43,30 +43,30 @@ const rightBtn = createElem({
                 </svg>`,
 });
 
-const TOTAL_SLIDER_WIDTH = 2148.5;
+const TOTAL_SLIDER_WIDTH = 1988 + 80;
 
 let currentOffset = 0;
 
 function moveSlider(direction) {
   let visibleSliderWidth = sliderContainer.offsetWidth;
   let offset = calculateOffset(visibleSliderWidth);
-  let directionValue = direction === 'left' ? offset : -offset;
+  let directionValue = direction === 'left' ? +offset : -offset;
 
   currentOffset += directionValue;
   currentOffset = Math.min(
-    Math.max(
-      currentOffset,
-      -Math.round(TOTAL_SLIDER_WIDTH - visibleSliderWidth),
-    ),
+    Math.max(currentOffset, -(TOTAL_SLIDER_WIDTH - visibleSliderWidth)),
     0,
   );
 
   sliderContainer.style.transform = `translateX(${currentOffset}px)`;
   updateButtonState();
 }
-
-function calculateOffset(visibleSliderWidth) {
+function calculateNumberOfClicks(visibleSliderWidth) {
   let numberOfClicks = visibleSliderWidth < TABLET_SCREEN_WIDTH ? 6 : 3;
+  return numberOfClicks;
+}
+function calculateOffset(visibleSliderWidth) {
+  let numberOfClicks = calculateNumberOfClicks(visibleSliderWidth);
   let offset = (TOTAL_SLIDER_WIDTH - visibleSliderWidth) / numberOfClicks;
   return offset;
 }
