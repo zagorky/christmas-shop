@@ -15,24 +15,20 @@ export default function createPopup({
     cssClasses: ['popup-container'],
   });
 
-  const closeBtn = this.createElem({
+  const closeBtn = createElem({
     nodeElem: 'button',
     cssClasses: ['popup-close-btn'],
   });
 
   closeBtn.addEventListener('click', () => {
     dialog.close();
-    if (onBackgroundClick) {
-      onBackgroundClick();
-    }
+    onBackgroundClick?.();
     dialog.remove();
   });
   dialog.addEventListener('click', (event) => {
     if (event.target === dialog) {
       dialog.close();
-      if (onClose) {
-        onClose();
-      }
+      onClose?.();
       dialog.remove();
     }
   });
