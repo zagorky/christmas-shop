@@ -22,13 +22,13 @@ export default function createPopup({
 
   closeBtn.addEventListener('click', () => {
     dialog.close();
-    onBackgroundClick?.();
+    onClose?.();
     dialog.remove();
   });
   dialog.addEventListener('click', (event) => {
     if (event.target === dialog) {
       dialog.close();
-      onClose?.();
+      onBackgroundClick?.();
       dialog.remove();
     }
   });
