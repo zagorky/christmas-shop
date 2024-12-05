@@ -14,15 +14,15 @@ class MenuElem {
     this.text = category;
     this.input.onchange = () => {
       onChange(this.category.replace(/-/g, ' '));
-      this.checkActibeMenuElem();
+      this.#checkActibeMenuElem();
     };
-    this.renderMenuElem();
+    this.#renderMenuElem();
   }
-  renderMenuElem() {
-    this.renderInput();
-    this.renderLabel();
+  #renderMenuElem() {
+    this.#renderInput();
+    this.#renderLabel();
   }
-  renderInput() {
+  #renderInput() {
     this.input.type = this.type;
     this.input.name = this.name;
     this.input.id = this.category;
@@ -31,7 +31,7 @@ class MenuElem {
     }
     menu?.append(this.input);
   }
-  renderLabel() {
+  #renderLabel() {
     this.label.htmlFor = this.category;
     this.label.classList.add(this.classNameTypography, this.classNameMain);
     this.label.textContent = this.category.replace(/-/g, ' ');
@@ -41,7 +41,7 @@ class MenuElem {
     menu?.append(this.label);
   }
 
-  checkActibeMenuElem() {
+  #checkActibeMenuElem() {
     Array.from(menu.children).forEach((child) => {
       if (child.tagName === 'LABEL') {
         child.classList.remove('activeBtn');
