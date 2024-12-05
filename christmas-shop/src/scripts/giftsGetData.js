@@ -23,12 +23,12 @@ class Card {
     this.superpowers = superpowers;
 
     this.createElem = createElem;
-    this.elem = this.createCardElems();
+    this.elem = this.#createCardElems();
 
     this.elem.addEventListener('click', () => {
       const cssClass = this.category.toLowerCase().replace(' ', '-');
 
-      const superpowerList = this.createPopupSuperpowerList(this.superpowers);
+      const superpowerList = this.#createPopupSuperpowerList(this.superpowers);
 
       const popupTextContainer = this.createElem({
         nodeElem: 'div',
@@ -80,7 +80,7 @@ class Card {
       popupDialog.showModal();
     });
   }
-  createCardElems() {
+  #createCardElems() {
     const cssClass = this.category.toLowerCase().replace(' ', '-');
 
     const card = this.createElem({
@@ -111,7 +111,7 @@ class Card {
     return card;
   }
 
-  createPopupSuperpowerList(superpowers) {
+  #createPopupSuperpowerList(superpowers) {
     const ul = this.createElem({
       nodeElem: 'ul',
       cssClasses: ['popup-ul'],
