@@ -1,41 +1,38 @@
 const burgerMenu = document.querySelector('.burger-menu');
-// const burgerContainer = document.querySelector('.burger');
 const navigation = document.querySelector('.navigation');
 const navLinks = document.querySelectorAll('.nav-a');
 const TABLET_SCREEN_WIDTH = 769;
 
 function toggleBurgerMenu() {
   if (window.innerWidth < TABLET_SCREEN_WIDTH) {
-    burgerMenu.classList.toggle('open');
-    toggleNav('open');
-    toggleScroll('open');
+    addClasses();
   } else {
-    toggleScroll('open');
-  }
-}
-function toggleScroll(classValue) {
-  if (burgerMenu.classList.contains(classValue)) {
-    document.body.classList.add('blocked');
-    changeTypographyClass('actionSmall', 'actionLarge');
-  } else {
-    document.body.classList.remove('blocked');
-    changeTypographyClass('actionLarge', 'actionSmall');
-  }
-}
-function toggleNav(classValue) {
-  if (burgerMenu.classList.contains(classValue)) {
-    navigation.classList.toggle('adaptiveNav');
-  } else {
-    navigation.classList.toggle('adaptiveNav');
+    removeClasses();
   }
 }
 
+function addClasses() {
+  burgerMenu.classList.toggle('open');
+  document.body.classList.toggle('blocked');
+  changeTypographyClass('actionSmall', 'actionLarge');
+  navigation.classList.toggle('open');
+  navigation.classList.add('adaptiveNav');
+}
+
 function checkSize() {
-  if (window.innerWidth > TABLET_SCREEN_WIDTH) {
-    navigation.classList.remove('adaptiveNav');
-    burgerMenu.classList.remove('open');
-    changeTypographyClass('actionLarge', 'actionSmall');
+  if (window.innerWidth >= TABLET_SCREEN_WIDTH) {
+    removeClasses();
+  } else {
+    navigation.classList.add('adaptiveNav');
   }
+}
+
+function removeClasses() {
+  burgerMenu.classList.remove('open');
+  document.body.classList.remove('blocked');
+  navigation.classList.remove('open');
+  navigation.classList.remove('adaptiveNav');
+  changeTypographyClass('actionLarge', 'actionSmall');
 }
 
 function changeTypographyClass(oldClass, newClass) {
@@ -46,9 +43,20 @@ function changeTypographyClass(oldClass, newClass) {
 }
 
 export default function initBurger() {
-  burgerMenu.addEventListener('click', toggleBurgerMenu);
-  navLinks.forEach((link) => {
-    link.addEventListener('click', toggleBurgerMenu);
+  burgerMenu.addEventListener('click', () => {
+    toggleBurgerMenu();
+    window.scrollTo({ top: 0, behavior: 'smooth' });
   });
-  window.addEventListener('resize', checkSize);
+  navLinks.forEach((link) => {
+    link.addEventListener('click', () => {
+      toggleBurgerMenu();
+      document.body.classList.remove('blocked');
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+  });
+  window.addEventListener('resize', () => {
+    checkSize();
+  });
 }
+
+export { TABLET_SCREEN_WIDTH };

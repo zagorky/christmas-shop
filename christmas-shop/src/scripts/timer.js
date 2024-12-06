@@ -1,31 +1,13 @@
-const daysElem = document.querySelector('.days p');
-const hoursElem = document.querySelector('.hours p');
-const minutesElem = document.querySelector('.mins p');
-const secondsElem = document.querySelector('.secs p');
-
-//функция для ревьюера1, который снизит баллы за рабочий код
-// function goReviewYourself(daysElem, hoursElem, minutesElem, secondsElem) {
-//   daysElem.textContent = '47';
-//   hoursElem.textContent = '5';
-//   minutesElem.textContent = '34';
-//   secondsElem.textContent = '12';
-// }
-
-function timer() {
-  let msTillNY = calculateMSTillNY();
-
-  fillDates(daysElem, createLastTime('days', msTillNY));
-
-  fillDates(hoursElem, createLastTime('hours', msTillNY));
-
-  fillDates(minutesElem, createLastTime('mins', msTillNY));
-
-  fillDates(secondsElem, createLastTime('secs', msTillNY));
-}
+const timerData = {
+  daysElem: document.querySelector('.days p'),
+  hoursElem: document.querySelector('.hours p'),
+  minutesElem: document.querySelector('.mins p'),
+  secondsElem: document.querySelector('.secs p'),
+};
 
 function calculateMSTillNY() {
   const today = new Date();
-  const NYDate = new Date(today.getFullYear() + 1, 0, 1);
+  const NYDate = new Date(Date.UTC(today.getUTCFullYear() + 1, 0, 1));
   let msTillNY = NYDate - today;
   return msTillNY;
 }
@@ -49,9 +31,21 @@ function createLastTime(elem, ms) {
   }
 }
 
-export default function initTimer() {
-  // goReviewYourself(daysElem, hoursElem, minutesElem, secondsElem);
+function initTimer(nodeElems) {
+  const { daysElem, hoursElem, minutesElem, secondsElem } = nodeElems;
+  function timer() {
+    let msTillNY = calculateMSTillNY();
 
-  //раскомментировать на третьей части
+    fillDates(daysElem, createLastTime('days', msTillNY));
+
+    fillDates(hoursElem, createLastTime('hours', msTillNY));
+
+    fillDates(minutesElem, createLastTime('mins', msTillNY));
+
+    fillDates(secondsElem, createLastTime('secs', msTillNY));
+  }
+
   setInterval(timer, 1000);
 }
+
+export { initTimer, timerData };

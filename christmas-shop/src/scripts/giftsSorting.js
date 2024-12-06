@@ -1,10 +1,38 @@
-// Implementation of the Category switching for products on the gifts page: +8
-// The ALL category is active and all gifts are displayed when opening or reloading the gifts page: +2
-// When switching categories, the gifts of the selected category are displayed: +4
 import giftsData from '../data/gifts.json';
+import { renderCards } from './giftsGetData';
 
-export default function initSorting() {
-  let gifts = giftsData;
+function filterData(category) {
+  let filteredGifts = giftsData.filter((gift) => {
+    return gift.category === category;
+  });
+  return filteredGifts;
+}
 
-  console.log(gifts);
+export default function initSorting(category) {
+  clearContainer(document.querySelector('.cards-container'));
+  const giftsToRender = checkPage(fillFilteredData(category));
+  renderCards(giftsToRender);
+}
+
+function fillFilteredData(category) {
+  let filteredData = category === 'All' ? giftsData : filterData(category);
+  return filteredData;
+}
+function clearContainer(container) {
+  container.innerHTML = '';
+}
+
+function checkPage(gifts) {
+  if (window.location.href.includes('gifts')) {
+    return gifts;
+  }
+  shuffleGifts(gifts);
+  return gifts.slice(0, 4);
+}
+
+function shuffleGifts(gifts) {
+  for (let i = gifts.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [gifts[i], gifts[j]] = [gifts[j], gifts[i]];
+  }
 }

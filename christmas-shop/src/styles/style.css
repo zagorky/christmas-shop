@@ -47,6 +47,7 @@
 }
 html {
   background-color: var(--static-white);
+  scrollbar-gutter: stable;
 }
 body {
   font-family: var(--primary-font-family);

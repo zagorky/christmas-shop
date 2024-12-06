@@ -1,7 +1,9 @@
+import initSorting from './giftsSorting';
+
 const menu = document.querySelector('.menu');
 
 class MenuElem {
-  constructor(category, ability) {
+  constructor(category, onChange) {
     this.input = document.createElement('input');
     this.label = document.createElement('label');
     this.category = category;
@@ -10,40 +12,48 @@ class MenuElem {
     this.classNameTypography = 'actionSmall';
     this.classNameMain = 'menu-btn';
     this.text = category;
-    this.ability = ability;
-    this.renderMenuElem();
+    this.input.onchange = () => {
+      onChange(this.category.replace(/-/g, ' '));
+      this.#checkActibeMenuElem();
+    };
+    this.#renderMenuElem();
   }
-  renderMenuElem() {
-    this.renderInput();
-    this.renderLabel();
-    this.checkAbility();
+  #renderMenuElem() {
+    this.#renderInput();
+    this.#renderLabel();
   }
-  renderInput() {
+  #renderInput() {
     this.input.type = this.type;
     this.input.name = this.name;
     this.input.id = this.category;
-    menu.append(this.input);
+    if (this.category === 'All') {
+      this.input.checked = true;
+    }
+    menu?.append(this.input);
   }
-  renderLabel() {
+  #renderLabel() {
     this.label.htmlFor = this.category;
     this.label.classList.add(this.classNameTypography, this.classNameMain);
-    this.label.textContent = this.category.split(/(?=[A-Z])/).join(' ');
-    menu.append(this.label);
-  }
-  checkAbility() {
-    if (this.ability) {
-      this.label.classList.toggle('activeBtn');
+    this.label.textContent = this.category.replace(/-/g, ' ');
+    if (this.input.checked) {
+      this.label.classList.add('activeBtn');
     }
-    this.input.disabled = true;
+    menu?.append(this.label);
   }
-  static clearMenu(parent) {
-    parent.innerHTML = '';
+
+  #checkActibeMenuElem() {
+    Array.from(menu.children).forEach((child) => {
+      if (child.tagName === 'LABEL') {
+        child.classList.remove('activeBtn');
+      }
+    });
+    this.label.classList.add('activeBtn');
   }
 }
 
-const categoryALL = new MenuElem('all', true);
-const categoryForWork = new MenuElem('forWork', false);
-const categoryForHealth = new MenuElem('forHealth', false);
-const categoryForHarmony = new MenuElem('forHarmony', false);
+const categories = ['All', 'For-Work', 'For-Health', 'For-Harmony'];
+categories.forEach((category) => {
+  new MenuElem(category, initSorting);
+});
 
-export { categoryALL, categoryForWork, categoryForHealth, categoryForHarmony };
+export { categories };

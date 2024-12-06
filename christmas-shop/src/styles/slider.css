@@ -27,22 +27,22 @@
 }
 .slider {
   color: var(--static-white);
-  max-width: 2576px;
+  max-width: 1988px;
   width: 100%;
   display: flex;
   flex-direction: row;
   padding-top: 20px;
   padding-bottom: 18px;
-  transition: transform 0.4s ease;
+  transition: transform 0.4s ease-in-out;
 }
+
 .slider-elem {
-  margin: auto 0;
+  margin: auto 20px;
 }
 .slider-elem-img img {
   width: 200px;
   height: 200px;
   border-radius: 20px;
-  margin: 0 20px;
 }
 .bnt-container {
   display: flex;
@@ -70,11 +70,6 @@
 .left {
   margin: auto;
   transform: rotate(-180deg);
-  transition: all 0.3s ease-in-out;
-}
-.activeNav {
-  border: 1px solid var(--static-white) !important;
-  color: var(--static-white) !important;
   transition: all 0.3s ease-in-out;
 }
 
